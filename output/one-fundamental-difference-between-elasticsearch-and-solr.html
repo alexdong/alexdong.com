@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <meta charset="utf-8" />
+                <title>One fundamental difference between ElasticSearch and Solr</title>
+                <link rel="stylesheet" href="./theme/css/main.css" />
+        </head>
+
+        <body id="index" class="home">
+                <header id="banner" class="body">
+                        <h1><a href="./">Raw thoughts from Alex Dong </a></h1>
+                        <nav><ul>
+                </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./one-fundamental-difference-between-elasticsearch-and-solr.html" rel="bookmark"
+           title="Permalink to One fundamental difference between ElasticSearch and Solr">One fundamental difference between ElasticSearch and Solr</a></h1>
+    </header>
+
+    <div class="entry-content">
+      <ul>
+<li>code</li>
+<li>bestof</li>
+</ul>
+<hr>
+<p><strong>important update</strong>: The recent release of Solr 4 has addressed the difference mentioned below. Now Solr handles replication similarly to ElasticSearch. Even better, a transaction log has been added for durabilities. So please be aware that the information below is more a comparison between ElasticSearch and Solr 3.  </p>
+<p>Most of the articles comparing ElasticSearch and Solr fall into two groups.</p>
+<p>The first group would give some performance test and declare one outperforms the other. Like <a href="http://blog.socialcast.com/realtime-search-solr-vs-elasticsearch/">this one</a> from socialcast.  If you dig deeper though, you'll realize that it's not a fair comparison. The ElasticSearch's read will waste too much time in routing with the default 5 shards settings;  For Solr, you are not supposed to call IndexWriter#commit for every write request anyway. The author also ignored the fact that Solr 4's soft commit would make search while indexing a lot faster.</p>
+<p>The second group provides feature-by-feature comparison like the <a href="http://blog.sematext.com/2012/08/23/solr-vs-elasticsearch-part-1-overview/">Sematext one</a>.  This does provide a more comprehensive view on what's available in each package. Let's be honest, most of the features can be implemented given enough time.  I'm sure ElasticSearch will have a proper SpellChecker soon and it won't take too long for Solr to have a percolate feature implemented.  Unfortunately, this hides the fundamental architectural differences between the two, which is actually crucial for people to decide which one to choose.</p>
+<p>Actually, there is only one fundamental difference here but it does have far reaching consequences on how each would perform. <strong>The difference is how the distributed replication works</strong>.</p>
+<p>To understand this, you have to look at Lucene's index on disk first. Lucene stores its search index in immutable segments and then <strong>as more documents are indexed, these immutable segments will be merged into new, and more efficient, ones.</strong>  Inevitably, this will incur non-trivial disk read/write. It'll be slow.  Within Lucene, this usually happens when a commit call happens. (To keep things easier, let's ignore the difference between soft and hard commit in Solr 4 for now. )</p>
+<p>Both ElasticSearch and Solr use Lucene to store their search index but how the changes replicated to different servers differ.</p>
+<p><strong>Solr</strong> will <strong>copy the new segment file to different servers</strong>. This works great when you don't need to add new documents to your search index too often.  But in the age of an endless stream of contents keep flowing in and the needs for near real time search, this decision is seriously holding us back.</p>
+<p>You see, there is an <strong>inherent conflict on how often to call commit</strong> here.  If you want your new content to show up in other search shards, you want to call commit as often as possible so that new segments can be created and copied over. However, if you want to index fast, you want to avoid, or at least delay, commit at all cost so that you can keep indexing stuff without cleaning up the disks.</p>
+<p><strong>ElasticSearch solved this problem by sending the same document to be indexed by all the search shards.</strong>  To be more precise, all the replica shards. This way, you will never need to call commit to get your index shipped to other server. You can index as many as you like and still have all information available to all replica shards.</p>
+<p>One important result of this approach is that ElasticSearch offers a much <strong>robust single server deployment by having a write ahead log</strong>. Even if you kill it brutally, you know the dash 9 thing, a single node ElasticSearch would still be able to recover, replay and keep going. Try that with Solr and you'll have to manually fix the corrupted index.</p>
+<p>Another important consequence  is that it's relatively easy to have a <strong>High Availability built-in.  </strong>If the primary shard goes down, one of the replicas can take over and elect itself to be the primary without causing too much troubles because all replica shards have already had the same content.</p>
+<p>There is one minor downside to this approach though. If your application has a high rate of modification to the same document, then that change might arrive at the replica out of sequence. This can be addressed by using versioning but I really doubt a search engine will have such a high modification rate.</p>
+<p>I hope this clarifies things a bit. I also hope that now if you look at the feature-by-feature comparison, you would appreciate the differences better by understanding what's the rational behind them.</p>
+    </div><!-- /.entry-content -->
+  </article>
+</section>
+
+                <footer id="contentinfo" class="body">
+                </footer><!-- /#contentinfo -->
+
+        </body>
+</html>

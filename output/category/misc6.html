@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <meta charset="utf-8" />
+                <title>Raw thoughts from Alex Dong - misc category</title>
+                <link rel="stylesheet" href="../theme/css/main.css" />
+        </head>
+
+        <body id="index" class="home">
+                <header id="banner" class="body">
+                        <h1><a href="../">Raw thoughts from Alex Dong </a></h1>
+                        <nav><ul>
+                </header><!-- /#banner -->
+  <section id="content" class="body">
+      <article>
+        <h1 class="entry-title"><a href="../theres-more-to-life-than-being-happy.html">There's More to Life Than Being Happy</a></h1>
+        <abbr class="published" title="2013-01-27T19:32:20+13:00">
+          Published: Sun 27 January 2013
+        </abbr>
+        <h2>- life</h2>
+<blockquote>
+<p>In September 1942, Viktor Frankl, a prominent Jewish psychiatrist and neurologist in Vienna, was arrested and transported to a Nazi concentration camp with his wife and parents. Three years later, when his camp was liberated, most of his family, including his pregnant wife, had perished -- but he, prisoner number 119104, had lived. In his bestselling 1946 book, Man's Search for Meaning, which he wrote in nine days about his experiences in the camps, Frankl concluded that the difference between those who had lived and those who had died came down to one thing: Meaning, an insight he came to early in life.</p>
+</blockquote>
+<p>As he saw in the camps, those who found meaning even in the most horrendous circumstances were far more resilient to suffering than those who did not. "Everything can be taken from a man but one thing," Frankl wrote in <em>Man's Search for Meaning</em>, "the last of the human freedoms -- to choose one's attitude in any given set of circumstances, to choose one's own way."</p>
+<p>Frankl worked as a therapist in the camps, and in his book, he gives the example of two suicidal inmates he encountered there. Like many others in the camps, these two men were hopeless and thought that there was nothing more to expect from life, nothing to live for. "In both cases," Frankl writes, "it was a question of getting them to realize that life was still expecting something from them; something in the future was expected of them." For one man, it was his young child, who was then living in a foreign country. For the other, a scientist, it was a series of books that he needed to finish.</p>
+<p>via <a href="http://www.theatlantic.com/health/archive/2013/01/theres-more-to-life-than-being-happy/266805/">The Atlantic</a>. This seems to fit with the concept of <strong>“</strong><a href="http://alexdong.com/have-a-place-in-the-world-the-answer-to-the-hardest-question/">Find something more important than you are and dedicate your life to it”</a></p>
+      </article>
+      <hr/>
+      <article>
+        <h1 class="entry-title"><a href="../segregating-old-sick-enable-fantasy.html">Segregating the old and the sick enables a fantasy</a></h1>
+        <abbr class="published" title="2013-01-25T08:34:31+13:00">
+          Published: Fri 25 January 2013
+        </abbr>
+        <h2>- life</h2>
+<p>Z and I have always wanted to have our parents to live close and take care of them when they get older. It does not make sense, we have been told. You don't want to see the long and slow decay. Then I saw this piece on NYTimes: <a href="http://opinionator.blogs.nytimes.com/2013/01/20/you-are-going-to-die/">you are going to die</a>.</p>
+<blockquote>
+<p>Plenty of people before me have lamented the way that we in industrialized countries regard our elderly as unproductive workers or obsolete products, and lock them away in institutions instead of taking them into our own homes out of devotion and duty. Most of these critiques are directed at the indifference and cruelty thus displayed to the elderly; what I wonder about is what it’s doing to the rest of us.</p>
+</blockquote>
+<p><strong>Segregating the old and the sick enables a fantasy, as baseless as the fantasy of capitalism’s endless expansion, of youth and health as eternal</strong>, in which old age can seem to be an inexplicably bad lifestyle choice, like eating junk food or buying a minivan, that you can avoid if you’re well-educated or hip enough. So that when through absolutely no fault of your own your eyesight begins to blur and you can no longer eat whatever you want without consequence and the hangovers start lasting for days, you feel somehow ripped off, lied to. Aging feels grotesquely unfair. As if there ought to be someone to sue.</p>
+<p>We don’t see old or infirm people much in movies or on TV. We love explosive gory death onscreen, but we’re not so enamored of the creeping, gray, incontinent kind. Aging and death are embarrassing medical conditions, like hemorrhoids or eczema, best kept out of sight. <strong>Survivors of serious illness or injuries have written that, once they were sick or disabled, they found themselves confined to a different world, a world of sick people, invisible to the rest of us.</strong> Denis Johnson writes in his novel “Jesus’ Son”: “You and I don’t know about these diseases until we get them, in which case we also will be put out of sight.”</p>
+      </article>
+      <hr/>
+      <article>
+        <h1 class="entry-title"><a href="../one-fundamental-difference-between-elasticsearch-and-solr.html">One fundamental difference between ElasticSearch and Solr</a></h1>
+        <abbr class="published" title="2013-01-22T22:39:58+13:00">
+          Published: Tue 22 January 2013
+        </abbr>
+        <ul>
+<li>code</li>
+<li>bestof</li>
+</ul>
+<hr>
+<p><strong>important update</strong>: The recent release of Solr 4 has addressed the difference mentioned below. Now Solr handles replication similarly to ElasticSearch. Even better, a transaction log has been added for durabilities. So please be aware that the information below is more a comparison between ElasticSearch and Solr 3.  </p>
+<p>Most of the articles comparing ElasticSearch and Solr fall into two groups.</p>
+<p>The first group would give some performance test and declare one outperforms the other. Like <a href="http://blog.socialcast.com/realtime-search-solr-vs-elasticsearch/">this one</a> from socialcast.  If you dig deeper though, you'll realize that it's not a fair comparison. The ElasticSearch's read will waste too much time in routing with the default 5 shards settings;  For Solr, you are not supposed to call IndexWriter#commit for every write request anyway. The author also ignored the fact that Solr 4's soft commit would make search while indexing a lot faster.</p>
+<p>The second group provides feature-by-feature comparison like the <a href="http://blog.sematext.com/2012/08/23/solr-vs-elasticsearch-part-1-overview/">Sematext one</a>.  This does provide a more comprehensive view on what's available in each package. Let's be honest, most of the features can be implemented given enough time.  I'm sure ElasticSearch will have a proper SpellChecker soon and it won't take too long for Solr to have a percolate feature implemented.  Unfortunately, this hides the fundamental architectural differences between the two, which is actually crucial for people to decide which one to choose.</p>
+<p>Actually, there is only one fundamental difference here but it does have far reaching consequences on how each would perform. <strong>The difference is how the distributed replication works</strong>.</p>
+<p>To understand this, you have to look at Lucene's index on disk first. Lucene stores its search index in immutable segments and then <strong>as more documents are indexed, these immutable segments will be merged into new, and more efficient, ones.</strong>  Inevitably, this will incur non-trivial disk read/write. It'll be slow.  Within Lucene, this usually happens when a commit call happens. (To keep things easier, let's ignore the difference between soft and hard commit in Solr 4 for now. )</p>
+<p>Both ElasticSearch and Solr use Lucene to store their search index but how the changes replicated to different servers differ.</p>
+<p><strong>Solr</strong> will <strong>copy the new segment file to different servers</strong>. This works great when you don't need to add new documents to your search index too often.  But in the age of an endless stream of contents keep flowing in and the needs for near real time search, this decision is seriously holding us back.</p>
+<p>You see, there is an <strong>inherent conflict on how often to call commit</strong> here.  If you want your new content to show up in other search shards, you want to call commit as often as possible so that new segments can be created and copied over. However, if you want to index fast, you want to avoid, or at least delay, commit at all cost so that you can keep indexing stuff without cleaning up the disks.</p>
+<p><strong>ElasticSearch solved this problem by sending the same document to be indexed by all the search shards.</strong>  To be more precise, all the replica shards. This way, you will never need to call commit to get your index shipped to other server. You can index as many as you like and still have all information available to all replica shards.</p>
+<p>One important result of this approach is that ElasticSearch offers a much <strong>robust single server deployment by having a write ahead log</strong>. Even if you kill it brutally, you know the dash 9 thing, a single node ElasticSearch would still be able to recover, replay and keep going. Try that with Solr and you'll have to manually fix the corrupted index.</p>
+<p>Another important consequence  is that it's relatively easy to have a <strong>High Availability built-in.  </strong>If the primary shard goes down, one of the replicas can take over and elect itself to be the primary without causing too much troubles because all replica shards have already had the same content.</p>
+<p>There is one minor downside to this approach though. If your application has a high rate of modification to the same document, then that change might arrive at the replica out of sequence. This can be addressed by using versioning but I really doubt a search engine will have such a high modification rate.</p>
+<p>I hope this clarifies things a bit. I also hope that now if you look at the feature-by-feature comparison, you would appreciate the differences better by understanding what's the rational behind them.</p>
+      </article>
+      <hr/>
+      <article>
+        <h1 class="entry-title"><a href="../aaron-swartz-and-ragequitting.html">Aaron Swartz and ragequitting</a></h1>
+        <abbr class="published" title="2013-01-22T20:33:58+13:00">
+          Published: Tue 22 January 2013
+        </abbr>
+        <ul>
+<li>culture</li>
+<li>startup</li>
+</ul>
+<hr>
+<p>Agree with Jeff on every word he wrote <a href="http://www.codinghorror.com/blog/2013/01/the-end-of-ragequitting.html">here</a>.</p>
+<blockquote>
+<p>What happened to Aaron was not fair. Not even a little. <strong>But <em>this is the path of the activist</em>. The greater the injustice, the greater wrong undone when you ultimately prevail.</strong> And I am convinced, absolutely and utterly convinced, that Aaron <em>would</em> have prevailed.</p>
+</blockquote>
+      </article>
+      <hr/>
+      <article>
+        <h1 class="entry-title"><a href="../dont-be-a-cog.html">Don't be a cog.</a></h1>
+        <abbr class="published" title="2013-01-22T20:25:42+13:00">
+          Published: Tue 22 January 2013
+        </abbr>
+        <ul>
+<li>culture</li>
+<li>strategy</li>
+<li>bestof</li>
+</ul>
+<hr>
+<p>Tim O'Reilly linked to Paul Graham's short essay called "<a href="http://paulgraham.com/todo.html">The Top of My Todo List</a>" today on twitter. I like what PG did to convert the 5 lessons to 5 commands.</p>
+<blockquote>
+<p>Don't ignore your dreams;</p>
+</blockquote>
+<p>don't work too much;</p>
+<p>say what you think;</p>
+<p>cultivate friendships;</p>
+<p>be happy.</p>
+      </article>
+      <hr/>
+      <article>
+        <h1 class="entry-title"><a href="../larry-page-on-the-philosophy-of-being-10x-better.html">Larry Page on the philosophy of being 10x better</a></h1>
+        <abbr class="published" title="2013-01-20T21:07:29+13:00">
+          Published: Sun 20 January 2013
+        </abbr>
+        <ul>
+<li>culture</li>
+<li>startup</li>
+<li>strategy</li>
+</ul>
+<hr>
+<p>Steve Levy from Wired just did a lengthy <a href="http://www.wired.com/business/2013/01/ff-qa-larry-page/all/">interview with Larry Page</a> from Google.  Most of the stuff are cliche but there are two things that really jumped out on me.  I pasted them below and bold out the things I find most interesting.</p>
+<p>On competition and the excitement of doing something new.</p>
+<blockquote>
+<p><strong>Wired:</strong> Google is known for encouraging its employees to tackle ambitious challenges and make big bets. Why is that so important?</p>
+</blockquote>
+<p><strong>Larry Page:</strong> I worry that something has gone seriously wrong with the way we run companies. If you read the media coverage of our company, or of the technology industry in general, it’s always about the competition. The stories are written as if they are covering a sporting event. <strong>But it’s hard to find actual examples of really amazing things that happened solely due to competition. How exciting is it to come to work if the best you can do is trounce some other company that does roughly the same thing?</strong> That’s why most companies decay slowly over time. They tend to do approximately what they did before, with a few minor changes. It’s natural for people to want to work on things that they know aren’t going to fail. But incremental improvement is guaranteed to be obsolete over time. Especially in technology, where you know there’s going to be non-incremental change.</p>
+<p>On the importance of both innovation and commercialisation.</p>
+<blockquote>
+<p><strong>Wired:</strong> On the other hand, as the canard goes, the pioneers take the most arrows. Look at the experience of Xerox PARC, where fantastic innovations didn’t seem to <a href="http://www.newyorker.com/reporting/2011/05/16/110516fa_fact_gladwell">help the corporation itself</a>.</p>
+</blockquote>
+<p><strong>Page:</strong> PARC had a tremendous research organization and they invented many of the tools of modern computing. But they weren’t focused on commercialization. You need both. <strong>Take one company I admire, Tesla. They’ve not only made a really innovative car, but they’re probably spending 99 percent of their effort figuring out how to actually get it out to people.</strong> When I was growing up, I wanted to be an inventor. Then I realized that there’s a lot of sad stories about inventors like Nikola Tesla, amazing people who didn’t have much impact, because they never turned their inventions into businesses.</p>
+      </article>
+      <hr/>
+      <article>
+        <h1 class="entry-title"><a href="../where-the-media-stands-a-summary-of-news-coverage-on-aaron-swartzs-case-guardian-economistnytimes-bbc-yomiuri-wsj-xinhua.html">'Where the media stands? A summary of news coverages on Aaron Swartz''s case.</a></h1>
+        <abbr class="published" title="2013-01-17T10:37:47+13:00">
+          Published: Thu 17 January 2013
+        </abbr>
+        <p>Guardian &gt; Economist &gt; NYTimes &gt;&gt; BBC &gt; WSJ &gt; Xinhua '
+wordpress_id: 334
+categories:
+- culture
+- bestof</p>
+<hr>
+<p>TL;DR:  Of all the news coverage on Aaron Swartz's case, <strong>Guardian</strong> provided the best coverage; <strong>Economist</strong> got and described the core accurately and timely;  <strong>NYTimes</strong> got the key points, but failed to follow up; <strong>BBC</strong> structured it as a "debate"; Japan's <strong>Yomiuri</strong> and <strong>Asahi</strong>, China's <strong>PeopleDaily</strong> had no coverage of this; <strong>WSJ</strong> is misleading its readers by associating the cause with depression; China's <strong>Xinhua</strong> performed the worst by talking about "<em>prevalence of depression in the tech community"</em>.</p>
+<p>Aaron Swartz's funeral has come and past.  It's time for us to move on. But before we dive into all the new year's works, it is very important for us to review what the major newspapers around the world have said about this and use it as a gauge to see where they position themselves on this case.  Or to put it more bluntly: did they get it? <strong>Did they get the core of this case is "free access to public document" instead of IP theft, national security or suicide after long depression? </strong></p>
+<p>This is important because this case won't be the last collision between technologists who try to push the world forward and the incumbents who don't understand technology's role and want to set a precedent to stop this inevitable trend.   As software and AI evolve further, more labour and manual jobs will be replaced by robots and algorithms. Whether we will have a relatively smooth transition or a turmoil largely depends on how the public opinions are shaped. So far, it doesn't look very good. As said by <a href="http://www.slate.com/articles/technology/technology/2013/01/aaron_swartz_suicide_prosecutors_have_too_much_power_to_charge_and_intimidate.html">slate</a>:</p>
+<blockquote>
+<p>The underlying point ... is that the government doesn’t understand hackers and isn’t good at distinguishing between miscreant vigilantes like Swartz who are trying to free information systems and profit-driven or diabolical hackers who are trying to bring down those systems. That’s when an expansive law like the Computer Fraud and Abuse Act becomes dangerous. Prosecutors persuaded of their own righteousness, and woodenly equating downloading a deliberately unprotected database with stealing, lose all sense of proportion and bring in the heavy artillery when what’s in order is a far more mild penalty.</p>
+</blockquote>
+<p>Ok, let's get started.</p>
+<p><strong>Guardian</strong> offers the <strong>best writing</strong> on this.  Article <a href="http://www.guardian.co.uk/commentisfree/2013/jan/16/ortiz-heymann-swartz-accountability-abuse">Carmen Ortiz and Stephen Heymann: accountability for prosecutorial abuse</a> directly points the root of the problem</p>
+<blockquote>
+<p>the US government - as part of its war to vest control over the internet in itself and in corporate factions - has been wildly excessive, almost hysterical, in punishing even trivial and harmless activists who are perceived as "hackers".</p>
+</blockquote>
+<p>In <a href="http://www.guardian.co.uk/technology/2013/jan/15/aaron-swartz-husband-prosecutor-criticises">Aaron Swartz: husband of prosecutor criticises internet activist's family</a>, author provides lots of in-depth interview with Aaron's lawyers and attorneys to shed lights into the gruelling negotiation process that Aaron has gone through; and the ugly, disgusting faces of the prosecutors.   Now compare this to WSJ's <a href="http://online.wsj.com/article/AP2e1b837317d14dbab268f56bff084b10.html">brief coverage</a>.</p>
+<blockquote>
+<p>Andy Good, Swartz's initial lawyer, told the Boston Globe that he had warned one prosecutor, Steve Heymann, that his client was a "suicide risk".
+Good said: "His reaction was a standard reaction in that office, not unique to Steve. He said: 'Fine, we'll lock him up.'  I'm not saying they made Aaron kill himself. Aaron might have done this anyway. I'm saying they were aware of the risk, and they were heedless."
+Lawyers for Swartz said they had offered to accept a deferred prosecution or probation, so that if he did it again he would serve time.</p>
+</blockquote>
+<p>Marty Weinberg, who took over from Good as Swartz's lawyer, confirmed to the Guardian that during negotiations for a plea bargain, MIT refused to take a position which could have helped his client.
+Weinberg said: "During pleas negotiations for Mr Swartz, he attempted to negotiate an agreement that would not subject him to any risk of going to prison. We asked them to support this initiative but they declined. As a matter of fact, MIT as an institution communicated to myself that they would not take any position in ongoing pleas negotiations between Mr Swartz and the government."
+"There were subsets of the MIT community who were profoundly in support of Aaron," but that support did not override institutional interests, Weinberg told the Globe.</p>
+<p>Another of Swartz's attorneys, Elliot Peters, said on Monday that MIT officials were "very cooperative with prosecutors" during the investigation.</p>
+<p>Economist, my favourite magazine, pointed out the essence of this case in its article <a href="http://www.economist.com/blogs/babbage/2013/01/remembering-aaron-swartz?fsrc=scn/tw_ec/commons_man">Commons Man</a>:</p>
+<blockquote>
+<p>TO CALL Aaron Swartz gifted would be to miss the point. As far as the internet was concerned, he was the gift.</p>
+</blockquote>
+<p>Around 2006 he obtained—though he would not say how—the complete bibliographic data for books held by the Library of Congress. He thought it unfair that the Library's catalogue division charged hefty fees to provide this information, which, <strong>being the work of the government, had no copyright protection within the United States.</strong> So he posted it in the Open Library, which aims to provide an entry for every book in existence as part of Internet Archive, a project founded by the internet entrepreneur Brewster Kahle to store a copy of every web page of every website ever to go online.</p>
+<p>Aghast at how federal court documents were available only for a price from the inappositely named Public Access to Court Electronic Records (PACER) system, in 2009 he used the free access temporarily granted to public libraries to retrieve 18m pages of PACER's 500m documents before he was cut off. They ended up on public.resource.org, founded by Carl Malamud, a veteran advocate of open access, also known as the internet's public librarian.</p>
+<p>While Economists correctly pointed out Swartz's cause was open access to public documents, the <strong>NYTimes</strong> was mostly writing about him as a purist all-information-must-be-free ideologue.  But to its credit, it did mention the cause of changing the <em>Computer Fraud and Abuse Act</em> in article <a href="http://www.nytimes.com/2013/01/14/technology/aaron-swartz-a-data-crusader-and-now-a-cause.html?pagewanted=all&amp;pagewanted=print">A Data Crusader, a Defendant and Now, a Cause</a> and provide a link to the <a href="https://petitions.whitehouse.gov/petition/reform-computer-fraud-and-abuse-act-reflect-realities-computing-and-networks-2013/qMvdwVNw">petition</a> itself. The article <a href="http://opinionator.blogs.nytimes.com/2013/01/13/what-is-a-hacktivist/">What Is a ‘Hacktivist’?</a> comes at the right time to paint a personal, friendly and make-the-world-better picture of hacktivist.  But somehow they stopped from following through the case. They didn't challenge Carmen Ortiz's husband's tweet either.</p>
+<p>Sadly, majority of the traditional newspapers either failed to appreciate the importance of this event or, even worse, try to distract attentions by associating this with depression.</p>
+<p><strong>BBC</strong> barely scratched the issue during this event.  It did mention this case in article <a href="http://www.bbc.co.uk/news/technology-21011663">Aaron Swartz investigation ordered by MIT</a>. It seems to me that BBC has failed to grasp the essence of this event by finishing the article with this:<strong>
+</strong></p>
+<blockquote>
+<p>However, in a blog post, Orin Kerr, a professor of law at the George Washington University Law School, wrote the actions of the prosecutors had been "based on a fair reading of the law".
+"None of the charges involved aggressive readings of the law or any apparent prosecutorial overreach," he said.
+"All of the charges were based on established case law."</p>
+</blockquote>
+<p>Japan's two most popular newspaper <strong>Yomiuri</strong>, <strong>Asahi</strong> and China's government mouthpiece <strong>PeopleDaily</strong> has no mentions at all.</p>
+<p><strong>WSJ</strong> is muddying the water by linking this to the suicide and depression angle even though more than <a href="Even though more than 80% of its reader rate the charge was &quot;overzealous&quot;: http://online.wsj.com/community/groups/question-day-229/topics/do-you-think-governments-prosecution">80% of its readers vote the charge to be "overzealous"</a></p>
+<p>Its article <a href="http://online.wsj.com/article/SB10001424127887324595704578242230974876860.html">Web Activist's Suicide Highlights Tech Law</a> began with</p>
+<blockquote>
+<p>Mental-health experts cautioned against trying to settle on an explicit cause when someone kills himself. "I'm sure he perceived that as a stressor," Gregory Eells, director of counseling and psychological services at Cornell University, said of the criminal charges. But, he said, "It's always a stretch to say that's the only cause." Mr. Eells wasn't familiar with details of the Swartz case.</p>
+</blockquote>
+<p>and ended with</p>
+<blockquote>
+<p>On what would prove to be the morning of his death, Ms. Stinebrickner-Kauffman said, the couple had a tickle fight before she left for work. Mr. Swartz said he was going to stay home and rest.</p>
+</blockquote>
+<p>Its other article <a href="http://online.wsj.com/article/SB10001424127887324581504578238692048200404.html">Legal Case Strained Troubled Web Activist</a> went even further by talking about "state sponsored hackers who threaten national security" and "organized criminals who break into computers for financial gain".  WSJ, you were really trying hard to establish some link in your reader's mind, aren't you?</p>
+<blockquote>
+<p>What began as a straightforward report of a campus breaking-and-entering incident eventually ensnared Mr. Swartz, who had written publicly about his battle with depression, in the broader federal apparatus for prosecuting computer crimes.</p>
+</blockquote>
+<p>At the top of their list of targets are state-sponsored hackers who threaten national security and organized criminals who break into computers for financial gain. The longest prison sentence so far in a U.S. hacking case—20 years–was given to a Miami man, Albert Gonzalez, in 2010 for his role in the theft and sale of millions of credit and debit cards.
+In recent years, prosecutors in the U.S. and Europe have become increasingly concerned about the growth of hacking groups, known as "hacktivists."
+The groups, sometimes formed under the guise of free-lance computer-security firms, have exposed the security vulnerabilities of computers used by government, law enforcement and corporations through online mischief.</p>
+<p>But nothing comes as classic as China's <strong>XinHua's</strong> blatant distraction tactic in its article <a href="http://news.xinhuanet.com/english/world/2013-01/15/c_132103916.htm">Suicide of U.S. Internet activist fuels talk about depression</a>.</p>
+<blockquote>
+<p>Prominent U.S. Internet developer and activist Aaron Swartz committed suicide last week, which triggered heated discussion in Startupland these days about the prevalence of depression in the tech community.</p>
+</blockquote>
+<p>Allow me to finish this article by quoting <a href="http://www.guardian.co.uk/commentisfree/2013/jan/13/aaron-swartz-government-abuses-gilmor">Dan Gillmor's post</a> on Guardian</p>
+<blockquote>
+<p><strong>Remember Aaron Swartz by working against government abuses</strong></p>
+</blockquote>
+<p>If I lived in Massachusetts, where the U.S. Attorney with overall jurisdiction over Aaron's case may run for governor, I'd start working tomorrow to ensure that she couldn't get elected dogcatcher. I'd also raise money to pay the best and bravest lawyer I could find, to ask the Massachusetts Bar Association to investigate how she and the assistant U.S. attorney in direct charge of the case had acted, and whether they deserved to keep their licenses to practice law.</p>
+<p>No matter where I lived, I would ask my member of the US House and my US senators how they can allow the computer crime laws they passed to criminalize a violation of a terms of service – an interpretation that could put any one of us in jail under the Justice Department's misuse of the law. If the people representing me didn't respond or expressed support for the administration's you're-all-potential-prisoners stance, I'd look for better representatives.</p>
+<p>If I wrote software code for, say, Facebook or any other big company, or was a young coder considering a startup, I'd ask myself whether my work was worthy of Aaron's memory – and if not, what I would do about that.
+And I'd find and support organizations, like the Electronic Frontier Foundation, that are carrying on the work Aaron championed, and did, to bring our culture and laws into the 21st Century in ways that value creativity, openness and collaboration.</p>
+<p>Get angry. Then get busy.</p>
+      </article>
+      <hr/>
+      <article>
+        <h1 class="entry-title"><a href="../soulmate-lost-rip-aaron-swartz.html">'Soulmate lost. RIP Aaron Swartz. '</a></h1>
+        <abbr class="published" title="2013-01-13T05:08:42+13:00">
+          Published: Sun 13 January 2013
+        </abbr>
+        <ul>
+<li>culture</li>
+<li>startup</li>
+<li>bestof</li>
+</ul>
+<hr>
+<p>So it is true.  Aaron has killed himself.  That sucks.  I tried very hard not to cry but it hurts me deeply.</p>
+<p>I never had a chance to meet him in person but over the years, I get to "meet" him via his work.  I've always been surprised that such a prodigy actually exists among us. I've also had this weird feeling that he won't die of age.</p>
+<p>Aaron's code is a beautiful example of minimalism. Around 2006, I remember trying really hard to beat his abstraction of a python wrapper for db operations in <a href="https://github.com/webpy/webpy/blob/master/web/db.py">web/db.py</a>. I gave up after two weeks of attempts and reached a conclusion that he has achieved a perfect balance of just enough function. The whole thing is short, logic and beautiful. Like a poem. You can't take anything away from it.  He was 18 years old by then.</p>
+<p>Aaron's work is like that too.  Reddit was a good example of that where you can get raw thoughts and insightful discussions without worrying too much of format and etiquette. His less known work of Jottit is actually more impressive.  It's a failed attempt to build a minimal website where one can  publish raw ideas quick and easy. I had wanted to build a site like that but Aaron built exactly what I had in mind with a crispy clarity of purpose.  I named this blog "Raw thoughts from Alex Dong" after him as well.  A place to exchange ideas without all the fluffy, airy, wishy-washing bullshit.</p>
+<p>A friend who used to work in a suicide help centre told me that, to many people, suicide is a way of revenge. It's one's last attempt to bet everything on this final attack.  I guess what Aaron is attacking is not only the legal case itself. But the cruel reality of this world.  Where an idealistic will eventually bump into layers and layers of lies; the ignorance of the general public; cold face from people who have already taken the pill and given up.  The more prodigious you are, the harder you get hit on the head.  Everyone has been saying how great you are and what a promising career you have in front of you. Then bump! Out of blue, you realise you are alone. Fighting hopeless without seeing the light.   Aaron has been so young yet so successful that when the harsh of the reality raised its ugly head right in front of him, he chose to keep attacking and attacking. Wish that he could win. He bet his most precious asset, his life, on this final attack.   But he has lost. He failed to find out the right tactic.  I worry that his death is futile. I worry that the world will soon move on with all the weekend entertainment, I worry that his cause will be forgotten.</p>
+<p>We programmers, with our new found power, are more likely to be idealistic about things. If something doesn't make sense, sure it should and can be fixed. The only problem is how long the code-debug cycle runs.  We believe that if only we can express our thoughts clearer, we could make a case and win. Then we would be busy moving to the next thing.   Yet the world moves painfully slowly. Most status quo disappears when they die of age.  This is a reality that's just not compatible with programmer's view.</p>
+<p>I have wished that Aaron would be like Steve Jobs.  Learn the ways to make compromises. Put his head down and work on something that's hard. Then eventually change the world for the better.  Move humanity one step forward.   Before Steve Jobs, not many people in valley gives a shit about design, aesthetics. It's about tech, someone has told me.  After Steve Jobs, everyone suddenly starts to talk about "beautiful".</p>
+<p>To me, Aaron's death is a reminder to the rest of us idealistic programmers.  It told us loud and clear that we have to pick a battle that worth fighting for and be prepared for the hard, long, lonely journey. And hopefully come out from the other end knowing that we've tried our best and we have not wasted our talent and live.  We can finally rest in peace.</p>
+<p>Bye, Aaron.</p>
+      </article>
+      <hr/>
+      <article>
+        <h1 class="entry-title"><a href="../know-your-learning-style.html">Know your learning style</a></h1>
+        <abbr class="published" title="2013-01-05T19:23:07+13:00">
+          Published: Sat 05 January 2013
+        </abbr>
+        <ul>
+<li>culture</li>
+<li>design</li>
+<li>education</li>
+<li>startup</li>
+<li>bestof</li>
+</ul>
+<hr>
+<p>I wasn't a top student in schools. My parents got called into school to "figure out a solution" a lot often than others.  I excel in some classes like history, chemistry and math but not others like literature.  I was appalling bad at remembering all those beautiful Chinese poems no matter how many times I tried to remember them.  I have never really understood why until I took the "<a href="http://www.engr.ncsu.edu/learningstyles/ilsweb.html">learning style</a>" test.</p>
+<p>During the test, you will get to answer 40 a/b questions and in the end, you'll be presented with a report like this:</p>
+<blockquote>
+<p>Results for: Alex Dong</p>
+<div class="highlight"><pre><span></span>ACT                  X                                REF 
+     11  9   7   5   3   1   1   3   5   7   9   11
+
+SEN                              X                    INT 
+     11  9   7   5   3   1   1   3   5   7   9   11
+
+VIS      X                                            VRB 
+     11  9   7   5   3   1   1   3   5   7   9   11
+
+SEQ                                  X                GLO 
+     11  9   7   5   3   1   1   3   5   7   9   11
+</pre></div>
+
+
+<ul>
+<li>If your score on a scale is 1-3, you are fairly well balanced on the two dimensions of that scale.</li>
+<li>If your score on a scale is 5-7, you have a moderate preference for one dimension of the scale and will learn more easily in a teaching environment which favors that dimension.</li>
+<li>If your score on a scale is 9-11, you have a very strong preference for one dimension of the scale. You may have real difficulty learning in an environment which does not support that preference.</li>
+</ul>
+</blockquote>
+<p>So a few interesting things I learned about myself.  <em>It's very scary to realise about this at age 35.</em>  If I have known this test early in my life, I am sure I would make a lot of choices quite differently. (Explanation can be found <a href="http://www4.ncsu.edu/unity/lockers/users/f/felder/public/ILSdir/styles.htm">here</a>. )</p>
+<ul>
+<li>
+<p>I'm a bit extreme on VISual vs VeRBal factor. This is exactly why I am so slow processing words, debating and remembering but I can clearly remember all the details of a street corner I drove past in a foreign city 10 years ago.</p>
+</li>
+<li>
+<p>I'm a strong GLObal instead of SEQuence learner, which means I will not carefully follow through a sequence of steps and my thoughts jump around quite a bit.  This explains one long question in my mind.  No matter how hard I try, it's almost impossible for me to get a high score in exams. I often forget to read the questions fully.</p>
+</li>
+<li>
+<p>I prefer to play with something to understand it, that makes me a ACTive instead of a REFlective learner.  I guess this is the reason why I prefer computer programming instead of mechanical engineering because fundamentally I need to play to understand whereas most mechanical stuffs are done in CAD software and simulations.</p>
+</li>
+<li>
+<p>I'm also a INTuitive instead of SENsing learner where I hate to repeat and love to play with new things.  So trying to force myself to become a diligence worker who consistently delivers just works against my nature.</p>
+</li>
+</ul>
+<p><strong>In the future of education, I believe all kids will be "profiled" so that a personalised course set will be delivered that tailored to the student's learning style.</strong>  I can smell some opportunities around the corner here.</p>
+      </article>
+      <hr/>
+      <article>
+        <h1 class="entry-title"><a href="../fart-apps-toilet-checkin.html">Fart apps and toilet check-in services</a></h1>
+        <abbr class="published" title="2013-01-05T12:43:06+13:00">
+          Published: Sat 05 January 2013
+        </abbr>
+        <h2>- startup</h2>
+<p>Hacker News has long become too watery for my liking but I do routinely check out the "<a href="http://news.ycombinator.com/bestcomments">bestcomment</a>" page, which always surprises me with delight and insightful comments.</p>
+<p>Like this <a href="http://news.ycombinator.com/item?id=4989923">one</a> on trivial applications and the stagnation of real progress in tech world.</p>
+<blockquote>
+<p>The people in charge have no vision. Everyone makes this complaint, because it's almost always true. The difference is that it's starting to matter. You can't "do technology" without vision. Not anymore.</p>
+</blockquote>
+<p>If you're running a toothpaste factory, you don't need vision. You just need competent execution. You need people to show up and follow the plan without complaint. This kind of work can actually be managed. If you can cut costs without compromising on quality, you do it. It's not about vision. That's already solved. Vision was relevant long ago when someone figured out how to make toothpaste. Your job is just to keep abreast of competitors and seek rent.</p>
+<p><strong>VC-istan is a postmodern startup factory.</strong> It's technically not a company, but as a tight social network, it functions as one. VCs, rather than properly competing, talk to each other and agree on who they like and who they don't. VC-istan's "serial entrepreneurs" are just glorified PMs whose egos make them unemployable. <strong>The real bosses are the VCs.</strong> They want quick exits, as they should, because that's how the incentive systems that govern them are set up. <strong>The "tech press" are a sort of HR organization. Entrepreneurs are PMs, often mediocre ones, and engineers are chumps paid in lottery tickets.</strong> This is just a big company that has managed to dress itself up as a thousand small ones that happen to be all controlled by the same people.</p>
+<p>Now you have an ecosystem of commodity entrepreneurs hiring commodity engineers to implement commodity ideas. Ok, nothing to see here. Mobiles skwrking, mobiles chirping, take the money and run, take the money and run, take the money...</p>
+<p>Is it any wonder that this isn't producing innovation? It shouldn't be. Yet VC-istan is doing a lot better than most large companies do. It seems inevitable in large organizations (including economies) that the resources gravitate toward players who don't have much in the way of vision. Innovation is the <em>exception</em>. It adds variance. Given that we're social animals who judge one another based on reliability (low variance/minimal performance) rather than capability (expected return) it is socially <em>dangerous</em>.</p>
+<p>How many people have the talent and the resources? I'm sitting on +4 sigma talent but have no money. The people with boatloads of money seem (with a few exceptions) to be lacking in vision (which means I can't tell if they have talent, but I have doubts). I can't say that I blame them. Why take risks if you have no need to do so?</p>
+<p>What we have now is a generation that's used to technical progress and wants to take part. We have people who have been working their asses off since age 4, are now in their 20s and 30s, and want to take part in technical innovation. Most of them can't, because there's so little of it actually going on, and because most work activity is bullshit oriented toward keeping one warlord boss's status high at the expense of another's, rather than being invested in true progress. That's depressing. It creates a malaise. A deep sense of ennui. Yawn, another fart app. We now have an unprecedented number of ridiculously talented, over-educated people saying, "Dude, where's my machine learning job?"</p>
+<p><strong>I think that 2013 will see the beginning of a Flight to Substance, and if I'm right, that will put that talent to better use than fart apps and toilet check-in services. I don't know how it will play out. I have no clue who will fund it.</strong> One sign of this is the increasing clamor for Valve-style open allocation. By the mid-2010s, you won't be considered a real tech company if you're running closed allocation (take heed, Google). If I'm right, that will help. That will help our generation work its way toward excellence. At least, some of us will go in that direction. Others will go off into the weeds of fart apps. May the market reward both crowds justly.</p>
+<p>Here's how we fix tech.</p>
+<ul>
+<li>
+<p>Open allocation. As long as the work is relevant to the company's needs, let people work on whatever they want. This enables <em>native</em> growth of technical talent. You don't have to poach qualified people with ridiculous signing bonuses. They quickly find a project that fits their skills and interests, and they actually improve while they work for you. Imagine that.</p>
+</li>
+<li>
+<p>Stop fetishizing either extreme of company size. Not all large companies are bad, not all startups are good. Nor vice versa. If your 50-person startup is running closed allocation with typical HR policies, then it's just a big company that failed to get big and it should be considered a massive joke. I've heard of people getting turned down for transfers in 20-person companies because of "headcount" limitations. If you want to work at a startup, then drop that shit and work for a real fucking startup.</p>
+</li>
+<li>
+<p>Demand work on hard problems. Don't build someone's fart app for 5% equity. If you're in the press, don't reward stupidity either. Instead of cheering on idiots who get acquired for outrageous sums, ridicule them.</p>
+</li>
+</ul>
+      </article>
+      <hr/>
+<p class="paginator">
+        <a href="../category/misc5.html">&laquo;</a>
+    Page 6 / 13
+        <a href="../category/misc7.html">&raquo;</a>
+</p>
+  </section><!-- /#content -->
+
+                <footer id="contentinfo" class="body">
+                </footer><!-- /#contentinfo -->
+
+        </body>
+</html>

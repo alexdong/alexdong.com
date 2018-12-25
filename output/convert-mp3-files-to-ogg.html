@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <meta charset="utf-8" />
+                <title>"Convert mp3 files to ogg"</title>
+                <link rel="stylesheet" href="./theme/css/main.css" />
+        </head>
+
+        <body id="index" class="home">
+                <header id="banner" class="body">
+                        <h1><a href="./">Raw thoughts from Alex Dong </a></h1>
+                        <nav><ul>
+                </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./convert-mp3-files-to-ogg.html" rel="bookmark"
+           title="Permalink to "Convert mp3 files to ogg"">"Convert mp3 files to ogg"</a></h1>
+    </header>
+
+    <div class="entry-content">
+      <ul>
+<li>code</li>
+<li>open source</li>
+<li>bestof</li>
+</ul>
+<hr>
+<p>I have never expected this to be hard. Sure it won't be difficult to do this in 2013. But after sinking almost 1 hour into this, I decided to write it down hoping that it might save other people a bit time. </p>
+<p>So I started with <a href="sox.sourceforge.net/">sox</a>. I tried <code>sox zit.mp3 zit.ogg</code> and received an error message</p>
+<blockquote>
+<p>sox FAIL formats: no handler for file extension `ogg'. </p>
+</blockquote>
+<p>Then I tried <code>dir2ogg -q7 zit.mp3</code> which was recommended by a post on Ubuntu's discussion forum. But unfortunately, it still didn't work out. Here is the error message I got: </p>
+<blockquote>
+<p>dir2ogg 0.11.8 (2009-08-04), converts audio files into ogg vorbis.</p>
+<p>WARNING: Mutagen failed on zit.mp3, no tags available
+Traceback (most recent call last):
+ID3NoHeaderError: 'zit.mp3' doesn't start with an ID3 tag</p>
+<p>INFO: Converting "zit.mp3" (using mpg123 as decoder)...
+[wav.c:143] error: cannot even write a single byte: Illegal seek
+[audio.c:630] error: failed to open audio device
+[mpg123.c:902] error: Failed to initialize output, goodbye.
+ERROR: Cannot open output file "zit.ogg": Permission denied
+WARNING: No tags found...
+}}}</p>
+</blockquote>
+<p>After much fiddling around, this is the final solution that was working for me. To chain <code>mpg123</code> and <code>oggenc</code> together. <code>mpg123</code> will generate a <code>.wav</code>  file to the standard output, which <code>oggenc</code> takes in and emit a corresponding <code>ogg</code> file. </p>
+<p><code>for i in *.mp3; do mpg321 $i -w - | oggenc -q7 -o ${i/mp3/ogg} -; done</code></p>
+<p>A few caveats: </p>
+<ul>
+<li><code>$i</code> is the filename and <code>${i/mp3/ogg}</code> changes the output filename. </li>
+<li><code>-q7</code> select a level-7 sound quality. Since both mp3 and ogg are lossy sound format, converting one to another with the same sample rate would only decrease the sound quality. By specifying a higher bit rate, the <code>ogg</code> output would sound similar to the <code>mp3</code> file. </li>
+<li>The <code>-</code> are quite important. </li>
+<li>On Ubuntu/Debian, you might need to install the packages using <code>sudo apt-get install mpg321 vorbis-tools</code></li>
+</ul>
+    </div><!-- /.entry-content -->
+  </article>
+</section>
+
+                <footer id="contentinfo" class="body">
+                </footer><!-- /#contentinfo -->
+
+        </body>
+</html>

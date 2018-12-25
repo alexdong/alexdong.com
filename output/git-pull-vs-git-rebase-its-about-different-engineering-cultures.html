@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <meta charset="utf-8" />
+                <title>'git pull vs. git rebase: it''s about different engineering cultures'</title>
+                <link rel="stylesheet" href="./theme/css/main.css" />
+        </head>
+
+        <body id="index" class="home">
+                <header id="banner" class="body">
+                        <h1><a href="./">Raw thoughts from Alex Dong </a></h1>
+                        <nav><ul>
+                </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./git-pull-vs-git-rebase-its-about-different-engineering-cultures.html" rel="bookmark"
+           title="Permalink to 'git pull vs. git rebase: it''s about different engineering cultures'">'git pull vs. git rebase: it''s about different engineering cultures'</a></h1>
+    </header>
+
+    <div class="entry-content">
+      <ul>
+<li>code</li>
+<li>startup</li>
+</ul>
+<hr>
+<p>It's not often for me to become interested in technology itself these days. But the discussion between git pull and git rebase has interested me a lot.  Not for its own technology details but more as a tool to either loose or strengthen an engineering culture.</p>
+<p>git pull encourages a rather loose, relax and, in the long run, ad-hoc manner of team work.  This suits startup cultures quite well.   It's fast to learn and easy for people who migrate from older version controls like subversions to learn.  Engineers works on his own little branch. He has no reason to integrate with other people's code until the very end of one's little project is finished.  The commit history ends up having messages that describes more about the code and less about the reason and thinking behind this list of patches.  For example, if you happen to follow the resque project, you'll realize that <a href="https://github.com/defunkt/resque/commit/832fb9d696c4367ae17d99aaa2ef6b43268605c5">a commit message like this</a> is not really that helpful. 7 lines of changes.  One line comment without explaining why the 'destroy' is delayed.</p>
+<p>git rebase encourages comparatively stricter engineering culture. One has to pay attention to not only his code, but also the commit histories.  Projects like linux kernel uses it to enforce a culture of <a href="http://www.mail-archive.com/dri-devel@lists.sourceforge.net/msg39091.html"> keep clean history</a>. Linus even wrote up what a good commit would look like <a href="https://github.com/torvalds/subsurface/blob/master/README#L161">here. </a>  I can see how this could be very helpful in a project where the code needs to be maintained 15 years later by totally different set of people.  A clean history, instead of a loose list of incremental functional changes, will provide more context in the long run.  As a sample,<a href="http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=ce57e981f2b996aaca2031003b3f866368307766"> check out this patch</a> by Linus for a firmware related patch. <a href="http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=blobdiff;f=drivers/base/firmware_class.c;h=81541452887bd3ce5d868909e3fb753fb3d6b124;hp=e85763de928f096e46cbfd74abb69c064e5c2101;hb=ce57e981f2b996aaca2031003b3f866368307766;hpb=e1cc485262846dcad931bf85ee655cbbb815bfe6">4 lines</a> of changes, 8 lines of comments on the commit.</p>
+    </div><!-- /.entry-content -->
+  </article>
+</section>
+
+                <footer id="contentinfo" class="body">
+                </footer><!-- /#contentinfo -->
+
+        </body>
+</html>

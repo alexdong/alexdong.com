@@ -1,0 +1,48 @@
+header#banner {
+  text-align: center;
+  padding: 10px 0;
+}
+
+/*
+	Body
+*****************/
+#content {
+  margin: 0 auto;
+  background: #fff;
+  overflow: hidden;
+  padding: 20px 20px;
+  width: 600px;
+}
+
+article {
+  margin-bottom: 1em;
+}
+
+article h1 {
+  margin: 1.5em 0 0.5em;
+  font-size: 22px;
+}
+
+article blockquote {
+  margin-left: 0.5em;
+  padding-left: 1em;
+  font-style: italic;
+}
+
+article h2 {
+  font-size: 18px;
+}
+
+article p {
+  font-size: 16px;
+  margin: 0.5em 0;
+  line-height: 1.25;
+}
+
+article + hr {
+  color: #ccc;
+}
+
+.paginator {
+  text-align: center;
+}

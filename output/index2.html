@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <meta charset="utf-8" />
+                <title>Raw thoughts from Alex Dong</title>
+                <link rel="stylesheet" href="./theme/css/main.css" />
+        </head>
+
+        <body id="index" class="home">
+                <header id="banner" class="body">
+                        <h1><a href="./">Raw thoughts from Alex Dong </a></h1>
+                        <nav><ul>
+                </header><!-- /#banner -->
+  <section id="content" class="body">
+      <article>
+        <h1 class="entry-title"><a href="./a-problem-statement-for-the-web-bootstraps-way-of-thinking-a-password-manager-follows-unix-philosophy-and-rules-on-writing-cc-shared-libraries.html">"A problem statement for the web, bootstrap's way of thinking, a password manager follows unix philosophy and rules on writing c/c++ shared libraries"</a></h1>
+        <abbr class="published" title="2013-08-26T09:44:00+12:00">
+          Published: Mon 26 August 2013
+        </abbr>
+        <h2>- links</h2>
+<p><a href="http://unitscale.com/mb/bomb-in-the-garden/">The bomb in the garden</a>: <a href="http://practicaltypography.com/end-credits.html#bio">Matthew Butterick</a>'s summarization on the problems of the Internet. It helps me to tie a few thoughts together into a more coherent framework.  The problem statement:"the web is much better at making information free than making it expensive".  As a consequence, "We've ended up with a web dominated by advertising, which is weakening. ". We're seeing "a gradual degradation of design quality" and the real possibility of "the open web becomes a second-class platform".  He did propose a solution, which is similar to what Tim Berners Lee <a href="http://www.weforum.org/videos/insight-idea-tim-berners-lee">said</a> at World Economic Forum in Jan, that we need to make it really easy to pay for online content.  </p>
+<p><a href="http://www.helloerik.com/bootstrap-3-grid-introduction">Bootstrap 3 Grid Introduction</a>: I found bootstrap v3's "mobile first" approach a bit confusing. This article provides a short-but-solid description on what does it mean to be a "mobile first" grid system.  Even if you were not using bootstrap v3, reading this would still bring a new perspective to stylesheet design in mobile age. </p>
+<p><a href="http://zx2c4.com/projects/password-store/">Pass: the standard Unix password manager</a>: A great password manager that follows the Unix philosophy. It uses GPG to encrypt password files and uses git to track password changes. </p>
+<p><a href="http://lucumr.pocoo.org/2013/8/18/beautiful-native-libraries/">Beautiful Native Libraries</a>: Armin's suggestions on writing proper c/c++ shared libraries that "do not annoy your users". Loads of solid advises, but I hope I would never need to use them. </p>
+      </article>
+      <hr/>
+      <article>
+        <h1 class="entry-title"><a href="./choirio-explained.html">"Choir.io explained"</a></h1>
+        <abbr class="published" title="2013-08-16T10:15:00+12:00">
+          Published: Fri 16 August 2013
+        </abbr>
+        <h2>- bestof</h2>
+<p>People ask me "why do you build <a href="http://choir.io">choir.io</a>". Yes,
+the <a href="http://choir.io/player/f9c750f2bedb0c0f">Github Realtime Activity</a> 
+demo is cool, but are you really going to bet your next startup on this?" </p>
+<p>My answer is yes and this post explains why. </p>
+<p>Five years from now, most of us will handle
+casual computing tasks with wearable computers.  We don't know what 
+the devices might look like but it's almost certain that we will be 
+communicating with them using voice commands.  Google Moto X's 
+<a href="http://www.theverge.com/2013/7/14/4522054/moto-x-always-listening-voice-commands-new-notifications">"always listening"</a>
+feature enables us to talk to the phone without having to launch an 
+app. Google's voice search is finally fast enough to keep up with 
+my natural speaking speed. </p>
+<p>However, the options for computers to communicate back to us 
+are still very limited. Your email client might play a ding sound
+when a new email arrives. But the sound stays the same regardless of whom 
+the mail is sent from and how important it is to you.  </p>
+<p>Our ears are born multi-tasking masters. As I am
+typing this, I could hear the heat pump's humming, 
+the wind blowing the leaves and the light tapping of snow flakes on the 
+window.  All at the same time. </p>
+<p>We can also, almost effortlessly, notice changes of a sound among 
+different background "noises".  Without looking out of the window, I can tell 
+that the snow has just turned into a sleety rain, because the soft snow
+falling sound has become much louder as the ice hitting the ground. </p>
+<p>Sound is the perfect medium for wearable computers to talk back to us. 
+Sound has a dozen of properties that we can tune to convey different 
+level of emotions and intrusiveness.  Different sound packs would fit 
+into various contexts. </p>
+<p>This is where Choir comes in. Choir provides a programmable
+interface to translate events into a rich set of context-aware sounds.
+Our users mark events with emotions and intrusivenss and we take care of the
+rest. </p>
+<p>Is Choir too early for the market? Certainly not. Choir has three 
+killer applications. </p>
+<p>First, ambient sound monitoring. By associating user or server 
+activities with different sounds, you can stay aware of the current statuses
+without having to look at the graphs. If something unusual happens, you would
+hear the changes almost subconsciously.  Failed login requests, rejected 
+credit card transactions, 500 errors are a few good examples here. </p>
+<p>Second, notify without interruptions. Today your notifications are 
+mostly delivered via email or chat room messages. You have to bear the cost
+of context switches to checkout these messages.  Choir can provide you 
+with a more fine-grained control over different type of notifications. 
+For example, you might choose to play a pleasant, low-intrusive sound
+when a user gives a kudos to a support ticket, but you would probably want to
+select a negative and intrusive sound, maybe a sea monster roar, if a 
+user just unsubscribed from your service. If you hear too many of the 
+scary sea monster noises, you will know something is wrong. </p>
+<p>Third, celebrate with others.  Some companies would hit a giant
+gone when they close a new deal. It is a great morale booster to bring 
+the whole team together and share the excitement of successes. 
+Now you could configure Choir to play a cheerful sound when a new paid
+user sign up for your service. </p>
+<p>If you are interested to give Choir a go, please request an invite at 
+<a href="http://choir.io">http://choir.io</a>. You can also visit our <a href="http://choir.uservoice.com">support
+forum</a> and tell us what you think. 
+We'd love to hear from you. </p>
+      </article>
+      <hr/>
+      <article>
+        <h1 class="entry-title"><a href="./facebooks-huxley-looking-inside-dropbox-short-writing-style-guide-and-easy-to-be-a-jerk-online.html">"Facebook's Huxley, looking inside Dropbox, short writing style guide and easy to be a jerk online"</a></h1>
+        <abbr class="published" title="2013-08-15T22:25:00+12:00">
+          Published: Thu 15 August 2013
+        </abbr>
+        <h2>- links</h2>
+<p><a href="https://github.com/facebook/huxley">Facebook's Huxley</a>: Huxley is a new approach to test UIs.  Presentation layer tests are tedious to write and fragile to maintain. Huxley takes screenshots of each test run and compare them with previous results to find out what has changed.  </p>
+<p><a href="https://www.usenix.org/system/files/conference/woot13/woot13-kholia.pdfplus">Looking inside the (Drop) box</a>: This paper presents a method to decrypt Dropbox's native app, bypass the two factor authentication and hijack Dropbox accounts. The key here is to inject Python code by overriding standard C functions like <code>strlen</code>. </p>
+<p><a href="http://www.sdc.uwo.ca/writing/gradhandouts/General%20Writing%20-%20Writing%20Style%20-%20Presentation.pdf">Effective writing style PPT from WSU</a></p>
+<blockquote>
+<p>While you might feel that this takes away some of the forcefulness of your writing, you should always feel that being correct is more important than being persuasive.
+(via <a href="https://twitter.com/Bohr_research">@Bohr_research</a>)</p>
+</blockquote>
+<p><a href="http://www.somebits.com/weblog/culture/games/toxic-behavior-in-league-of-legends.html">Most everyone can be a jerk online</a></p>
+<blockquote>
+<p>1% of players are toxic, frequently acting badly; 78% of players are generally good. The graph on the right shows toxic behavior. And only 5% of toxic behavior comes from toxic people; 77% of it comes from people who are usually good.  </p>
+</blockquote>
+      </article>
+      <hr/>
+      <article>
+        <h1 class="entry-title"><a href="./androids-notification-center-the-awful-undefined-in-javascript-peak-e-book-sales-and-laura-poitras.html">"Android's notification center, the awful 'undefined' in javascript, peak e-book sales and Laura Poitras "</a></h1>
+        <abbr class="published" title="2013-08-14T22:15:00+12:00">
+          Published: Wed 14 August 2013
+        </abbr>
+        <h2>- links</h2>
+<p><a href="http://paulstamatiou.com/android-is-better">Android is better - How I fell in love with Android and how you can too</a>: My main phone is an iPhone 4s.  I used Android briefly for a recent project.  Are there anything I hope iOS would have? Android's notification center. <a href="http://twitter.com/stammy">@stammy</a> summarized it up here: </p>
+<blockquote>
+<p>My love of Android lies heavily with the way Android handles notifications. These aren't your useless "read-only" iOS notifications that just launch the app. I've thought about notifications a lot while I working on the (twitter's) notifications team; how to keep the user in control and make it clear what each notification is actually saying.</p>
+<p>Basically, it's your entire phone command center. </p>
+</blockquote>
+<p><a href="http://designpepper.com/blog/drips/redefining-undefined">Redefining 'undefined'</a>: This short post tells a fascinating story of <code>undefined</code> in javascript. <code>undefined</code> is both a "global variable", which means it can be assigned to, and an immutable value where <code>undefined</code> is the only instance of the type.<br>
+If you are not confused enough, check out <a href="http://designpepper.com/blog/drips/the-difference-between-boolean-objects-and-boolean-primitives-in-javascript">The Difference Between Boolean Objects and Boolean Primitives in JavaScript</a>. The gist here is that if you create a <code>new Boolean(false)</code> object and use it in an <code>if</code> statement, you'll get the result as if it is a <code>true</code>.</p>
+<p><a href="http://www.roughtype.com/?p=3590">The flattening of e-book sales</a>: Ebook sales growth has peaked at about 25% of total market size. The author gives 6 guesses on why this is the case. My theory is that technology evolves much faster than human beings. Once a habit is formed, it'll be there for the rest of one's life.  The widening gaps between generations in the <a href="http://lancewiggs.com/2013/08/12/living-forward/">millennial test</a> is a good example of how hard it is to change habits. </p>
+<p><a href="http://www.nytimes.com/2013/08/18/magazine/laura-poitras-snowden.html?pagewanted=all&amp;_r=0">How Laura Poitras Helped Snowden Spill His Secrets</a>: Laura Poitras was contacted by Snowden in January, who asked for her public key before sending out any documents.  She then met him and filmed the interview between Greenwald and Snowden in HongKong, as part of her documentary on surveillance state.  This article talks about her work, her personality and the very intense story that leads up to the final Snowden leak.  </p>
+      </article>
+      <hr/>
+      <article>
+        <h1 class="entry-title"><a href="./rob-malda-on-social-news-hemingways-eye-innodbs-full-text-search-and-etsys-crack-down-on-ssl-cas.html">"Rob Malda on social news, Hemingway's eye, InnoDB's full text search and Etsy's crack down on SSL CAs."</a></h1>
+        <abbr class="published" title="2013-08-08T22:40:00+12:00">
+          Published: Thu 08 August 2013
+        </abbr>
+        <h2>- links</h2>
+<p><a href="http://www.washingtonpost.com/blogs/the-switch/wp/2013/08/07/slashdot-founder-rob-malda-on-why-there-wont-be-another-hacker-news/">Tim B. Lee interviewed Rob Malda</a>: The part of social news, the problem with hacker news and twitter are the most interesting bits to me. </p>
+<blockquote>
+<p>I did not premeditate anything. I just winged it, and when I saw problems I triaged them. The Slashdot system was very much evolved and not designed.   One thing I learned is don’t spend your entire life playing predictive defense against attacks that will never happen. Real people are very clever. If they choose to attack you they’ll attack you in ways you can’t predict.
+Most people are just purely passive consumers, and that’s okay. I think a lot of people in this space obsess too much over trying to convert passives into actives. Some people are just wired to be that kind of person. Others aren’t. That’s okay.
+With more and more voices, you tend toward broader subjects. Eventually it becomes less and less interesting. But what’s interesting to [me] isn’t always the thing that’s most lucrative. I had a pretty strong belief that the population of Slashdot users was relatively fixed. That makes for a crappy business model. You want to have a million really good users and be done? How does make the chart go up and to the right?</p>
+</blockquote>
+<p><a href="http://www.huffingtonpost.com/2013/08/01/hemingway-lookalike-contest_n_3690493.html?utm_hp_ref=arts">Hemingway lookalike contest</a>: <a href="http://corte.si">Aldo</a> described Hemingway using following terms: "full of action, well seasoned, brilliant, paranoid, depressed and committed suicide".  I found only the real photo captures all these characters. The participants seems to lack one of these "action, brilliant or depressed".  I happend to notice that his left eye seems to lack the paranoid and a color of brilliance. <a href="http://answers.yahoo.com/question/index?qid=20070916132644AAArXuY">Turned out</a> "Hemingway's left eye was defective from birth ... In May of 1918, Hemingway wanted to join the Army but could not due to a defective left eye which he inherited from his mother."</p>
+<p><a href="http://www.mysqlperformanceblog.com/2013/07/31/innodb-full-text-search-in-mysql-5-6-part-3/">Performance evaluation of InnoDB's Full-text search in Mysql 5.6</a>: disappointing. Slow to index. Slow to query. It bloats the code base. I don't know why this feature needs to be built in the first place. </p>
+<blockquote>
+<p>InnoDB FTS fills a need for those people who want the features and capabilities of InnoDB but can’t modify their existing applications or who just don’t have enough FTS traffic to justify building out a Sphinx/Solr/Lucene-based solution.</p>
+</blockquote>
+<p><a href="http://codeascraft.com/2013/07/16/reducing-the-roots-of-some-evil/">Reducing The Roots of Some Evil</a>: SSL CA is in such a mess that company like Etsy is manually trimming down the number of CA they trust. This sounds good but feels a bit unscalable. </p>
+      </article>
+      <hr/>
+      <article>
+        <h1 class="entry-title"><a href="./digital-photo-printing-shadow-dom-local-newspaper-as-civic-duty-and-the-brilliance-of-javascript.html">"Digital photo printing, Shadow DOM, Local newspaper as civic duty and the brilliance of javascript"</a></h1>
+        <abbr class="published" title="2013-08-08T22:06:00+12:00">
+          Published: Thu 08 August 2013
+        </abbr>
+        <h2>- links</h2>
+<p><a href="http://petapixel.com/2013/07/25/digital-photo-printing-10-years-after/">Digital photo printing: 10 years after</a>:</p>
+<blockquote>
+<p>Is anyone still printing photos? 
+Research firm InfoTrends did a survey of Internet connected households in EU, and photo printing went up 11% in 2012 compared to 2007-2008. Similarly, U.S.-based online photo printing has become a big deal, growing by about 20% annually between 2007-2012 according to market research firm IbisWorld. Three significant reasons for this growth are: the adoption of digital cameras, ability to transport photos online, and the increase in broadband and mobile Internet connections.
+48% of the online photo printing market in the U.S. being prints on paper..   11.2% canvas and frame prints; 19.7% photobooks</p>
+</blockquote>
+<p><a href="http://blog.jonudell.net/2012/10/30/why-i-subscribe-to-the-ann-arbor-chronicle/">Why I subscribe to the Ann Arbor Chronicle</a>: My ideal local newspaper in 2020 will be one run by volunteers, locals vote for issues to be covered and volunteers would write subjective report. Ann Arbor Chronicle's donation increase over the last a few years seems to confirm the possibility of this. </p>
+<blockquote>
+<p>Launched in September 2008, the Ann Arbor Chronicle is an online newspaper that focuses on civic affairs and local government coverage. Although we’d likely be classified by most folks as “new media,” in many ways we embrace an ethos that runs contrary to current trends: Longer, in-depth articles; an emphasis on factual accuracy and thoroughness, not speed; and an assumption that our readers are thoughtful, intelligent and engaged in this community.</p>
+</blockquote>
+<p><a href="http://glazkov.com/2011/01/14/what-the-heck-is-shadow-dom/">What the Heck is Shadow DOM?</a>: HTML's own way for building custom controls. The idea is there could a hidden dom structure that's normally hidden from javascript and css. The custom control author can choose to expose some of it via psuedo-selectors. <code>&lt;input type="slider"&gt;</code>, <code>&lt;video&gt;</code> are good examples. More concrete use cases can be found <a href="http://wiki.whatwg.org/wiki/Component_Model_Use_Cases">here</a>. </p>
+<p><a href="https://blog.mozilla.org/javascript/2013/08/01/staring-at-the-sun-dalvik-vs-spidermonkey/">Staring at the Sun: Dalvik vs. ASM.js vs. Native</a>: Javascript does have the promise of a popular language. It's messy. It's ugly. It has layers and layers of patches yet everytime you feel it has hit a wall, a project like <a href="http://asmjs.org">asm.js</a> will come and lift it into stratosphere. 
+Sometimes I do hope that WebOS would make it to the end if the <a href="http://www.theverge.com/2012/6/5/3062611/palm-webos-hp-inside-story-pre-postmortem">webkit issues were that easy to solve</a>. I sincerely wish FireFox and Mozilaa best luck in breaking up the walled gardens. </p>
+<blockquote>
+<ol>
+<li>Asm.js is reasonably competitive with native C++ code on ARM. Even discarding the one score where asm.js did better, it executes at around 70% of the speed of native C++ code. These results suggest that apps with high performance needs can use asm.js as the target of choice for critical hot-path code, achieving near native performance.</li>
+<li>Asm.js competes very well on mobile performance compared to Dalvik. Even throwing out the benchmarks that are highly favourable to asm.js (binary-trees and fasta), there seems to be a consistent 10-50% speedup over comparable Dalvik code.</li>
+</ol>
+</blockquote>
+      </article>
+      <hr/>
+      <article>
+        <h1 class="entry-title"><a href="./mosquitos-mouthpiece-fallible-human-being-ssl-forward-secrecy-and-a-webhook-debug-tool.html">"Mosquito's mouthpiece, fallible human being, SSL Forward secrecy and a webhook debug tool"</a></h1>
+        <abbr class="published" title="2013-08-07T21:58:00+12:00">
+          Published: Wed 07 August 2013
+        </abbr>
+        <h2>- links</h2>
+<p><a href="http://phenomena.nationalgeographic.com/2013/08/06/heres-what-happens-inside-you-when-a-mosquito-bites/">Here’s What Happens Inside You When a Mosquito Bites</a>
+Absolutely stunning series of short microscope video on how flexible and intelligent the mosquito's mouthpart is. </p>
+<p><a href="http://blog.canonical.com/2013/07/30/ubuntu-forums-are-back-up-and-a-post-mortem/">Ubuntu Forums are back up and a post mortem</a>
+Security is hard because fallible people are always a weak part of the chain. </p>
+<blockquote>
+<p>A forum moderator account was "stolen", then the attacker uses XSS to gain admin permissions. </p>
+</blockquote>
+<p><a href="http://blog.ivanristic.com/2013/06/ssl-labs-deploying-forward-secrecy.html">SSL Labs: Deploying Forward Secrecy</a></p>
+<blockquote>
+<p>In the context of mass surveillance, however, the RSA key exchange is a serious liability. Your adversaries might not have your private key today, but what they can do now is record all your encrypted traffic. Eventually, they might obtain the key in one way or another (e.g., by bribing someone, obtaining a warrant, or by breaking the key after sufficient technology advances) and, at that time, they will be able to go back in time to decrypt everything.
+...
+but generates session keys in such a way that only the two parties involved in the communication can obtain them. No one else can, even if they have access to the server's private key. 
+The article provides a good entry-leve description to SSL's support of 
+Forward Secrecy using DHE and ECDHE algorithm.  The author also has a follow-up 
+post on how to configure Apache, Nginx and OpenSSL to support Forward Secrecy. </p>
+</blockquote>
+<p><a href="https://github.com/progrium/localtunnel">localtunnel: Expose your local web server to the Internet</a>: A must have tool to debug webhooks. </p>
+      </article>
+      <hr/>
+      <article>
+        <h1 class="entry-title"><a href="./four-steps-in-learning-programming.html">"Four steps in learning programming"</a></h1>
+        <abbr class="published" title="2013-07-30T21:07:00+12:00">
+          Published: Tue 30 July 2013
+        </abbr>
+        <ul>
+<li>coding</li>
+<li>education</li>
+</ul>
+<hr>
+<p>Recently I came across a suggestion on <a href="http://photo.stackexchange.com/questions/8300/ideas-for-daily-exercises-to-improve-photography-technique">ideas for daily excercises to improve
+photography technique</a>. 
+Here are the main ideas from "art school's true exercises": </p>
+<blockquote>
+<ol>
+<li>Take n pictures of a single object, making sure that no two were the same (n was generally some large number like '100' or '250') - 
+   The exercise was designed to train yourself to begin to see the many ways it's possible to approach a subject...</li>
+<li>Find an object and take the exact same picture of it every hour for 24 hours (generally an inanimate object... ) - 
+   The goal was to see how even something that doesn't move changes quite radically depending on what is going on around it.</li>
+<li>Take 100 pictures of objects that have a common characteristic (they're all buildings, they're all less than 1 inch wide, 
+   they're all blue, etc.) - The goal was to learn how to find interesting pictures 'hiding inside' everyday objects.</li>
+<li>Take 100 pictures from a perspective you wouldn't normally think to take pictures from (lying down, under water, 
+   upside down, cropped to 1x6, etc.)</li>
+</ol>
+</blockquote>
+<p>I think these four steps could be mapped to the similar process in learning and mastering the art of programming, ie 
+learning your tool, understand the context, form your own opinion and open up to new ideas. </p>
+      </article>
+      <hr/>
+      <article>
+        <h1 class="entry-title"><a href="./snowden-getaway-options-academic-interaction-feynman-diagrams-javascripts-wake-and-false-confidence-in-https.html">"Snowden getaway options, academic interaction feynman diagrams, javascript's wake and false confidence in https"</a></h1>
+        <abbr class="published" title="2013-07-30T09:57:00+12:00">
+          Published: Tue 30 July 2013
+        </abbr>
+        <h2>- links</h2>
+<p><a href="http://edition.cnn.com/2013/07/12/us/snowden-getaway-options">What are the odds of a Snowden getaway?</a>: Even reading this makes me feel cold. </p>
+<blockquote>
+<p>Speaking of movies, near the end of the hit film "Catch Me If You Can," there's a scene that Snowden might do well to watch while he's killing time in the airport lounge (or wherever he is) pondering his fate. The young forger, Frank Abagnale, who has been staying a step ahead of the feds, finally grows irritated and fatigued. Not because they are particularly skilled in their hunting, nor because they are getting closer, but simply because they won't give up. In a fit of pique, he blurts into the phone, "Stop chasing me!" On the other end, the dogged, bureaucratic Treasury agent, Carl Hanratty, answers, "I can't stop. It's my job."
+Ultimately, this is why many people who have been involved in such matters believe Snowden will be caught.  ...
+They'll have to make Edward Snowden their living, because those who are chasing him already have. Government agents will be paid every minute of every day for as long as it takes. Seasons may change and years may pass, but the odds say that one morning, he'll look out of a window, go for a walk or stop for a cup of coffee, and the trap will spring shut. It will be almost like a movie.</p>
+</blockquote>
+<p><a href="http://www.phdcomics.com/comics.php?f=1461">Academic Interaction Feynman Diagrams</a>: hilarious social interaction patterns described using Feynman diagrams.</p>
+<p><a href="http://blog.alexmaccaw.com/javascript-wake-event">JavaScript ‘wake’ event</a></p>
+<blockquote>
+<p>It turns out there is no JavaScript wake event. There is an online event, but it doesn’t seem to trigger whenever the computer is sent to sleep and re-awoken.
+The only sure fire way I could work out to achieve this, was to run a interval and check that the it was invoked at the expected times. Any delay in an interval invocation indicates that the computer has just slept.</p>
+</blockquote>
+<p><a href="http://www.tedunangst.com/flak/post/tiny-downside-to-encrypting-all-web-traffic">tiny downside to encrypting all web traffic</a></p>
+<blockquote>
+<p>When "https is secure, make sure your bank uses https" permeates into the general conscience, does it become "if everything is https, everything is secure"? Does the prevalence of https inspire false confidence in the web or will people learn that https was never a good signal for determining the legitimacy of a (possibly forged) web site?</p>
+</blockquote>
+      </article>
+      <hr/>
+      <article>
+        <h1 class="entry-title"><a href="./two-scripts-for-android-app-reverse-engineering.html">"Two scripts for Android app reverse engineering"</a></h1>
+        <abbr class="published" title="2013-07-24T10:10:00+12:00">
+          Published: Wed 24 July 2013
+        </abbr>
+        <h2>- code</h2>
+<p>For the last two weeks, I've been working on an audit project for an Android app. 
+I worked on Microsoft's <a href="https://en.wikipedia.org/wiki/Windows_CE">WinCE</a> about 14 years ago. 
+I am quietly impressed by how developer friendly the Android platform is. Here are a couple of
+shell scripts I have written to make the reverse engineering process easier. </p>
+<p>During our work, it is quite common to make some modification to the smali files 
+generated by <a href="https://code.google.com/p/android-apktool/">apktool</a>, turn it back 
+into a proper apk and install on the device to see whether our guesses were correct. 
+This is quite a repetitive process that involves sign the apk, align the zip file, 
+uninstall the original app and install the new one from local computer to the device. </p>
+<p><code>Pack.sh</code> is a shell script that automates this process for you. It takes two parameters, 
+the first is the folder where the smali files are; the second is the package name 
+for the application, which is needed for us to automatically uninstalled the app from 
+the device. </p>
+<p>{% gist 6073781 %}</p>
+<p><a href="http://en.wikipedia.org/wiki/Strace">strace</a> is a brilliant tool that allows you to 
+attach to a running process and see all the unix system calls it's making. 
+Once you get it up and running, it is almost trivial to get a comprehensive view 
+of the app's interaction with Android system, for example, 
+which files it touches, which urls it requests. </p>
+<p>In our case, the app would be launched and crashed immediately, leaving us no time
+to manually attach a strace to the process to see what has gone wrong. <code>ambush.sh</code>
+is a shell script that waits for a process to show up and automatically attach strace
+to that process. This makes it possible for us to see what the app has been doing 
+before it crashes itself. It takes two parameters too. The first is the pattern 
+that <code>ps | grep</code> could use to find the process id; the latter is where the strace
+is located. </p>
+<p>{% gist 6034934 %}</p>
+<p><a href="http://benno.id.au/blog/2007/11/18/android-runtime-strace">Benno</a>
+has compiled a version of <a href="http://benno.id.au/android/strace">strace for Android</a>.
+If you have <a href="www.busybox.net">busybox</a> installed, you can run the following command 
+to install it from the net. </p>
+<p _="%" endcodeblock>{% codeblock lang:bash %}
+    $ cd /data/local
+    $ wget http://benno.id.au/android/strace
+    $ chmod 555 ./strace</p>
+<p>Please note that you'll have to put the strace in <code>/data/local</code> in order to 
+use <code>chmod</code> to make it an executable. </p>
+      </article>
+      <hr/>
+<p class="paginator">
+        <a href="./index.html">&laquo;</a>
+    Page 2 / 13
+        <a href="./index3.html">&raquo;</a>
+</p>
+  </section><!-- /#content -->
+
+                <footer id="contentinfo" class="body">
+                </footer><!-- /#contentinfo -->
+
+        </body>
+</html>

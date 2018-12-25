@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <meta charset="utf-8" />
+                <title>Raw thoughts from Alex Dong - misc category</title>
+                <link rel="stylesheet" href="../theme/css/main.css" />
+        </head>
+
+        <body id="index" class="home">
+                <header id="banner" class="body">
+                        <h1><a href="../">Raw thoughts from Alex Dong </a></h1>
+                        <nav><ul>
+                </header><!-- /#banner -->
+  <section id="content" class="body">
+      <article>
+        <h1 class="entry-title"><a href="../async-in-ruby-done-right-by-learning-from-erlang.html">Async in Ruby done right by learning from Erlang</a></h1>
+        <abbr class="published" title="2012-10-25T14:26:42+13:00">
+          Published: Thu 25 October 2012
+        </abbr>
+        <h2>- code</h2>
+<p>I wrote about <a href="http://alexdong.com/learn-a-language-you-wont-use-in-work/">learning a language you won't use in work</a>, mainly because by doing so, you'll gain understanding of the "right way" to do things.  <a href="http://alexdong.com/alan-kay-normal-considered-harmful/">Perspective</a> sometimes worth a lot more than people expected. Celluloid is a Ruby project that seems to get async model right by taking ideas from Erlang and implement them.</p>
+<blockquote>
+<p>By combining concurrency with object oriented programming, Celluloid frees you up from worry about where to use threads and locks. Celluloid combines them together into a single concurrent object oriented programming model, encapsulating state in concurrent objects and thus avoiding many of the problems associated with multithreaded programming. Celluloid provides many features which make concurrent programming simple, easy, and fun:</p>
+</blockquote>
+<p>Automatic "deadlock-free" synchronization: Celluloid uses a concurrent object model which combines method dispatch and thread synchronization. Each actor is a concurrent object running in its own thread, and <strong>every method invocation is wrapped in a fiber that can be suspended whenever it calls out to other actors, and resumed when the response is available</strong>. This means methods which are waiting for responses from other actors, external messages, or other system events (including I/O with Celluloid::IO) can be suspended and will never block other methods that are ready to run. This won't prevent bugs in Celluloid, bugs in other thread-safe libraries you use, and even certain "dangerous" features of Celluloid from causing your program to deadlock, but in general, programs built with Celluloid will be naturally immune to deadlocks.</p>
+<p>Fault-tolerance: Celluloid has taken to <strong>heart many of Erlang's ideas about fault-tolerance in order to enable self-healing applications</strong>. The central idea: have you tried turning it off and on again? Celluloid takes care of rebooting subcomponents of your application when they crash, whether it's a single actor, or large (potentially multi-tiered) groups of actors that are all interdependent. This means rather that worrying about rescuing every last exception, you can just sit back, relax, and let parts of your program crash, knowing Celluloid will automatically reboot them in a clean state. Celluloid provides its own implementation of the <strong>core fault-tolerance concepts in Erlang including linking, supervisors, and supervision groups.</strong></p>
+<p>via <a href="https://github.com/celluloid/celluloid">celluloid/celluloid</a>.</p>
+      </article>
+      <hr/>
+      <article>
+        <h1 class="entry-title"><a href="../use-sidekiq-to-make-resque-clusters-run-happier.html">Use sidekiq to make resque clusters run happier</a></h1>
+        <abbr class="published" title="2012-10-25T14:19:05+13:00">
+          Published: Thu 25 October 2012
+        </abbr>
+        <h2>- code</h2>
+<p>Resque is a single-thread, single-process, fork-based process. Running lots of them incurs serious swapping. There have been proposals of running <a href="http://blog.carbonfive.com/2011/09/16/improving-resques-memory-efficiency/">jruby</a> to solve this problem but looks like Sidekq and the upcoming Ruby 3.0 offer a cleaner solution.</p>
+<blockquote>
+<p>Sidekiq uses multithreading so it is much more memory efficient than Resque (which forks a new process for every job). You'll find that you might need 50 200MB resque processes to peg your CPU whereas one 300MB Sidekiq process will peg the same CPU and perform the same amount of work. Please see my blog post on Resque's memory efficiency and how I was able to shrink a Carbon Five client's resque processing farm from 9 machines to 1 machine.</p>
+</blockquote>
+<p>via <a href="https://github.com/mperham/sidekiq">mperham/sidekiq</a>.</p>
+      </article>
+      <hr/>
+      <article>
+        <h1 class="entry-title"><a href="../the-tesla-approach-to-distributing-and-servicing-cars.html">The Tesla Approach to Distributing and Servicing Cars</a></h1>
+        <abbr class="published" title="2012-10-24T08:37:02+13:00">
+          Published: Wed 24 October 2012
+        </abbr>
+        <ul>
+<li>startup</li>
+<li>strategy</li>
+</ul>
+<hr>
+<p>The following post from Telsa, the new car making company, reminds me the challenges people used to have when Apple opened its own physical store.  And why the late comers like Samsung are also piloting their own physical store as well.  <strong>People still triumphs machine, branding and technology at the end of day, especially for ground-breaking new stuff</strong>.</p>
+<blockquote>
+<p>By the time most people decide to head to their local dealer, they have already pretty much decided what car they want to buy, which is usually the same make as their old car. At that point it is largely just a matter of negotiating with the dealer on price. Tesla, as a new carmaker, would therefore rarely have the opportunity to educate potential customers about Model S if we were positioned in typical auto dealer locations.</p>
+</blockquote>
+<p>That is why we are deliberately positioning our store and gallery locations in high foot traffic, high visibility retail venues, like malls and shopping streets that people regularly visit in a relatively open-minded buying mood. This allows us to interact with potential customers and have them learn about our cars from Tesla Product Specialists before they have decided which new car to buy. The Product Specialists are also trained to answer questions about electric vehicles in general, not just ours. They are not on commission and they will never pressure you to buy a car. Their goal and the sole metric of their success is to have you enjoy the experience of visiting so much that you look forward to returning again.</p>
+<p>As it is, our Product Specialists could not sell you a car today under any circumstances, as Model S is already sold out several months in advance and there is no inventory on site. All they can do is get you to consider placing a reservation. Our stores are designed to be informative and interactive in a delightful way and are simply unlike the traditional dealership with several hundred cars in inventory that a commissioned salesperson is tasked with selling. Our technology is different, our car is different, and, as a result, our stores are intentionally different.</p>
+<p>via <a href="http://www.teslamotors.com/blog/tesla-approach-distributing-and-servicing-cars">The Tesla Approach to Distributing and Servicing Cars | Blog | Tesla Motors</a>.</p>
+      </article>
+      <hr/>
+      <article>
+        <h1 class="entry-title"><a href="../the-rise-of-the-successful-unsustainable-company.html">The rise of the “successful” unsustainable company</a></h1>
+        <abbr class="published" title="2012-10-24T08:29:21+13:00">
+          Published: Wed 24 October 2012
+        </abbr>
+        <h2>- startup</h2>
+<blockquote>
+<p>I do see companies that are sustainable even with high growth, like HubSpot whose <a href="http://blog.asmartbear.com/chaos-at-start.html">revenue curve is as predictable</a> as a plot on your TI-90 while also able to <a href="http://onstartups.com/tabid/3339/bid/54126/Video-of-Dharmesh-Shah-at-Business-of-Software-2010-Conference.aspx">obsess over customer satisfaction and retention</a>, or like Freshbooks who maintains an enviable corporate culture in addition to an unflagging revenue curve, or like SEOMoz whose insistence on <a href="http://www.seomoz.org/about/mission">TAGFEE</a> wins over employees, customers, <a href="http://www.feld.com/wp/archives/2012/05/seomoz-tagfee-and-me.html">and investors</a> alike, creating consistent growth even in the tumultuous market of SEO tools, or like Rackspace whose maniacal obsession with excellence in customer service allows them to charge premium prices and sustain an amazing 30% annual growth even at the massive scale of $1b in revenue.</p>
+</blockquote>
+<p>...</p>
+<p>It’s my goal to join the ranks of those excellent companies at WP Engine. With thirty employees, millions in revenue, a Rackspace-like commitment to customer service (we employ more WordPress experts per 1000 customers than anyone), an SEOMoz-like commitment to honesty and transparency, and a HubSpot-like obsession on introspective measurement, not just on marketing and growth but on customer happiness and retention, we’re experiencing fantastic growth, but in a way that I believe is sustainable.</p>
+<p>So now it’s your turn to think about this with your own company. Is your company building something of lasting value? Are you valuing growth over sustainable growth? Are you articulating and then living up to company-cultural values which attract and retain the right sort of people who then turn around and create the right sort of product and service?</p>
+<p>via <a href="http://blog.asmartbear.com/unsustainable-companies.html">The rise of the “successful” unsustainable company by @ASmartBear</a>.</p>
+      </article>
+      <hr/>
+      <article>
+        <h1 class="entry-title"><a href="../the-economic-logic-behind-tech-and-talent-acquisitions.html">The economic logic behind tech and talent acquisitions</a></h1>
+        <abbr class="published" title="2012-10-22T09:01:59+13:00">
+          Published: Mon 22 October 2012
+        </abbr>
+        <h2>- bestof</h2>
+<blockquote>
+<p>There’s been a lot of speculation lately about why big companies spend millions of dollars acquiring startups for their technology or talent. The answer lies in the economic logic that big companies use to make major project decisions.</p>
+</blockquote>
+<p>via <a href="http://cdixon.org/2012/10/18/the-economic-logic-behind-tech-and-talent-acquisitions/">The economic logic behind tech and talent acquisitions - Chris Dixon</a>.</p>
+      </article>
+      <hr/>
+      <article>
+        <h1 class="entry-title"><a href="../form-factor-wins-i-love-11-air.html">Form factor wins - I love 11' Air</a></h1>
+        <abbr class="published" title="2012-10-13T15:01:09+13:00">
+          Published: Sat 13 October 2012
+        </abbr>
+        <ul>
+<li>design</li>
+<li>mobile</li>
+</ul>
+<hr>
+<p><a href="http://alexdong.com/wp-content/uploads/2012/10/Screen-Shot-2012-10-13-at-3.58.22-PM.png"><img alt="" src="http://alexdong.com/wp-content/uploads/2012/10/Screen-Shot-2012-10-13-at-3.58.22-PM.png"></a></p>
+<p>I bought Zephyr an 11' air. I have been using it for the last 24 hours. Loving it. I think the size makes a, surprisingly, huge difference. It's so small that I notice myself put it away a lot. I think even better now given the subtle change of its size.</p>
+<p>Form factor wins.</p>
+      </article>
+      <hr/>
+      <article>
+        <h1 class="entry-title"><a href="../alan-kay-normal-considered-harmful.html">Alan Kay - Normal considered harmful</a></h1>
+        <abbr class="published" title="2012-10-13T14:33:02+13:00">
+          Published: Sat 13 October 2012
+        </abbr>
+        <ul>
+<li>design</li>
+<li>startup</li>
+</ul>
+<hr>
+<p>Alan Kay's 2009 talk in UIUC on what distinguishes us from frogs,  how to escape the pink normal plane, the power of outlooks, importance of expanding one's horizon, value of understanding the problem first before attacking a really hard problem.</p>
+<p>The target audiences are computer science students at UIUC but if you get started from 32:00, you should get right into the solution part if you are not interested in learning what's wrong with today's browser design and how it should be an OS first.</p>
+<p>Here are the slides that interest me the most.</p>
+<ul>
+<li>
+<p>Inner people is driven by forces from inside and outer people seek approval from others.</p>
+</li>
+<li>
+<p>Instrumental people think today is the future, they maintain status quo and ideas/tools people focus on the future and believe today can be better.</p>
+</li>
+<li>
+<p>Inner+Instrumental: dangerous. Some politicians and most dictators.</p>
+</li>
+<li>
+<p>Inner+Idea: who moves the history forward.</p>
+</li>
+<li>
+<p>Da Vinci is born with high IQ but Henry Ford was born in the right century with the knowledge ready for him. Hence Ford revolutionized how we travel yet  Da Vinci couldn't assemble an engine of his own.</p>
+</li>
+<li>
+<p>Calculus and Newton offered us some powerful tools that teach us how to see the world differently. Now a high school student can do things that aren't even thinkable in Da Vinci's time.</p>
+</li>
+<li>
+<p>Outlook is very powerful because it helps us to see the world different. How to increase it? Travel. Think. Don't be instrumental. Think normal as harmful. Believe the world can be better. Escape the pink plane.</p>
+</li>
+<li>
+<p>There are some universal traits anthropologists have found.</p>
+</li>
+<li>
+<p>Take any of these traits and amplify them, you've got a killer business.</p>
+</li>
+<li>
+<p>Carefully encourage and go after those "non-universal" ones. These are the things that separate us from frogs.</p>
+</li>
+<li>
+<p>Paul MacCready was awarded the best engineer of 20th century for building the first human powered airplane that flew from UK to French.</p>
+</li>
+<li>
+<p>Previous attempts started with an assumption, built a prototype, crashed it and try another assumption in another 18 months.</p>
+</li>
+<li>
+<p>Paul started by constructing a really simple model, as shown on left-bottom corner, that allows him to cycle through assumptions and ideas within a few minutes. Hence he explored the problem space a lot thoroughly. He won the awards in simply 5 years.</p>
+</li>
+</ul>
+<p><img alt="" src="http://www.columbia.edu/cu/news/02/10/images/susanSontag.jpg"></p>
+<p><strong>All understanding begins with our not accepting the world as it appears. </strong></p>
+<ul>
+<li>Susan Sontag</li>
+</ul>
+      </article>
+      <hr/>
+      <article>
+        <h1 class="entry-title"><a href="../startupville-4-factors-to-build-a-long-term-startup-community.html">StartupVille | 4 Factors to build a long-term startup community</a></h1>
+        <abbr class="published" title="2012-10-12T10:49:22+13:00">
+          Published: Fri 12 October 2012
+        </abbr>
+        <h2>- startup</h2>
+<p>4-minute video. Worth every second.</p>
+      </article>
+      <hr/>
+      <article>
+        <h1 class="entry-title"><a href="../four-nice-links-about-traction-and-quant-based-marketing.html">Four nice links about traction and quant based marketing</a></h1>
+        <abbr class="published" title="2012-10-09T21:20:51+13:00">
+          Published: Tue 09 October 2012
+        </abbr>
+        <h2>- startup</h2>
+<p>Ran into a few posts about startup traction and the concept of quant based market. Thought it might benefit some readers of this blog. (If you haven't read my previous post of <a href="http://alexdong.com/if-you-build-it-will-they-come/">distribution channels,</a> you should.)</p>
+<ul>
+<li>
+<p>Gabriel from DuckDuckGo has two nice articles on this topic.  "<a href="http://www.gabrielweinberg.com/blog/2012/07/traction-mistakes.html">How to move the needle</a>" talks about traction for different growth period and "<a href="http://www.gabrielweinberg.com/blog/2012/07/traction-mistakes.html">Traction mistakes</a>" lists 4 common mistakes people make. I have all four of them squarely.  This 50% time on product and 50% for traction parallel thinking is certainly the approach I'd take if I have a chance to do it again.   BTW, he is writing a <a href="http://tractionbook.com/">book</a> on this topic too. His co-author has a <a href="http://justinmares.com/thoughts-on-paul-grahams-growth/">recent review </a>on PG's "Startup = Growth" essay which echos what Gabriel has said.</p>
+</li>
+<li>
+<p>Noah Kagan who did the original marketing work for mint.com has an interesting post on <a href="http://okdork.com/2010/07/15/quant-based-marketing-for-pre-launch-start-ups/">Quant Based Marketing</a>.  The basic idea is pretty simple. List all potential channels of incoming attention and conversion rate from day-0. Then follow through the list.  Here is the <a href="https://docs.google.com/spreadsheet/ccc?key=0AuTYwDzB4XSudGpFcE9lSWI4YzUwcnhKZnNoMktEdkE&amp;hl=en_GB#gid=0">spreadsheet </a>for it. Worth a close look.</p>
+</li>
+</ul>
+      </article>
+      <hr/>
+      <article>
+        <h1 class="entry-title"><a href="../git-a-new-form-of-argument.html">'Git: a new form of argument'</a></h1>
+        <abbr class="published" title="2012-10-09T08:21:56+13:00">
+          Published: Tue 09 October 2012
+        </abbr>
+        <h2>- strategy</h2>
+<p>My favorite author Clay Shirkey has recently given a TED talk on how open source technology can eventually change the concept of governance.  He compares git, the distributed version control system, to printing press, voting, jury and peer review as a new form of argument tools.</p>
+      </article>
+      <hr/>
+<p class="paginator">
+        <a href="../category/misc8.html">&laquo;</a>
+    Page 9 / 13
+        <a href="../category/misc10.html">&raquo;</a>
+</p>
+  </section><!-- /#content -->
+
+                <footer id="contentinfo" class="body">
+                </footer><!-- /#contentinfo -->
+
+        </body>
+</html>
