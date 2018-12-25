@@ -13,6 +13,32 @@
                 </header><!-- /#banner -->
   <section id="content" class="body">
       <article>
+        <h1 class="entry-title"><a href="./build-start-up-community-where-you-live.html">Two outstanding posts of "is it possible to build startup community where you</a></h1>
+        <abbr class="published" title="2012-10-01T17:02:53+13:00">
+          Published: Mon 01 October 2012
+        </abbr>
+        <p>live."
+wordpress_id: 167
+categories:
+- startup
+- strategy</p>
+<hr>
+<p>I am a firm believer that it is possible to build a startup community where you live.  Especially as the <a href="http://online.wsj.com/article/SB10001424053111903480904576512250915629460.html">software is eating the world</a>, I see lots of opportunities when you merge local and mobile together.</p>
+<p>Having said this, it won't be easy. There haven't been a clear break-out yet, although New York, Seattle, Boulder are clearly leading the game. I have been consulted on how to do that in our little town Dunedin. I've talked about local capital, proven records, good quality engineers. I have wanted to summarize it into a clearly organized todo list but luckily that has been done by a <a href="http://www.bothsidesofthetable.com/">very capable VC</a>: <a href="http://www.bothsidesofthetable.com/2012/09/27/what-makes-a-successful-startup-community-is-it-possible-to-build-one-where-you-live/?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+BothSidesOfTheTable+%28Both+Sides+of+the+Table%29">What Makes a Successful Startup Community? Is it Possible to Build One Where You Live?
+</a></p>
+      </article>
+      <hr/>
+      <article>
+        <h1 class="entry-title"><a href="./getting-old-is.html">Getting old is ...</a></h1>
+        <abbr class="published" title="2012-09-18T20:16:36+12:00">
+          Published: Tue 18 September 2012
+        </abbr>
+        <h2>- startup</h2>
+<p><a href="http://alexdong.com/wp-content/uploads/2012/09/Twitter-_-alaindebotton_-Getting-older-is-a-version-....jpg"><img alt="" src="http://alexdong.com/wp-content/uploads/2012/09/Twitter-_-alaindebotton_-Getting-older-is-a-version-....jpg"></a></p>
+<p>So. Damn. True.</p>
+      </article>
+      <hr/>
+      <article>
         <h1 class="entry-title"><a href="./its-great-to-be-an-entreprenuer-critics-and-practitioners.html">It's great to be an entreprenuer - critics and practitioners</a></h1>
         <abbr class="published" title="2012-09-18T15:38:04+12:00">
           Published: Tue 18 September 2012
@@ -142,55 +168,6 @@ Jack Anderson, Chevron (via @bmoesta)</p>
         </abbr>
         <h2>- startup</h2>
 <p><a href="http://alexdong.com/wp-content/uploads/2012/09/Twitter-_-dorkitude_-_The-three-most-harmful-....jpg"><img alt="" src="http://alexdong.com/wp-content/uploads/2012/09/Twitter-_-dorkitude_-_The-three-most-harmful-....jpg"></a></p>
-      </article>
-      <hr/>
-      <article>
-        <h1 class="entry-title"><a href="./how-much-unit-tests-is-enough.html">How much unit tests is enough?</a></h1>
-        <abbr class="published" title="2012-09-05T22:31:32+12:00">
-          Published: Wed 05 September 2012
-        </abbr>
-        <h2>- code</h2>
-<p><a href="http://en.wikipedia.org/wiki/Kent_Beck">Kent Beck</a> had this perfect answer for this question at <a href="http://stackoverflow.com/questions/153234/how-deep-are-your-unit-tests/153565#153565">StackOverflow</a>:</p>
-<blockquote>
-<p>I get paid for code that works, not for tests, so my philosophy is to<strong> test as little as possible to reach a given level of confidence</strong> (I suspect this level of confidence is high compared to industry standards, but that could just be hubris). If I don't typically make a kind of mistake (like setting the wrong variables in a constructor), I don't test for it. I do tend to make sense of test errors, so I'm extra careful when I have logic with complicated conditionals. When coding on a team, I modify my strategy to carefully test code that we, collectively, tend to get wrong.</p>
-</blockquote>
-<p>Different people will have different testing strategies based on this philosophy, but that seems reasonable to me given the immature state of understanding of how tests can best fit into the inner loop of coding. Ten or twenty years from now we'll likely have a more universal theory of which tests to write, which tests not to write, and how to tell the difference. In the meantime, experimentation seems in order.</p>
-      </article>
-      <hr/>
-      <article>
-        <h1 class="entry-title"><a href="./what-wrong-with-university-database-prepare-for-future.html">What’s wrong with universities database class and how to prepare for the future?</a></h1>
-        <abbr class="published" title="2012-09-04T22:30:20+12:00">
-          Published: Tue 04 September 2012
-        </abbr>
-        <ul>
-<li>code</li>
-<li>bestof</li>
-</ul>
-<hr>
-<p>Every computer science or engineering graduate has learned the basics of relational database. This will certainly include some "advanced" skills like JOIN, or COUNT with GROUP BY, or sub-queries and probably certainly TRANSACTIONS. Students believe that they need to use these features in their real work.</p>
-<p>How wrong!</p>
-<p>Amazon's e-commerce site uses <a href="http://the-paper-trail.org/blog/consistency-and-availability-in-amazons-dynamo/">key-value, consistent hashing</a> and "always-write-succeed", instead of transactions, as described in <a href="http://www.allthingsdistributed.com/2007/10/amazons_dynamo.html">this ground-breaking paper</a>.  Reddit, one of the world's most popular site uses<a href="http://kev.inburke.com/kevin/reddits-database-has-two-tables/"> only two tables</a>:</p>
-<blockquote>
-<p>they keep a Thing Table and a Data Table. Everything in Reddit is a Thing: users, links, comments, subreddits, awards, etc. Things keep common attribute like up/down votes, a type, and creation date. The Data table has three columns: thing id, key, value. There’s a row for every attribute. There’s a row for title, url, author, spam votes, etc. When they add new features they didn’t have to worry about the database anymore. They didn’t have to add new tables for new things or worry about upgrades. Easier for development, deployment, maintenance.</p>
-</blockquote>
-<p>The price is you can’t use cool relational features. There are no joins in the database and you must manually enforce consistency. No joins means it’s really easy to distribute data to different machines. You don’t have to worry about foreign keys are doing joins or how to split the data up. Worked out really well. Worries of using a relational database are a thing of the past.</p>
-<p>In the age of big data, it's very rare that the database these students will work on in the future will stay on only one disk. As soon as the data expands physical machine boundary, all <strong>those beautiful normalization,  join, sub-queries and transactions all become completely useless.</strong></p>
-<p>To prepare the students for future, I strongly recommend the universities also teaching the students these:</p>
-<ul>
-<li>
-<p>How to denormalize databases.  Teach them redis. Get them to think about how NOT to use lock. Teach them the master and slave concepts.</p>
-</li>
-<li>
-<p>Explain how<a href="http://www.mongodb.org/display/DOCS/Sharding+Introduction"> MongoDB's sharding</a> works.  Let students work out how to pick the right index and keys to shard on.</p>
-</li>
-<li>
-<p>Experiment with Google App Engine, particularly the <a href="https://developers.google.com/appengine/docs/python/gettingstartedpython27/usingdatastore">DataStore</a> so the students know the basic of BigTable and think more carefully on how to pick the best row id.</p>
-</li>
-<li>
-<p>Play around with Riak.  Think about how <a href="http://wiki.basho.com/Vector-Clocks.html">vector clock</a> works. What the "<a href="http://www.allthingsdistributed.com/2008/12/eventually_consistent.html">eventual consistency</a>" really means.</p>
-</li>
-</ul>
-<p>(<a href="http://alexdong.com/learn-a-language-you-wont-use-in-work/">Again</a>, if you are a student and you have read <em>any</em> of the above paper. Drop me a message. I've got a job for you. )</p>
       </article>
       <hr/>
 <p class="paginator">

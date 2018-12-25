@@ -13,6 +13,52 @@
                 </header><!-- /#banner -->
   <section id="content" class="body">
       <article>
+        <h1 class="entry-title"><a href="../cannot-measure-productivity-openpgp-for-gmail-selling-out-and-judge-music-performance-by-the-look.html">"Cannot measure productivity, OpenPGP for Gmail, Selling out and judge music performance by the look"</a></h1>
+        <abbr class="published" title="2013-09-05T22:05:00+12:00">
+          Published: Thu 05 September 2013
+        </abbr>
+        <h2>- links</h2>
+<p><a href="http://martinfowler.com/bliki/CannotMeasureProductivity.html">Cannot measure productivity</a></p>
+<blockquote>
+<p>Some people say "if you can't measure it, you can't manage it". That's a cop out. Businesses manage things they can't really measure the value of all the time. How do you measure the      productivity of a company's lawyers, it's marketing department, an educational institution?    You can't - but you still need to manage them (see Robert Austin for more).
+I can see why measuring productivity is so seductive. If we could do it we could assess      software much more easily and objectively than we can now. But false measures only make things worse. This is somewhere I think we have to admit to our ignorance.</p>
+</blockquote>
+<p><a href="https://github.com/seancolyer/gmail-crypt">OpenPGP support for gmail</a></p>
+<blockquote>
+<p>gmail-crypt: An OpenPGP browser (currently Chrome) extension that integrates tightly with    Gmail and does encryption/decryption via Javascript.</p>
+</blockquote>
+<p><a href="http://caterina.net/2013/08/29/are-you-taking-any-steps-to-keep-shit-real-dave-eggers-on-selling-out/">Are you taking any steps to keep shit real? Dave Eggers on “Selling Out”</a>: A long     quote from <a href="http://en.wikipedia.org/wiki/Dave_Eggers">Dave Eggers</a>' <a href="http://en.wikipedia.org/wiki/A_Heartbreaking_Work_of_Staggering_Genius">A Heartbreaking Work of  Staggering Genius</a>.</p>
+<blockquote>
+<p>The only thing worse than this sort of activity is when people, students and teachers alike, run around college campuses calling each other racists and anti-Semites. It’s born of boredom, lassitude. Too cowardly to address problems of substance where such problems actually are, we  claw at those close to us. We point to our neighbor, in the khakis and sweater, and cry foul.  It’s ridiculous. We find enemies among our peers because we know them better, and their        proximity and familiarity means we don’t have to get off the couch to dismantle them.
+Did I wonder if people would think we were selling out, that we were not fulfilling the      mission they had assumed we had committed ourselves to?
+No. I did not. Nor will I ever. We just don’t care. We care about doing what we want to do   creatively. We want to be interested in it. We want it to challenge us. We want it to be       difficult. We want to reinvent the stupid thing every time. Would I ever think, before I did   something, of how those with sellout monitors would respond to this or that move? I would not.</p>
+</blockquote>
+<p><a href="http://www.digitalmusicnews.com/uploads/28/50/2850bf87fa857587137db28ac2c81667/PNAS-2013-Tsay-1221454110.pdf">Sight over sound in the judgement of music performance</a></p>
+<blockquote>
+<p>participants were asked to predict the outcomes using either audio-only recordings, videos   with audio, or videos without sound.  Astoundingly, the prediction rate for those watching     without sound was dramatically greater than those evaluating with the sound.   In fact, those  listening to the music predicted the proper outcome about one-third of the time, the same as   chance.</p>
+</blockquote>
+      </article>
+      <hr/>
+      <article>
+        <h1 class="entry-title"><a href="../fanout-architecture-design-apache-spark-algorithms-beats-moores-law-and-linuxs-so_reuseport.html">"Fanout architecture design, Apache spark, algorithms beats Moore's law and Linux's SO_REUSEPORT"</a></h1>
+        <abbr class="published" title="2013-08-29T23:07:00+12:00">
+          Published: Thu 29 August 2013
+        </abbr>
+        <h2>- links</h2>
+<p><a href="http://static.googleusercontent.com/external_content/untrusted_dlcp/research.google.com/en/us/people/jeff/Berkeley-Latency-Mar2012.pdf">Fanout architecture design guides from Google (pdf)</a>: If a server has an average 1-ms latency but has a 1% chance of taking longer than 1 second to finish a request, spreading a request across 100 such servers would mean that 63% requests will take more than 1 second.  This paper introduces some good engineering practices for designing a fanout architecture. </p>
+<p><a href="http://spark.incubator.apache.org/">Apache Spark project</a>: When memory is so cheap, why don't run mapreduce in memory? </p>
+<blockquote>
+<p>Spark was initially developed for two applications where placing data in memory helps: iterative algorithms, which are common in machine learning, and interactive data mining. In both cases, Spark can run up to 100x faster than Hadoop MapReduce. However, you can use Spark for general data processing too. </p>
+</blockquote>
+<p><a href="http://agtb.wordpress.com/2010/12/23/progress-in-algorithms-beats-moore%E2%80%99s-law/">Progress in Algorithms Beats Moore’s Law</a>:
+From 1988 to 2003, solving the same model using linear programming sees an improvement by a factor of roughly 43 million.  </p>
+<blockquote>
+<p>Of this, a factor of roughly 1,000 was due to increased processor speed, whereas a factor of roughly 43,000 was due to improvements in algorithms! </p>
+</blockquote>
+<p><a href="http://freeprogrammersblog.vhex.net/post/linux-39-introdued-new-way-of-writing-socket-servers/2">Linux kernel 3.9 introduced SO_REUSEPORT</a>: This patch allows multiple processes to bind to the same IP. This opens up the possibility of uninterrupted server upgrade by gradually replacing old processes with new ones.  This used to be a big selling point for erlang, but now languages like Ruby, Python or node.js would be able to do it too. </p>
+      </article>
+      <hr/>
+      <article>
         <h1 class="entry-title"><a href="../a-problem-statement-for-the-web-bootstraps-way-of-thinking-a-password-manager-follows-unix-philosophy-and-rules-on-writing-cc-shared-libraries.html">"A problem statement for the web, bootstrap's way of thinking, a password manager follows unix philosophy and rules on writing c/c++ shared libraries"</a></h1>
         <abbr class="published" title="2013-08-26T09:44:00+12:00">
           Published: Mon 26 August 2013
@@ -224,75 +270,6 @@ Here are the main ideas from "art school's true exercises": </p>
 </blockquote>
 <p>I think these four steps could be mapped to the similar process in learning and mastering the art of programming, ie 
 learning your tool, understand the context, form your own opinion and open up to new ideas. </p>
-      </article>
-      <hr/>
-      <article>
-        <h1 class="entry-title"><a href="../snowden-getaway-options-academic-interaction-feynman-diagrams-javascripts-wake-and-false-confidence-in-https.html">"Snowden getaway options, academic interaction feynman diagrams, javascript's wake and false confidence in https"</a></h1>
-        <abbr class="published" title="2013-07-30T09:57:00+12:00">
-          Published: Tue 30 July 2013
-        </abbr>
-        <h2>- links</h2>
-<p><a href="http://edition.cnn.com/2013/07/12/us/snowden-getaway-options">What are the odds of a Snowden getaway?</a>: Even reading this makes me feel cold. </p>
-<blockquote>
-<p>Speaking of movies, near the end of the hit film "Catch Me If You Can," there's a scene that Snowden might do well to watch while he's killing time in the airport lounge (or wherever he is) pondering his fate. The young forger, Frank Abagnale, who has been staying a step ahead of the feds, finally grows irritated and fatigued. Not because they are particularly skilled in their hunting, nor because they are getting closer, but simply because they won't give up. In a fit of pique, he blurts into the phone, "Stop chasing me!" On the other end, the dogged, bureaucratic Treasury agent, Carl Hanratty, answers, "I can't stop. It's my job."
-Ultimately, this is why many people who have been involved in such matters believe Snowden will be caught.  ...
-They'll have to make Edward Snowden their living, because those who are chasing him already have. Government agents will be paid every minute of every day for as long as it takes. Seasons may change and years may pass, but the odds say that one morning, he'll look out of a window, go for a walk or stop for a cup of coffee, and the trap will spring shut. It will be almost like a movie.</p>
-</blockquote>
-<p><a href="http://www.phdcomics.com/comics.php?f=1461">Academic Interaction Feynman Diagrams</a>: hilarious social interaction patterns described using Feynman diagrams.</p>
-<p><a href="http://blog.alexmaccaw.com/javascript-wake-event">JavaScript ‘wake’ event</a></p>
-<blockquote>
-<p>It turns out there is no JavaScript wake event. There is an online event, but it doesn’t seem to trigger whenever the computer is sent to sleep and re-awoken.
-The only sure fire way I could work out to achieve this, was to run a interval and check that the it was invoked at the expected times. Any delay in an interval invocation indicates that the computer has just slept.</p>
-</blockquote>
-<p><a href="http://www.tedunangst.com/flak/post/tiny-downside-to-encrypting-all-web-traffic">tiny downside to encrypting all web traffic</a></p>
-<blockquote>
-<p>When "https is secure, make sure your bank uses https" permeates into the general conscience, does it become "if everything is https, everything is secure"? Does the prevalence of https inspire false confidence in the web or will people learn that https was never a good signal for determining the legitimacy of a (possibly forged) web site?</p>
-</blockquote>
-      </article>
-      <hr/>
-      <article>
-        <h1 class="entry-title"><a href="../two-scripts-for-android-app-reverse-engineering.html">"Two scripts for Android app reverse engineering"</a></h1>
-        <abbr class="published" title="2013-07-24T10:10:00+12:00">
-          Published: Wed 24 July 2013
-        </abbr>
-        <h2>- code</h2>
-<p>For the last two weeks, I've been working on an audit project for an Android app. 
-I worked on Microsoft's <a href="https://en.wikipedia.org/wiki/Windows_CE">WinCE</a> about 14 years ago. 
-I am quietly impressed by how developer friendly the Android platform is. Here are a couple of
-shell scripts I have written to make the reverse engineering process easier. </p>
-<p>During our work, it is quite common to make some modification to the smali files 
-generated by <a href="https://code.google.com/p/android-apktool/">apktool</a>, turn it back 
-into a proper apk and install on the device to see whether our guesses were correct. 
-This is quite a repetitive process that involves sign the apk, align the zip file, 
-uninstall the original app and install the new one from local computer to the device. </p>
-<p><code>Pack.sh</code> is a shell script that automates this process for you. It takes two parameters, 
-the first is the folder where the smali files are; the second is the package name 
-for the application, which is needed for us to automatically uninstalled the app from 
-the device. </p>
-<p>{% gist 6073781 %}</p>
-<p><a href="http://en.wikipedia.org/wiki/Strace">strace</a> is a brilliant tool that allows you to 
-attach to a running process and see all the unix system calls it's making. 
-Once you get it up and running, it is almost trivial to get a comprehensive view 
-of the app's interaction with Android system, for example, 
-which files it touches, which urls it requests. </p>
-<p>In our case, the app would be launched and crashed immediately, leaving us no time
-to manually attach a strace to the process to see what has gone wrong. <code>ambush.sh</code>
-is a shell script that waits for a process to show up and automatically attach strace
-to that process. This makes it possible for us to see what the app has been doing 
-before it crashes itself. It takes two parameters too. The first is the pattern 
-that <code>ps | grep</code> could use to find the process id; the latter is where the strace
-is located. </p>
-<p>{% gist 6034934 %}</p>
-<p><a href="http://benno.id.au/blog/2007/11/18/android-runtime-strace">Benno</a>
-has compiled a version of <a href="http://benno.id.au/android/strace">strace for Android</a>.
-If you have <a href="www.busybox.net">busybox</a> installed, you can run the following command 
-to install it from the net. </p>
-<p _="%" endcodeblock>{% codeblock lang:bash %}
-    $ cd /data/local
-    $ wget http://benno.id.au/android/strace
-    $ chmod 555 ./strace</p>
-<p>Please note that you'll have to put the strace in <code>/data/local</code> in order to 
-use <code>chmod</code> to make it an executable. </p>
       </article>
       <hr/>
 <p class="paginator">

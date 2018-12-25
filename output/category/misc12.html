@@ -13,6 +13,55 @@
                 </header><!-- /#banner -->
   <section id="content" class="body">
       <article>
+        <h1 class="entry-title"><a href="../how-much-unit-tests-is-enough.html">How much unit tests is enough?</a></h1>
+        <abbr class="published" title="2012-09-05T22:31:32+12:00">
+          Published: Wed 05 September 2012
+        </abbr>
+        <h2>- code</h2>
+<p><a href="http://en.wikipedia.org/wiki/Kent_Beck">Kent Beck</a> had this perfect answer for this question at <a href="http://stackoverflow.com/questions/153234/how-deep-are-your-unit-tests/153565#153565">StackOverflow</a>:</p>
+<blockquote>
+<p>I get paid for code that works, not for tests, so my philosophy is to<strong> test as little as possible to reach a given level of confidence</strong> (I suspect this level of confidence is high compared to industry standards, but that could just be hubris). If I don't typically make a kind of mistake (like setting the wrong variables in a constructor), I don't test for it. I do tend to make sense of test errors, so I'm extra careful when I have logic with complicated conditionals. When coding on a team, I modify my strategy to carefully test code that we, collectively, tend to get wrong.</p>
+</blockquote>
+<p>Different people will have different testing strategies based on this philosophy, but that seems reasonable to me given the immature state of understanding of how tests can best fit into the inner loop of coding. Ten or twenty years from now we'll likely have a more universal theory of which tests to write, which tests not to write, and how to tell the difference. In the meantime, experimentation seems in order.</p>
+      </article>
+      <hr/>
+      <article>
+        <h1 class="entry-title"><a href="../what-wrong-with-university-database-prepare-for-future.html">What’s wrong with universities database class and how to prepare for the future?</a></h1>
+        <abbr class="published" title="2012-09-04T22:30:20+12:00">
+          Published: Tue 04 September 2012
+        </abbr>
+        <ul>
+<li>code</li>
+<li>bestof</li>
+</ul>
+<hr>
+<p>Every computer science or engineering graduate has learned the basics of relational database. This will certainly include some "advanced" skills like JOIN, or COUNT with GROUP BY, or sub-queries and probably certainly TRANSACTIONS. Students believe that they need to use these features in their real work.</p>
+<p>How wrong!</p>
+<p>Amazon's e-commerce site uses <a href="http://the-paper-trail.org/blog/consistency-and-availability-in-amazons-dynamo/">key-value, consistent hashing</a> and "always-write-succeed", instead of transactions, as described in <a href="http://www.allthingsdistributed.com/2007/10/amazons_dynamo.html">this ground-breaking paper</a>.  Reddit, one of the world's most popular site uses<a href="http://kev.inburke.com/kevin/reddits-database-has-two-tables/"> only two tables</a>:</p>
+<blockquote>
+<p>they keep a Thing Table and a Data Table. Everything in Reddit is a Thing: users, links, comments, subreddits, awards, etc. Things keep common attribute like up/down votes, a type, and creation date. The Data table has three columns: thing id, key, value. There’s a row for every attribute. There’s a row for title, url, author, spam votes, etc. When they add new features they didn’t have to worry about the database anymore. They didn’t have to add new tables for new things or worry about upgrades. Easier for development, deployment, maintenance.</p>
+</blockquote>
+<p>The price is you can’t use cool relational features. There are no joins in the database and you must manually enforce consistency. No joins means it’s really easy to distribute data to different machines. You don’t have to worry about foreign keys are doing joins or how to split the data up. Worked out really well. Worries of using a relational database are a thing of the past.</p>
+<p>In the age of big data, it's very rare that the database these students will work on in the future will stay on only one disk. As soon as the data expands physical machine boundary, all <strong>those beautiful normalization,  join, sub-queries and transactions all become completely useless.</strong></p>
+<p>To prepare the students for future, I strongly recommend the universities also teaching the students these:</p>
+<ul>
+<li>
+<p>How to denormalize databases.  Teach them redis. Get them to think about how NOT to use lock. Teach them the master and slave concepts.</p>
+</li>
+<li>
+<p>Explain how<a href="http://www.mongodb.org/display/DOCS/Sharding+Introduction"> MongoDB's sharding</a> works.  Let students work out how to pick the right index and keys to shard on.</p>
+</li>
+<li>
+<p>Experiment with Google App Engine, particularly the <a href="https://developers.google.com/appengine/docs/python/gettingstartedpython27/usingdatastore">DataStore</a> so the students know the basic of BigTable and think more carefully on how to pick the best row id.</p>
+</li>
+<li>
+<p>Play around with Riak.  Think about how <a href="http://wiki.basho.com/Vector-Clocks.html">vector clock</a> works. What the "<a href="http://www.allthingsdistributed.com/2008/12/eventually_consistent.html">eventual consistency</a>" really means.</p>
+</li>
+</ul>
+<p>(<a href="http://alexdong.com/learn-a-language-you-wont-use-in-work/">Again</a>, if you are a student and you have read <em>any</em> of the above paper. Drop me a message. I've got a job for you. )</p>
+      </article>
+      <hr/>
+      <article>
         <h1 class="entry-title"><a href="../learn-a-language-you-wont-use-in-work.html">Learn a language you won't use in work</a></h1>
         <abbr class="published" title="2012-09-03T21:27:03+12:00">
           Published: Mon 03 September 2012
@@ -173,53 +222,6 @@
 <p>Design, by its nature, is like editing an article. If you have two paragraphs saying pretty much the same thing, will you keep both of them. Jack Dorsey, the CEO of square and Chairman of Twitter basically said "<a href="https://twitter.com/hash/status/84417208385683456">CEO is the Editor of the product, the team and the story</a>".</p>
 <p><img alt="" src="http://alexdong.com/wp-content/uploads/2012/08/Twitter-_-hash_-Short-bit-from-@jack-about-....jpg"></p>
 <p>This is another video from Jack on The CEO as Chief Editor.</p>
-      </article>
-      <hr/>
-      <article>
-        <h1 class="entry-title"><a href="../everyone-else-was-busy-reading-their-phones.html">Everyone else was busy reading ... their phones</a></h1>
-        <abbr class="published" title="2012-08-15T22:07:15+12:00">
-          Published: Wed 15 August 2012
-        </abbr>
-        <h2>- mobile</h2>
-<p>Today's NYTimes has an interesting article on magazine. It argues from a different perspective. Instead of the typical argue of value of creation vs. curation, it tells a story of the media itself. Here is the quote:</p>
-<blockquote>
-<p>Ultimately, it doesn’t matter what you put on the cover of your magazine if no one will look at you. A few weeks ago, I was in a busy doctor’s office with a dozen others, absently paging through the magazines on the table. The table in front of us was stacked with the pride of American publishing, all manner of topics and fancy covers yelling for attention. Ever the intrepid media reporter, I looked up from scanning Bon Appétit to see what other people were interested in. A mother and a daughter were locked in conversation, but <strong>everyone else was busy reading — their phones</strong>.</p>
-</blockquote>
-<p>Coincidentally, the recent data from the major internet service providers are on a very strong uprising:</p>
-<blockquote>
-<p>Facebook: 102 million people accessed Facebook solely from mobile<strong> in June, a massive 23% increase over the 83 million mobile-only users in March</strong>.<strong> 18.7% of its 543 million monthly mobile users don’t even visit its desktop site.</strong></p>
-</blockquote>
-<p>eBay's mobile shoppers and <strong>mobile payers are 3 to 4 times more valuable than Web</strong> only. Mobile was a major contributor to eBay's Q2 growth with 600,000 new customers making their first purchase through eBay’s mobile apps.</p>
-<p>Yelp. 10% of Yelp's monthly uniques access the service on mobile but account for <strong>a disproportionate 40% of Yelp's search query volume.</strong></p>
-<p>If your startup or company or product does not have a mobile aspect to it, I'd be worried.</p>
-      </article>
-      <hr/>
-      <article>
-        <h1 class="entry-title"><a href="../if-you-build-it-will-they-come.html">If You Build It, Will They Come?</a></h1>
-        <abbr class="published" title="2012-08-15T21:54:21+12:00">
-          Published: Wed 15 August 2012
-        </abbr>
-        <h2>- startup</h2>
-<p>Every once for a while, there will be some ground-breaking articles that come along. They would either redefine something I thought I've understood quite well, like <a href="http://worrydream.com/MagicInk/">Magic Ink: Information Software and Graphical Interface</a>, or make something I always fail to grasp crystal clear like Paul Graham's <a href="http://paulgraham.com/wealth.html">How to Make Wealth</a>.  Recently, I have been reading <a href="http://blakemasters.tumblr.com/peter-thiels-cs183-startup/">Peter Thiel's talks at Stanford's CS183 course</a>.  None of the above are easy-reads but they definitely worth read several times to understand thoroughly the points.</p>
-<p>First, he talks about the engineer bias that leads many, including myself, to underestimate the importance of distribute your product:</p>
-<blockquote>
-<p>But for whatever reason, people do not get distribution. They tend to overlook it. It is the single topic whose importance people understand least. Even if you have an incredibly fantastic product, you still have to get it out to people. The engineering bias blinds people to this simple fact. The conventional thinking is that great products sell themselves; if you have great product, it will inevitably reach consumers. But nothing is further from the truth.</p>
-</blockquote>
-<p>He then went on to explain why most people thinks salesman are dishonesty and hence forgot we forgot president, investors, entrepreneurs are all salesman.</p>
-<blockquote>
-<p>We are culturally biased to think of salespeople as classically untrustworthy, and unreliable. The used car dealer is the archetypical example. Marc Andreessen has noted that <strong>most engineers underestimate the sales side of things because they are very truth-oriented people.</strong> In engineering, something either works or it doesn’t. The surface appearance is irrelevant. So engineers tend to view attempts to change surface appearance of things—that is, sales—as fundamentally dishonest.</p>
-</blockquote>
-<p><strong>What is tricky about sales is that</strong>, while we know that it exists all around us,<strong> it’s not always obvious who the real salesperson is</strong>. Tom Sawyer convinced all the kids on the block to whitewash the fence for him. None of those neighborhood kids recognized the sale. The game hasn’t changed. And that’s why that story rings true today.</p>
-<p>Sales work looks like easy, just like everyone thought politician is easy. But in fact, there might be similar huge gap between a master and a mediocre player.</p>
-<blockquote>
-<p>A good analogy to the engineer vs. sales dynamic is experts vs. politicians. If you work at a big company, you have two choices. You can become expert in something, like, say, international tax accounting. It’s specialized and really hard. It’s also transparent in that it’s clear whether you’re actually an expert or not.</p>
-</blockquote>
-<p>The other choice is to be a politician. These people get ahead by being nice to others and getting everyone to like them. Both expert and politician can be successful trajectories. But <strong>what tends to happen is that people choose to become politicians rather than experts because it seems easier. Politicians _seem _like average people, so average people simply assume that they can do the same thing.</strong></p>
-<p>The next highlight comes when he describes the importance of crack the nut of finding the most important factor in all the distribution channel under the sun and win it.</p>
-<blockquote>
-<p>That is a really bad idea. It is very likely that one channel is optimal. Most businesses actually get zero distribution channels to work. <strong>Poor distribution—not product—is the number one cause of failure. If you can get even a single distribution channel to work, you have great business.</strong> If you try for several but don’t nail one, you’re finished. So it’s worth thinking really hard about finding the single best distribution channel. If you are an enterprise software company with a sales team, your key strategic question is: who are the people who are most likely to buy the product? That will help you close in on a good channel. What you want to avoid is not thinking hard about which customers are going to buy it and just sending your sales team out to talk to everybody.</p>
-</blockquote>
-<p>He also covers PR/Marketing, enterprise sales and a bit history of advertisement. But from an engineer-turned-entrepreneur perspective, the above are the ones that really nail it for me. Hope you enjoy it as well.</p>
       </article>
       <hr/>
 <p class="paginator">
