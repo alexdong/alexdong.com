@@ -2,16 +2,76 @@
 <html lang="en">
         <head>
                 <meta charset="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=contain">
                 <title>Raw thoughts from Alex Dong</title>
                 <link rel="stylesheet" href="./theme/css/main.css" />
         </head>
 
         <body id="index" class="home">
                 <header id="banner" class="body">
-                        <h1><a href="./">Raw thoughts from Alex Dong </a></h1>
-                        <nav><ul>
+                <h1><a href="./">Raw thoughts from Alex Dong </a></h1>
                 </header><!-- /#banner -->
   <section id="content" class="body">
+      <article>
+        <h1 class="entry-title"><a href="./four-iphone-5ios-7-technical-improvements-that-caught-my-eyes.html">"Four iPhone 5/iOS 7 technical improvements that caught my eyes"</a></h1>
+        <abbr class="published" title="2013-09-30T10:22:00+13:00">
+          Published: Mon 30 September 2013
+        </abbr>
+        <ul>
+<li>technology</li>
+<li>strategy</li>
+<li>links</li>
+</ul>
+<hr>
+<p>There have been a lot of articles written about the new iPhone 5 so here I will skip all the fluffy stuff and focus on four technical changes that have caught my eyes.</p>
+<p>First, the new 64-bit CPU and the <a href="http://www.mikeash.com/pyblog/friday-qa-2013-09-27-arm64-and-you.html">Object-C runtime changes</a>. This is the real deal. </p>
+<blockquote>
+<p>Objective-C objects are contiguous chunks of memory. The first pointer-sized piece of that memory is the isa. Traditionally, the isa is a pointer to the object`s class. </p>
+<p>ARM64 running iOS currently uses only 33 bits of a pointer, leaving 31 bits for other purposes. Class pointers are also aligned, meaning that a class pointer is guaranteed to be divisible by 8, which frees up another three bits, leaving 34 bits of the isa available for other uses. Apple's ARM64 runtime takes advantage of this for some great performance improvements.</p>
+<p>Probably the important performance improvement is an inline reference count. On ARM64, 19 bits of the isa field go to holding the object's reference count inline. That means that the procedure for retaining an object simplifies to only one instruction instead of five. </p>
+<p>My casual benchmarking indicates that basic object creation and destruction takes about 380ns on a 5S running in 32-bit mode, while it's only about 200ns when running in 64-bit mode. </p>
+</blockquote>
+<p>Then we have the new <a href="http://www.macrumors.com/2013/09/24/inside-apples-a7-chip-m7-motion-coprocessor-and-more-from-the-iphone-5s/">M7 chip</a>. This new chip makes it possible to use a few sensors without waking up the whole "computer". But if you look inside the chip, you'll see that it's only a consolidation rather than a revolutionary step as some media painted. It still doesn't include the "active display" or "touchless control" features that the <a href="http://www.anandtech.com/show/7235/moto-x-review/4">Moto X</a> has. </p>
+<blockquote>
+<p>M7, which is actually an ARM Cortex-M3 part from NXP running at 180 MHz. The chip allows for low-power collection of motion data drawn from a Bosch Sensortec accelerometer, an STMicroelectronics gyroscope, and an AKM magnetometer.</p>
+<p>After collecting information from the accelerometer, gyroscope, and magnetometer, the M7 performs some matrix math processing magic to produce an absolute orientation of the phone relative to the world. This data is then passed to the A7 in a neat package, probably in the form of three headings (roll, pitch, and yaw). </p>
+<p>Using the A7 to monitor this sort of data would be mega-overkill, so the M7 was introduced to maintain a constant, low-power watch over these sensors.</p>
+</blockquote>
+<p>Next is the <a href="http://www.multipath-tcp.org">Multi-Path TCP</a> support for Siri. (See the <a href="http://qz.com/126642/apples-ios7-includes-a-surprise-a-ticket-to-the-next-generation-of-the-internet/">qz coverage</a> for less-technical discussions. ) </p>
+<blockquote>
+<p>MultiPath TCP (MPTCP) is an effort towards enabling the simultaneous use of several IP-addresses/interfaces by a modification of TCP that presents a regular TCP interface to applications, while in fact spreading data across several subflows. </p>
+<p>Benefits of this include better resource utilization, better throughput and smoother reaction to failures.
+The multipath-tcp website also has a nice video demo of the technology. </p>
+<p>We did a little demo of MultiPath TCP used over Ethernet/WiFi/3G on our Linux Kernel implementation. We start an ssh-session with X-redirection and launch xscreensaver demo on the distant MPTCP-capable server. We then turn off Ethernet and WiFi and thanks to MultiPath TCP the ssh-session is able to handover the traffic to 3G without interrupting the user-experience. Without our MPTCP Linux Kernel the session would simply stop working and the user would need to restart the ssh-session.</p>
+</blockquote>
+<p>The last one is the two new background execution modes for apps. According to the <a href="https://developer.apple.com/library/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS7.html">developer doc</a>:</p>
+<blockquote>
+<p>Apps that regularly update their content by contacting a server can register with the system and <strong>be launched periodically to retrieve that content in the background</strong>. To register, include the UIBackgroundModes key with the fetch value in your app’s Info.plist file. Then, when your app is launched, call the setMinimumBackgroundFetchInterval: method to determine how often it receives update messages. Finally, you must also implement the application:performFetchWithCompletionHandler: method in your app delegate.</p>
+<p>Apps that use <strong>push notifications to notify the user that new content is available can fetch the content in the background</strong>. To support this mode, include the UIBackgroundModes key with the remote-notification value in your app’s Info.plist file. You must also implement the application:didReceiveRemoteNotification:fetchCompletionHandler: method in your app delegate.</p>
+</blockquote>
+      </article>
+      <hr/>
+      <article>
+        <h1 class="entry-title"><a href="./zmap-messy-technical-standards-and-bullrun-chromes-trojan-strategy-and-plumbing-openbsd-with-gdb.html">"Zmap, messy technical standards and BULLRUN, Chrome's trojan strategy and plumbing OpenBSD with gdb"</a></h1>
+        <abbr class="published" title="2013-09-11T18:52:00+12:00">
+          Published: Wed 11 September 2013
+        </abbr>
+        <h2>- links</h2>
+<p><a href="http://zmap.io">Zmap</a> is a stateless and faster version of nmap. It can scan the complete IPv4 space in 44 minutes. Here’s is <a href="http://www.washingtonpost.com/blogs/the-switch/wp/2013/08/18/heres-what-you-find-when-you-scan-the-entire-internet-in-an-hour/">WashingtonPost's article</a> on what you find when you scan the entire Internet in an hour. </p>
+<p><a href="http://www.mail-archive.com/cryptography@metzdowd.com/msg12325.html">John Gilmore's speculation on "BULLRUN"</a></p>
+<blockquote>
+<p>NSA employees participted throughout, and occupied leadership roles in the committee and among the editors of the documents
+Every once in a while, someone not an NSA employee, but who had longstanding ties to NSA, would make a suggestion that reduced privacy or security, but which seemed to make sense when viewed by people who didn't know much about crypto. 
+The resulting standard was incredibly complicated -- so complex that every real cryptographer who tried to analyze it threw up their hands and said, "We can't even begin to evaluate its security unless you simplify it radically". </p>
+</blockquote>
+<p><a href="http://www.theverge.com/2013/9/5/4696618/google-chrome-apps-chrome-os-windows-os-x-blink">Chrome's trojan horse strategy</a></p>
+<blockquote>
+<p>Chrome Apps amount to a Trojan horse for Google. By way of the Chrome browser, the company is essentially putting its own app ecosystem right on top of Windows and OS X. It’s a play that’s been months in the making. “There are still reasons why a developer would build a native app over a Chrome App today, but we’re working to tackle each one,” Rakowski says. Google began promoting a handful of Chrome Apps (then called Packaged Apps) in May. In July, its Chrome notification center was pushed out to Windows and Chrome OS users, allowing for alerts and pop-ups outside the browser window. And for months, Chrome’s developer channels have shipped with an app launcher that lives in the Windows taskbar — this launcher rolled out to the public today too.</p>
+<p>The new apps look and behave much like the native apps you find on Windows and OS X. They’re built using web technologies, but also with Chrome-specific code that means they won’t be able to run on other web browsers — they’re truly Chrome apps. They can exist outside of your browser window as distinct apps, work offline, and sync across devices and operating systems. They can also access your computer’s GPU, storage, camera, ports, and Bluetooth connection. Chrome Apps are, for now, only available through Chrome on Windows or Chrome OS on a Chromebook. Mac users will have to wait another six weeks before their version of Chrome will be updated.</p>
+</blockquote>
+<p><a href="http://www.packetmischief.ca/2013/09/09/plumbing-openbsd-software-with-gdb1/">Plumbing OpenBSD Software with gdb(1)</a>: An introudction on how to use gdb's <code>malloc_dump</code> and <code>list ADDRESS</code> to find memory leaks in OpenBSD's snmpd. </p>
+      </article>
+      <hr/>
       <article>
         <h1 class="entry-title"><a href="./cannot-measure-productivity-openpgp-for-gmail-selling-out-and-judge-music-performance-by-the-look.html">"Cannot measure productivity, OpenPGP for Gmail, Selling out and judge music performance by the look"</a></h1>
         <abbr class="published" title="2013-09-05T22:05:00+12:00">
@@ -218,63 +278,9 @@ Sometimes I do hope that WebOS would make it to the end if the <a href="http://w
 </blockquote>
       </article>
       <hr/>
-      <article>
-        <h1 class="entry-title"><a href="./mosquitos-mouthpiece-fallible-human-being-ssl-forward-secrecy-and-a-webhook-debug-tool.html">"Mosquito's mouthpiece, fallible human being, SSL Forward secrecy and a webhook debug tool"</a></h1>
-        <abbr class="published" title="2013-08-07T21:58:00+12:00">
-          Published: Wed 07 August 2013
-        </abbr>
-        <h2>- links</h2>
-<p><a href="http://phenomena.nationalgeographic.com/2013/08/06/heres-what-happens-inside-you-when-a-mosquito-bites/">Here’s What Happens Inside You When a Mosquito Bites</a>
-Absolutely stunning series of short microscope video on how flexible and intelligent the mosquito's mouthpart is. </p>
-<p><a href="http://blog.canonical.com/2013/07/30/ubuntu-forums-are-back-up-and-a-post-mortem/">Ubuntu Forums are back up and a post mortem</a>
-Security is hard because fallible people are always a weak part of the chain. </p>
-<blockquote>
-<p>A forum moderator account was "stolen", then the attacker uses XSS to gain admin permissions. </p>
-</blockquote>
-<p><a href="http://blog.ivanristic.com/2013/06/ssl-labs-deploying-forward-secrecy.html">SSL Labs: Deploying Forward Secrecy</a></p>
-<blockquote>
-<p>In the context of mass surveillance, however, the RSA key exchange is a serious liability. Your adversaries might not have your private key today, but what they can do now is record all your encrypted traffic. Eventually, they might obtain the key in one way or another (e.g., by bribing someone, obtaining a warrant, or by breaking the key after sufficient technology advances) and, at that time, they will be able to go back in time to decrypt everything.
-...
-but generates session keys in such a way that only the two parties involved in the communication can obtain them. No one else can, even if they have access to the server's private key. 
-The article provides a good entry-leve description to SSL's support of 
-Forward Secrecy using DHE and ECDHE algorithm.  The author also has a follow-up 
-post on how to configure Apache, Nginx and OpenSSL to support Forward Secrecy. </p>
-</blockquote>
-<p><a href="https://github.com/progrium/localtunnel">localtunnel: Expose your local web server to the Internet</a>: A must have tool to debug webhooks. </p>
-      </article>
-      <hr/>
-      <article>
-        <h1 class="entry-title"><a href="./four-steps-in-learning-programming.html">"Four steps in learning programming"</a></h1>
-        <abbr class="published" title="2013-07-30T21:07:00+12:00">
-          Published: Tue 30 July 2013
-        </abbr>
-        <ul>
-<li>coding</li>
-<li>education</li>
-</ul>
-<hr>
-<p>Recently I came across a suggestion on <a href="http://photo.stackexchange.com/questions/8300/ideas-for-daily-exercises-to-improve-photography-technique">ideas for daily excercises to improve
-photography technique</a>. 
-Here are the main ideas from "art school's true exercises": </p>
-<blockquote>
-<ol>
-<li>Take n pictures of a single object, making sure that no two were the same (n was generally some large number like '100' or '250') - 
-   The exercise was designed to train yourself to begin to see the many ways it's possible to approach a subject...</li>
-<li>Find an object and take the exact same picture of it every hour for 24 hours (generally an inanimate object... ) - 
-   The goal was to see how even something that doesn't move changes quite radically depending on what is going on around it.</li>
-<li>Take 100 pictures of objects that have a common characteristic (they're all buildings, they're all less than 1 inch wide, 
-   they're all blue, etc.) - The goal was to learn how to find interesting pictures 'hiding inside' everyday objects.</li>
-<li>Take 100 pictures from a perspective you wouldn't normally think to take pictures from (lying down, under water, 
-   upside down, cropped to 1x6, etc.)</li>
-</ol>
-</blockquote>
-<p>I think these four steps could be mapped to the similar process in learning and mastering the art of programming, ie 
-learning your tool, understand the context, form your own opinion and open up to new ideas. </p>
-      </article>
-      <hr/>
 <p class="paginator">
         <a href="./index.html">&laquo;</a>
-    Page 2 / 13
+    Page 2 / 14
         <a href="./index3.html">&raquo;</a>
 </p>
   </section><!-- /#content -->

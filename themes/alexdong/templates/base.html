@@ -2,6 +2,7 @@
 <html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
         <head>
                 <meta charset="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=contain">
                 <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
                 <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
                 {% if FEED_ALL_ATOM %}
@@ -15,8 +16,7 @@
 
         <body id="index" class="home">
                 <header id="banner" class="body">
-                        <h1><a href="{{ SITEURL }}/">{{ SITENAME }} {% if SITESUBTITLE %}<strong>{{ SITESUBTITLE }}</strong>{% endif %}</a></h1>
-                        <nav><ul>
+                <h1><a href="{{ SITEURL }}/">{{ SITENAME }} {% if SITESUBTITLE %}<strong>{{ SITESUBTITLE }}</strong>{% endif %}</a></h1>
                 </header><!-- /#banner -->
                 {% block content %}
                 {% endblock %}
