@@ -13,6 +13,33 @@
                 </header><!-- /#banner -->
   <section id="content" class="body">
       <article>
+        <h1 class="entry-title"><a href="./git-pull-vs-git-rebase-its-about-different-engineering-cultures.html">'git pull vs. git rebase: it''s about different engineering cultures'</a></h1>
+        <abbr class="published" title="2012-10-05T05:00:23+13:00">
+          Published: Fri 05 October 2012
+        </abbr>
+        <ul>
+<li>code</li>
+<li>startup</li>
+</ul>
+<hr>
+<p>It's not often for me to become interested in technology itself these days. But the discussion between git pull and git rebase has interested me a lot.  Not for its own technology details but more as a tool to either loose or strengthen an engineering culture.</p>
+<p>git pull encourages a rather loose, relax and, in the long run, ad-hoc manner of team work.  This suits startup cultures quite well.   It's fast to learn and easy for people who migrate from older version controls like subversions to learn.  Engineers works on his own little branch. He has no reason to integrate with other people's code until the very end of one's little project is finished.  The commit history ends up having messages that describes more about the code and less about the reason and thinking behind this list of patches.  For example, if you happen to follow the resque project, you'll realize that <a href="https://github.com/defunkt/resque/commit/832fb9d696c4367ae17d99aaa2ef6b43268605c5">a commit message like this</a> is not really that helpful. 7 lines of changes.  One line comment without explaining why the 'destroy' is delayed.</p>
+<p>git rebase encourages comparatively stricter engineering culture. One has to pay attention to not only his code, but also the commit histories.  Projects like linux kernel uses it to enforce a culture of <a href="http://www.mail-archive.com/dri-devel@lists.sourceforge.net/msg39091.html"> keep clean history</a>. Linus even wrote up what a good commit would look like <a href="https://github.com/torvalds/subsurface/blob/master/README#L161">here. </a>  I can see how this could be very helpful in a project where the code needs to be maintained 15 years later by totally different set of people.  A clean history, instead of a loose list of incremental functional changes, will provide more context in the long run.  As a sample,<a href="http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=ce57e981f2b996aaca2031003b3f866368307766"> check out this patch</a> by Linus for a firmware related patch. <a href="http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=blobdiff;f=drivers/base/firmware_class.c;h=81541452887bd3ce5d868909e3fb753fb3d6b124;hp=e85763de928f096e46cbfd74abb69c064e5c2101;hb=ce57e981f2b996aaca2031003b3f866368307766;hpb=e1cc485262846dcad931bf85ee655cbbb815bfe6">4 lines</a> of changes, 8 lines of comments on the commit.</p>
+      </article>
+      <hr/>
+      <article>
+        <h1 class="entry-title"><a href="./gary-panters-drawing-tips-be-like-a-river.html">Gary Panter's drawing tips - Be like a river</a></h1>
+        <abbr class="published" title="2012-10-03T08:59:48+13:00">
+          Published: Wed 03 October 2012
+        </abbr>
+        <h2>- design</h2>
+<blockquote>
+<p>Don’t worry about a style. It will creep up on you and eventually you will have to undo it in order to go further. Be like a river and accept everything.</p>
+</blockquote>
+<p>via <a href="http://unbored.net/gary-panters-drawing-tips/">Gary Panter's drawing tips - UNBORED</a>.</p>
+      </article>
+      <hr/>
+      <article>
         <h1 class="entry-title"><a href="./work-life-balance-when-you-work-involves-others-life.html">Work life balance when you work involves other's life</a></h1>
         <abbr class="published" title="2012-10-02T15:18:53+13:00">
           Published: Tue 02 October 2012
@@ -140,40 +167,6 @@ categories:
 <p>Uzzi then tallied his Q readings with information about how successful the productions had been. “Frankly, I was surprised by how big the effect was,” Uzzi told me. “I expected Q to matter, but I had no idea it would matter this much.” According to the data, the <strong>relationships among collaborators emerged as a reliable predictor of Broadway success.</strong> When the Q was low—less than 1.7 on Uzzi’s five-point scale—the musicals were likely to fail. Because the artists didn’t know one another, they struggled to work together and exchange ideas. “This wasn’t so surprising,” Uzzi says. “It takes time to develop a successful collaboration.” <strong>But, when the Q was too high (above 3.2), the work also suffered.</strong> The artists all thought in similar ways, which crushed innovation. According to Uzzi, this is what happened on Broadway during the nineteen-twenties, which he made the focus of a separate study. The decade is remembered for its glittering array of talent—Cole Porter, Richard Rodgers, Lorenz Hart, Oscar Hammerstein II, and so on—but Uzzi’s data reveals that ninety per cent of musicals produced during the decade were flops, far above the historical norm. “Broadway had some of the biggest names ever,” Uzzi explains. “But the shows were too full of repeat relationships, and that stifled creativity.”</p>
 <p><strong>The best Broadway shows were produced by networks with an intermediate level of social intimacy.</strong> The ideal level of Q—which Uzzi and his colleague Jarrett Spiro called the <strong>“bliss point”—emerged as being between 2.4 and 2.6.</strong> A show produced by a team whose Q was within this range was three times more likely to be a commercial success than a musical produced by a team with a score below 1.4 or above 3.2. It was also three times more likely to be lauded by the critics. “The best Broadway teams, by far, were those with a mix of relationships,” Uzzi says. “These teams had some old friends, but they also had newbies. This mixture meant that the artists could interact efficiently—they had a familiar structure to fall back on—but they also managed to incorporate some new ideas. They were comfortable with each other, but they weren’t too comfortable.”</p>
 <p>Uzzi’s favorite example of “intermediate Q” is “West Side Story,” one of the most successful Broadway musicals ever. In 1957, the play was seen as a radical departure from Broadway conventions, both for its focus on social problems and for its extended dance scenes. The concept was dreamed up by Jerome Robbins, Leonard Bernstein, and Arthur Laurents. They were all Broadway legends, which might make “West Side Story” look like a show with high Q. But the project also benefitted from a crucial injection of unknown talent, as the established artists realized that they needed a fresh lyrical voice. After an extensive search, they chose a twenty-five-year-old lyricist who had never worked on a Broadway musical before. His name was Stephen Sondheim.</p>
-      </article>
-      <hr/>
-      <article>
-        <h1 class="entry-title"><a href="./quote-once-an-innovation-is-implemented.html">'Quote: Once an innovation is implemented ...'</a></h1>
-        <abbr class="published" title="2012-09-15T14:56:16+12:00">
-          Published: Sat 15 September 2012
-        </abbr>
-        <h2>- design</h2>
-<p><strong>Once an innovation is implemented it is no longer innovative.</strong>
-—
-Jack Anderson, Chevron (via @bmoesta)</p>
-<p>via <a href="http://37signals.com/svn/posts/3255-once-an-innovation-is-implemented-it-is-no-longer-innovative">Quote: Once an innovation is implemented it is no longer innovative. - (37signals)</a>.</p>
-      </article>
-      <hr/>
-      <article>
-        <h1 class="entry-title"><a href="./the-difference-between-apple-amazon-in-one-chart.html">The Difference Between Apple & Amazon In One Chart</a></h1>
-        <abbr class="published" title="2012-09-14T14:44:52+12:00">
-          Published: Fri 14 September 2012
-        </abbr>
-        <h2>- strategy</h2>
-<p>Amazon is a great company. So is Apple. Although they both have content, ie iTune vs. Amazon, or tablet device, iPad vs. Kindle. the two companies culture are dramatically different.  Their strategy to profit are different.</p>
-<p><a href="http://alexdong.com/wp-content/uploads/2012/09/Twitter-_-alexdong_-Apple_s-goal-is-to-make-....jpg"><img alt="" src="http://alexdong.com/wp-content/uploads/2012/09/Twitter-_-alexdong_-Apple_s-goal-is-to-make-....jpg"></a></p>
-<p>Daring Fireball's <a href="http://daringfireball.net/2012/09/amazons_play">Amazon's Play </a>has summarized most of what I wanted to say about this. So I'll just quote him out right:</p>
-<blockquote>
-<p>Apple’s goal is to sell as many iPads as it can. <strong>Amazon’s goal is to sell as many Kindle Fires as it can to a specific audience: active Amazon.com customers.</strong> And for that specific audience, it’s a very appealing proposition. The <strong>Fire makes it even easier to do things you’re already doing</strong> — reading Kindle e-books, watching movies and TV shows through your Prime membership. And the low prices speak to the heart of the Amazon.com customer base. When Bezos says he wants Amazon’s interests aligned with those of their customers, he means it.</p>
-</blockquote>
-<p><strong>It’s a <em>heads we win, tails you lose</em> strategy.</strong> That’s the brilliance. If you buy an iPad but use Amazon’s iOS apps to read Kindle books and watch movies through your Amazon Prime account, Apple wins but so too does Amazon. If you buy a Kindle Fire instead of an iPad, Apple gets nothing. Amazon wins so long as you consume media content from Amazon, no matter if you play it on a Kindle Fire or an iPad. Apple only wins if you buy an iPad.</p>
-<p>ReadWriteWeb has one chart that shows the huge d<a href="http://www.readwriteweb.com/archives/the-difference-between-apple-amazon-in-one-chart.php">ifference Between Apple &amp; Amazon In One Chart</a>.</p>
-<blockquote>
-<p><img alt="" src="http://www.readwriteweb.com/files/styles/610_0/public/fields/apple-amazon-profit-chart.gif"></p>
-</blockquote>
-<p>Obviously, if short-term profit is all that matters, Apple is winning by a mile. Apple has generated more than $73 billion of profit over the span of this chart, while Amazon is around $2 billion. Some of that has to do with the relative size of the companies; Apple is about three times bigger, sales-wise. But Apple's approach is still dramatically more profitable on a relative basis.</p>
-<p>That said, there's also merit to Amazon's approach. By pricing its devices lower, it's potentially bringing its technologies to more people in different economic positions. Apple has lowered its pricing premium significantly over the years, but there are still potentially millions of people who could justify buying a $200 Kindle Fire but not a $400 iPad. Apple is now expected to launch a smaller, cheaper iPad, something it once suggested it wouldn't do - an action attributable in part to Amazon's success.</p>
-<p>Will Amazon's approach ever lead to substantial profits? If Apple and Google are driving media and app prices lower, that leaves less room for Amazon to profit in the future. But Amazon is a multifaceted machine, ranging from digital media sales to paper-towel delivery. It's possible that getting customers all-in on Amazon's digital and Prime services will eventually lead to greater profits across the board.</p>
       </article>
       <hr/>
 <p class="paginator">

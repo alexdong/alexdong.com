@@ -13,6 +13,91 @@
                 </header><!-- /#banner -->
   <section id="content" class="body">
       <article>
+        <h1 class="entry-title"><a href="../many-stairs-to-climb-mozillas-rr-fingerprints-of-election-thieves-and-layout-in-flipboard.html">"Many Stairs to Climb, Mozilla's RR, Fingerprints of election thieves and Layout in Flipboard"</a></h1>
+        <abbr class="published" title="2014-03-28T17:34:00+13:00">
+          Published: Fri 28 March 2014
+        </abbr>
+        <h2>- links</h2>
+<p><a href="http://www.simoneast.com/burton/?p=322">Many Stairs to Climb – 2</a></p>
+<p>From Simon East's Rephotographing project. Simon scanned some 130-year-old
+panorama photos of Dunedin. Then he built a beautifully slider 
+interface that allows side-by-side comparison between 1880 and 2014. 
+ (Via: <a href="https://twitter.com/jintymact/status/449385660172886016">Jinty MacTavish</a>)</p>
+<p><a href="http://rr-project.org">Mozilla's RR debugger</a></p>
+<blockquote>
+<p>rr aspires to be your primary debugging tool, replacing — well, enhancing — gdb. You record a failure once, then debug the recording, deterministically, as many times as you want. Every time the same execution is replayed.
+Remember, you're debugging the recorded trace deterministically; not a live, nondeterministic execution. The replayed execution's address spaces, register contents, syscall data etc are exactly the same in every run.
+(Via: <a href="https://twitter.com/antirez/status/449189188223918080">antirez</a>)</p>
+</blockquote>
+<p><a href="http://www.santafe.edu/news/item/pnas-thurner-fingerprints-election-thieves/">Finding the statistical fingerprints of election thieves</a></p>
+<blockquote>
+<p>In fair elections, a nation's voting pattern tends to feature one cluster, showing a general trend of voter turnout and vote for the victorious party (though some nations' regional voter preferences can distort it). Rigged ones show a cluster, but with a smear of votes toward the upper right for incremental fraud. Extreme fraud has a second, smaller, completely separate cluster at the top right corner, signifying up to 100 percent turnout and votes for the winner.
+(Via: <a href="https://twitter.com/jeresig/status/449227101678223361">jeresig</a>)</p>
+</blockquote>
+<p><a href="http://engineering.flipboard.com/2014/03/web-layouts/">Layout in Flipboard - For Web &amp; Windows</a></p>
+<p>The Duplo page layout engine searches between 2000 to 6000 candidate layouts for the best fit. It takes three steps to come up with a layout for a page:
+1) create 2000+ layouts in a decision tree structure
+2) select layout and apply content: It uses Branch and bound to shrink the candidate set, then it uses a dozen of heuristic like <a href="http://en.wikipedia.org/wiki/Perlin_noise">Perlin noise</a> to maintain an organic feel between pages. 
+3) refining layout by aligning the DOM elements to baseline grids
+(Via: <a href="https://twitter.com/AlanInteractive/status/449355010464165888">AlanInteractive</a>)</p>
+      </article>
+      <hr/>
+      <article>
+        <h1 class="entry-title"><a href="../turn-tiwai-point-into-the-worlds-largest-bitcoin-mining-farm.html">"Turn Tiwai Point into the world's largest Bitcoin mining farm"</a></h1>
+        <abbr class="published" title="2013-11-30T20:49:00+13:00">
+          Published: Sat 30 November 2013
+        </abbr>
+        <h2>- fun</h2>
+<p>The <a href="http://en.wikipedia.org/wiki/Tiwai_Point">Tiwai Point Aluminium Smelter</a> is one of the 
+largest industrial facilities in New Zealand.
+Between 2008 and 2013, aluminium prices fell by more than 30 percent. The owner, Rio Tinto, has 
+threatened to close the Tiwai Point smelter if it can't get a cheaper deal for electricity 
+from retailer Meridian, or the Government fails to give it a substantial subsidy. 
+The Smelter consumes about 15% of all electricities NZ generates. So there have been lots of 
+discussions of what NZ should do if Rio Tinto does shut it down.</p>
+<p>Here is a crazy idea. How about build a large a Bitcoin mining farm to use the electricity?<br>
+This started as a <a href="https://twitter.com/farmgeek/status/406637109521305601">joke</a> on 
+Twitter but after thinking about it for a while, it actually makes good sense. </p>
+<p>Let's start with the technical side of the bitcoin mining business first. </p>
+<p>You can think of the Bitcoin system as a global ledger and each transaciton 
+as a switch from asset to liability in this ledger.  The Bitcoin miners play the roles of 
+the central banks except that there are <a href="http://millybitcoin.com/how-many-people-are-bitcoin-mining/">thousands</a> 
+of these "central banks" out there competing to perform the "clearing house" 
+function for every transaction that happens in the Bitcoin universe. </p>
+<p>The task of these clearing houses is very simple: they group a set of transactions together into a block,<br>
+perform some checks and then put a stamp on it. The key step here is to "perform some check". 
+This involves guessing a random number in, say, a trillion possibilities. There is no smart here. 
+It's only about how fast you can brutal-force through all the possibilities and 
+how cheap you can do this. </p>
+<p>Of all those thousands participants, only the fastest one 
+will win the transaction. All the rest, despite the fact that they might be half
+way through, will simply throw away the existing work and start again. </p>
+<p>Here, the speed is determined by two factors: pure luck and the speed of the guess. 
+The luck is mathmatically gauranteed to be equal, or, more accurately, random. 
+Even with the fastest computer, you might still lose to a tiny computer in one's garage.
+You might think that this is a terribly competitive game to get yourself into. 
+But it is a fierce competition only in the sense that it's a game of lottery
+where only thousand of people buys and there are hundreds of chances to win
+everyday. </p>
+<p>So the real factor you can control is how fast you can guess. 
+Once you've invested in the hardware, the main running cost is
+the electricity bill, which Tiwai Point seems to have plenty of.</p>
+<p>It's a common mistake to think that as we getting closer to the hard limit of 
+<a href="http://bitcoin.stackexchange.com/questions/161/how-many-bitcoins-will-there-eventually-be">21-million Bitcoins</a>, 
+there will be no money left to be made for the miners.  Since a Bitcoin transaction won't 
+succeed until it's processed by a miner. People who want 
+a faster transaction, instead of waiting 7 hours, will usually offer a transaction fee.
+According to the <a href="https://en.bitcoin.it/wiki/Transaction_fees">Bitcoin website</a>: </p>
+<blockquote>
+<p>It is envisioned that over time the cumulative effect of collecting transaction fees 
+will allow somebody creating new blocks to "earn" more bitcoins than will be mined 
+from new bitcoins created by the new block itself. This is also an incentive to keep 
+trying to create new blocks even if the value of the newly created block from 
+the mining activity is zero in the far future.</p>
+</blockquote>
+      </article>
+      <hr/>
+      <article>
         <h1 class="entry-title"><a href="../four-iphone-5ios-7-technical-improvements-that-caught-my-eyes.html">"Four iPhone 5/iOS 7 technical improvements that caught my eyes"</a></h1>
         <abbr class="published" title="2013-09-30T10:22:00+13:00">
           Published: Mon 30 September 2013
@@ -229,53 +314,6 @@ We'd love to hear from you. </p>
 If you are not confused enough, check out <a href="http://designpepper.com/blog/drips/the-difference-between-boolean-objects-and-boolean-primitives-in-javascript">The Difference Between Boolean Objects and Boolean Primitives in JavaScript</a>. The gist here is that if you create a <code>new Boolean(false)</code> object and use it in an <code>if</code> statement, you'll get the result as if it is a <code>true</code>.</p>
 <p><a href="http://www.roughtype.com/?p=3590">The flattening of e-book sales</a>: Ebook sales growth has peaked at about 25% of total market size. The author gives 6 guesses on why this is the case. My theory is that technology evolves much faster than human beings. Once a habit is formed, it'll be there for the rest of one's life.  The widening gaps between generations in the <a href="http://lancewiggs.com/2013/08/12/living-forward/">millennial test</a> is a good example of how hard it is to change habits. </p>
 <p><a href="http://www.nytimes.com/2013/08/18/magazine/laura-poitras-snowden.html?pagewanted=all&amp;_r=0">How Laura Poitras Helped Snowden Spill His Secrets</a>: Laura Poitras was contacted by Snowden in January, who asked for her public key before sending out any documents.  She then met him and filmed the interview between Greenwald and Snowden in HongKong, as part of her documentary on surveillance state.  This article talks about her work, her personality and the very intense story that leads up to the final Snowden leak.  </p>
-      </article>
-      <hr/>
-      <article>
-        <h1 class="entry-title"><a href="../rob-malda-on-social-news-hemingways-eye-innodbs-full-text-search-and-etsys-crack-down-on-ssl-cas.html">"Rob Malda on social news, Hemingway's eye, InnoDB's full text search and Etsy's crack down on SSL CAs."</a></h1>
-        <abbr class="published" title="2013-08-08T22:40:00+12:00">
-          Published: Thu 08 August 2013
-        </abbr>
-        <h2>- links</h2>
-<p><a href="http://www.washingtonpost.com/blogs/the-switch/wp/2013/08/07/slashdot-founder-rob-malda-on-why-there-wont-be-another-hacker-news/">Tim B. Lee interviewed Rob Malda</a>: The part of social news, the problem with hacker news and twitter are the most interesting bits to me. </p>
-<blockquote>
-<p>I did not premeditate anything. I just winged it, and when I saw problems I triaged them. The Slashdot system was very much evolved and not designed.   One thing I learned is don’t spend your entire life playing predictive defense against attacks that will never happen. Real people are very clever. If they choose to attack you they’ll attack you in ways you can’t predict.
-Most people are just purely passive consumers, and that’s okay. I think a lot of people in this space obsess too much over trying to convert passives into actives. Some people are just wired to be that kind of person. Others aren’t. That’s okay.
-With more and more voices, you tend toward broader subjects. Eventually it becomes less and less interesting. But what’s interesting to [me] isn’t always the thing that’s most lucrative. I had a pretty strong belief that the population of Slashdot users was relatively fixed. That makes for a crappy business model. You want to have a million really good users and be done? How does make the chart go up and to the right?</p>
-</blockquote>
-<p><a href="http://www.huffingtonpost.com/2013/08/01/hemingway-lookalike-contest_n_3690493.html?utm_hp_ref=arts">Hemingway lookalike contest</a>: <a href="http://corte.si">Aldo</a> described Hemingway using following terms: "full of action, well seasoned, brilliant, paranoid, depressed and committed suicide".  I found only the real photo captures all these characters. The participants seems to lack one of these "action, brilliant or depressed".  I happend to notice that his left eye seems to lack the paranoid and a color of brilliance. <a href="http://answers.yahoo.com/question/index?qid=20070916132644AAArXuY">Turned out</a> "Hemingway's left eye was defective from birth ... In May of 1918, Hemingway wanted to join the Army but could not due to a defective left eye which he inherited from his mother."</p>
-<p><a href="http://www.mysqlperformanceblog.com/2013/07/31/innodb-full-text-search-in-mysql-5-6-part-3/">Performance evaluation of InnoDB's Full-text search in Mysql 5.6</a>: disappointing. Slow to index. Slow to query. It bloats the code base. I don't know why this feature needs to be built in the first place. </p>
-<blockquote>
-<p>InnoDB FTS fills a need for those people who want the features and capabilities of InnoDB but can’t modify their existing applications or who just don’t have enough FTS traffic to justify building out a Sphinx/Solr/Lucene-based solution.</p>
-</blockquote>
-<p><a href="http://codeascraft.com/2013/07/16/reducing-the-roots-of-some-evil/">Reducing The Roots of Some Evil</a>: SSL CA is in such a mess that company like Etsy is manually trimming down the number of CA they trust. This sounds good but feels a bit unscalable. </p>
-      </article>
-      <hr/>
-      <article>
-        <h1 class="entry-title"><a href="../digital-photo-printing-shadow-dom-local-newspaper-as-civic-duty-and-the-brilliance-of-javascript.html">"Digital photo printing, Shadow DOM, Local newspaper as civic duty and the brilliance of javascript"</a></h1>
-        <abbr class="published" title="2013-08-08T22:06:00+12:00">
-          Published: Thu 08 August 2013
-        </abbr>
-        <h2>- links</h2>
-<p><a href="http://petapixel.com/2013/07/25/digital-photo-printing-10-years-after/">Digital photo printing: 10 years after</a>:</p>
-<blockquote>
-<p>Is anyone still printing photos? 
-Research firm InfoTrends did a survey of Internet connected households in EU, and photo printing went up 11% in 2012 compared to 2007-2008. Similarly, U.S.-based online photo printing has become a big deal, growing by about 20% annually between 2007-2012 according to market research firm IbisWorld. Three significant reasons for this growth are: the adoption of digital cameras, ability to transport photos online, and the increase in broadband and mobile Internet connections.
-48% of the online photo printing market in the U.S. being prints on paper..   11.2% canvas and frame prints; 19.7% photobooks</p>
-</blockquote>
-<p><a href="http://blog.jonudell.net/2012/10/30/why-i-subscribe-to-the-ann-arbor-chronicle/">Why I subscribe to the Ann Arbor Chronicle</a>: My ideal local newspaper in 2020 will be one run by volunteers, locals vote for issues to be covered and volunteers would write subjective report. Ann Arbor Chronicle's donation increase over the last a few years seems to confirm the possibility of this. </p>
-<blockquote>
-<p>Launched in September 2008, the Ann Arbor Chronicle is an online newspaper that focuses on civic affairs and local government coverage. Although we’d likely be classified by most folks as “new media,” in many ways we embrace an ethos that runs contrary to current trends: Longer, in-depth articles; an emphasis on factual accuracy and thoroughness, not speed; and an assumption that our readers are thoughtful, intelligent and engaged in this community.</p>
-</blockquote>
-<p><a href="http://glazkov.com/2011/01/14/what-the-heck-is-shadow-dom/">What the Heck is Shadow DOM?</a>: HTML's own way for building custom controls. The idea is there could a hidden dom structure that's normally hidden from javascript and css. The custom control author can choose to expose some of it via psuedo-selectors. <code>&lt;input type="slider"&gt;</code>, <code>&lt;video&gt;</code> are good examples. More concrete use cases can be found <a href="http://wiki.whatwg.org/wiki/Component_Model_Use_Cases">here</a>. </p>
-<p><a href="https://blog.mozilla.org/javascript/2013/08/01/staring-at-the-sun-dalvik-vs-spidermonkey/">Staring at the Sun: Dalvik vs. ASM.js vs. Native</a>: Javascript does have the promise of a popular language. It's messy. It's ugly. It has layers and layers of patches yet everytime you feel it has hit a wall, a project like <a href="http://asmjs.org">asm.js</a> will come and lift it into stratosphere. 
-Sometimes I do hope that WebOS would make it to the end if the <a href="http://www.theverge.com/2012/6/5/3062611/palm-webos-hp-inside-story-pre-postmortem">webkit issues were that easy to solve</a>. I sincerely wish FireFox and Mozilaa best luck in breaking up the walled gardens. </p>
-<blockquote>
-<ol>
-<li>Asm.js is reasonably competitive with native C++ code on ARM. Even discarding the one score where asm.js did better, it executes at around 70% of the speed of native C++ code. These results suggest that apps with high performance needs can use asm.js as the target of choice for critical hot-path code, achieving near native performance.</li>
-<li>Asm.js competes very well on mobile performance compared to Dalvik. Even throwing out the benchmarks that are highly favourable to asm.js (binary-trees and fasta), there seems to be a consistent 10-50% speedup over comparable Dalvik code.</li>
-</ol>
-</blockquote>
       </article>
       <hr/>
 <p class="paginator">
