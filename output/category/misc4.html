@@ -4,16 +4,58 @@
                 <meta charset="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=contain">
                 <title>Raw thoughts from Alex Dong - misc category</title>
-                <link rel="stylesheet" href="../theme/css/main.css" />
+                <link rel="stylesheet" href="https://alexdong.com/theme/css/main.css" />
+                <link href="https://alexdong.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Raw thoughts from Alex Dong Atom Feed" />
         </head>
 
         <body id="index" class="home">
                 <header id="banner" class="body">
-                <h1><a href="../">Raw thoughts from Alex Dong </a></h1>
+                <h1><a href="https://alexdong.com/">Raw thoughts from Alex Dong </a></h1>
                 </header><!-- /#banner -->
   <section id="content" class="body">
       <article>
-        <h1 class="entry-title"><a href="../gmo-crops-mean-more-herbicide-apple-and-app-developers-detecting-outliers-and-information-theory-and-financial-market.html">"GMO crops mean more herbicide, Apple and app developers, Detecting outliers and Information theory and Financial market"</a></h1>
+        <h2 class="entry-title"><a href="https://alexdong.com/convert-mp3-files-to-ogg.html">"Convert mp3 files to ogg"</a></h2>
+        <abbr class="published" title="2013-07-05T14:10:00+12:00">
+          Published: Fri 05 July 2013
+        </abbr>
+        <ul>
+<li>code</li>
+<li>open source</li>
+<li>bestof</li>
+</ul>
+<hr>
+<p>I have never expected this to be hard. Sure it won't be difficult to do this in 2013. But after sinking almost 1 hour into this, I decided to write it down hoping that it might save other people a bit time. </p>
+<p>So I started with <a href="sox.sourceforge.net/">sox</a>. I tried <code>sox zit.mp3 zit.ogg</code> and received an error message</p>
+<blockquote>
+<p>sox FAIL formats: no handler for file extension `ogg'. </p>
+</blockquote>
+<p>Then I tried <code>dir2ogg -q7 zit.mp3</code> which was recommended by a post on Ubuntu's discussion forum. But unfortunately, it still didn't work out. Here is the error message I got: </p>
+<blockquote>
+<p>dir2ogg 0.11.8 (2009-08-04), converts audio files into ogg vorbis.</p>
+<p>WARNING: Mutagen failed on zit.mp3, no tags available
+Traceback (most recent call last):
+ID3NoHeaderError: 'zit.mp3' doesn't start with an ID3 tag</p>
+<p>INFO: Converting "zit.mp3" (using mpg123 as decoder)...
+[wav.c:143] error: cannot even write a single byte: Illegal seek
+[audio.c:630] error: failed to open audio device
+[mpg123.c:902] error: Failed to initialize output, goodbye.
+ERROR: Cannot open output file "zit.ogg": Permission denied
+WARNING: No tags found...
+}}}</p>
+</blockquote>
+<p>After much fiddling around, this is the final solution that was working for me. To chain <code>mpg123</code> and <code>oggenc</code> together. <code>mpg123</code> will generate a <code>.wav</code>  file to the standard output, which <code>oggenc</code> takes in and emit a corresponding <code>ogg</code> file. </p>
+<p><code>for i in *.mp3; do mpg321 $i -w - | oggenc -q7 -o ${i/mp3/ogg} -; done</code></p>
+<p>A few caveats: </p>
+<ul>
+<li><code>$i</code> is the filename and <code>${i/mp3/ogg}</code> changes the output filename. </li>
+<li><code>-q7</code> select a level-7 sound quality. Since both mp3 and ogg are lossy sound format, converting one to another with the same sample rate would only decrease the sound quality. By specifying a higher bit rate, the <code>ogg</code> output would sound similar to the <code>mp3</code> file. </li>
+<li>The <code>-</code> are quite important. </li>
+<li>On Ubuntu/Debian, you might need to install the packages using <code>sudo apt-get install mpg321 vorbis-tools</code></li>
+</ul>
+      </article>
+      <hr/>
+      <article>
+        <h2 class="entry-title"><a href="https://alexdong.com/gmo-crops-mean-more-herbicide-apple-and-app-developers-detecting-outliers-and-information-theory-and-financial-market.html">"GMO crops mean more herbicide, Apple and app developers, Detecting outliers and Information theory and Financial market"</a></h2>
         <abbr class="published" title="2013-07-04T18:04:00+12:00">
           Published: Thu 04 July 2013
         </abbr>
@@ -52,7 +94,7 @@ The nature never ceases to amuse us. But human beings are the true master of dra
       </article>
       <hr/>
       <article>
-        <h1 class="entry-title"><a href="../will-bitcoin-follow-the-path-of-bittorrent.html">"Will Bitcoin follow the path of BitTorrent? "</a></h1>
+        <h2 class="entry-title"><a href="https://alexdong.com/will-bitcoin-follow-the-path-of-bittorrent.html">"Will Bitcoin follow the path of BitTorrent? "</a></h2>
         <abbr class="published" title="2013-07-04T17:16:00+12:00">
           Published: Thu 04 July 2013
         </abbr>
@@ -104,7 +146,7 @@ Structurally, Bitcoin has a better chance of actually solving some long-standing
       </article>
       <hr/>
       <article>
-        <h1 class="entry-title"><a href="../responding-to-peer-review-lisp-as-a-meta-language-future-of-blogging-is-linking-and-technology-has-lost-its-golden-child-image.html">"Responding to peer review, lisp as a meta language, future of blogging is linking and technology has lost its golden child image. "</a></h1>
+        <h2 class="entry-title"><a href="https://alexdong.com/responding-to-peer-review-lisp-as-a-meta-language-future-of-blogging-is-linking-and-technology-has-lost-its-golden-child-image.html">"Responding to peer review, lisp as a meta language, future of blogging is linking and technology has lost its golden child image. "</a></h2>
         <abbr class="published" title="2013-07-04T16:47:00+12:00">
           Published: Thu 04 July 2013
         </abbr>
@@ -135,7 +177,7 @@ I can't help thinking that the winner of this nouveau publishing spectrum isn't 
       </article>
       <hr/>
       <article>
-        <h1 class="entry-title"><a href="../vcs-game-30-day-count-down-on-startup-invite-the-unknown-and-swedens-switch-to-left-hand-driving.html">"VC's game, 30-day count down on startup, invite the unknown and Sweden's switch to left hand driving."</a></h1>
+        <h2 class="entry-title"><a href="https://alexdong.com/vcs-game-30-day-count-down-on-startup-invite-the-unknown-and-swedens-switch-to-left-hand-driving.html">"VC's game, 30-day count down on startup, invite the unknown and Sweden's switch to left hand driving."</a></h2>
         <abbr class="published" title="2013-07-04T16:44:00+12:00">
           Published: Thu 04 July 2013
         </abbr>
@@ -155,7 +197,7 @@ Bonus: checkout the Headlamp sold in Sweden not long before Dagen H.</p>
       </article>
       <hr/>
       <article>
-        <h1 class="entry-title"><a href="../python-console-debugger-kamikaze-pilots-with-a-puppy-water-powered-space-coach-and-hash-sharing-system-to-fight-spam.html">"Python console debugger, Kamikaze pilots with a puppy, water powered space coach and hash sharing system to fight spam."</a></h1>
+        <h2 class="entry-title"><a href="https://alexdong.com/python-console-debugger-kamikaze-pilots-with-a-puppy-water-powered-space-coach-and-hash-sharing-system-to-fight-spam.html">"Python console debugger, Kamikaze pilots with a puppy, water powered space coach and hash sharing system to fight spam."</a></h2>
         <abbr class="published" title="2013-07-04T16:38:00+12:00">
           Published: Thu 04 July 2013
         </abbr>
@@ -175,7 +217,7 @@ None of this is to say that this would be easy to do, but the technology needed 
       </article>
       <hr/>
       <article>
-        <h1 class="entry-title"><a href="../teaching-to-see-googles-organic-search-anxiety-vs-creativity-and-journalism-vs-activism.html">"Teaching to see, Google's organic search, Anxiety vs. Creativity and Journalism vs. Activism"</a></h1>
+        <h2 class="entry-title"><a href="https://alexdong.com/teaching-to-see-googles-organic-search-anxiety-vs-creativity-and-journalism-vs-activism.html">"Teaching to see, Google's organic search, Anxiety vs. Creativity and Journalism vs. Activism"</a></h2>
         <abbr class="published" title="2013-07-02T08:47:00+12:00">
           Published: Tue 02 July 2013
         </abbr>
@@ -205,7 +247,7 @@ The more creative the person, he held, the more anxiety and guilt are potentiall
       </article>
       <hr/>
       <article>
-        <h1 class="entry-title"><a href="../cookie-clearing-house-80-full-time-management-ads-vs-paywall-and-when-to-clap-for-the-pilot.html">Cookie clearing house, 80% full time management, Ads vs. Paywall and when to clap for the pilot</a></h1>
+        <h2 class="entry-title"><a href="https://alexdong.com/cookie-clearing-house-80-full-time-management-ads-vs-paywall-and-when-to-clap-for-the-pilot.html">Cookie clearing house, 80% full time management, Ads vs. Paywall and when to clap for the pilot</a></h2>
         <abbr class="published" title="2013-06-24T17:22:00+12:00">
           Published: Mon 24 June 2013
         </abbr>
@@ -235,7 +277,7 @@ Ad supported: </p>
       </article>
       <hr/>
       <article>
-        <h1 class="entry-title"><a href="../cap-faq-affordance-of-line-and-color-anarchism-and-chinas-drone-program.html">"CAP FAQ, Affordance of line and color, Anarchism and China's Drone program"</a></h1>
+        <h2 class="entry-title"><a href="https://alexdong.com/cap-faq-affordance-of-line-and-color-anarchism-and-chinas-drone-program.html">"CAP FAQ, Affordance of line and color, Anarchism and China's Drone program"</a></h2>
         <abbr class="published" title="2013-06-20T16:45:00+12:00">
           Published: Thu 20 June 2013
         </abbr>
@@ -247,7 +289,7 @@ Ad supported: </p>
       </article>
       <hr/>
       <article>
-        <h1 class="entry-title"><a href="../python-on-llvm-sequencing-tuatara-genome-the-pragmatic-web-and-cost-of-a-computer-on-your-face.html">"Python on LLVM, Sequencing tuatara genome, the Pragmatic web and cost of a computer on your face"</a></h1>
+        <h2 class="entry-title"><a href="https://alexdong.com/python-on-llvm-sequencing-tuatara-genome-the-pragmatic-web-and-cost-of-a-computer-on-your-face.html">"Python on LLVM, Sequencing tuatara genome, the Pragmatic web and cost of a computer on your face"</a></h2>
         <abbr class="published" title="2013-06-19T08:04:00+12:00">
           Published: Wed 19 June 2013
         </abbr>
@@ -258,27 +300,24 @@ Ad supported: </p>
 <p><a href="http://plc.vc/google-glass">To justify having a computer on your face for everyone to see would have to deliver spectacular results.</a>: <em>if Google Glass would let you see 10x better than 20:20 vision then it might be a compelling proposition.  The problem Google Glass has is that it simply isn’t much better than a smart phone, and it comes as a huge price – having something on your face.</em></p>
       </article>
       <hr/>
-      <article>
-        <h1 class="entry-title"><a href="../the-feudal-cloud-einsteins-secret-of-learning-anything-random-forest-in-python-and-dirt-cheap-to-save-all-us-phone-calls.html">"The Feudal cloud, Einstein's secret of learning anything, Random forest in Python and dirt cheap to save all US phone calls"</a></h1>
-        <abbr class="published" title="2013-06-17T21:01:00+12:00">
-          Published: Mon 17 June 2013
-        </abbr>
-        <h2>- links</h2>
-<p><a href="http://www.schneier.com/blog/archives/2013/06/more_on_feudal.html">Schneier on Security</a>: The relationship between us and the "cloud service providers" * is inherently a feudal relationship. We cede control of our data and computing platforms to these companies and trust that they will treat us well and protect us from harm.  ... In the longer term, we all need to work to reduce the power imbalance. Medieval feudalism evolved into a more balanced relationship in which lords had responsibilities as well as rights. Today's Internet feudalism is both ad hoc and one-sided. We have no choice but to trust the lords, but we receive very few assurances in return.*</p>
-<p><a href="http://www.brainpickings.org/index.php/2013/06/14/einstein-letter-to-son/">The Secret to Learning Anything: Albert Einstein’s Advice to His Son</a>: <em>I am very pleased that you find joy with the piano. This and carpentry are in my opinion for your age the best pursuits, better even than school. Because those are things which fit a young person such as you very well. Mainly play the things on the piano which please you, even if the teacher does not assign those. That is the way to learn the most, that when you are doing something with such enjoyment that you don’t notice that the time passes. I am sometimes so wrapped up in my work that I forget about the noon meal. . . .</em></p>
-<p><a href="http://blog.yhathq.com/posts/random-forests-in-python.html">Random Forests in Python</a>: <em>random forest is an aggregation of other models. The algorithm to induce a random forest will create a bunch of random decision trees automatically. Since the trees are generated at random, most won't be all that meaningful to learning your classification/regression problem (maybe 99.9% of trees). Simply, the 99.9% of trees that are irrelevant make predictions that are all over the map and cancel each another out. The predictions of the minority of trees that are good top that noise and yield a good prediction.</em></p>
-<p><a href="http://boingboing.net/2013/06/16/what-would-it-cost-to-store-al.html">What would it cost to store all of America's phone calls?</a>: Intuitively we all know that storage is cheap but this one still surprised me. Considering Facebook's 57B market cap, no wonder why privacy is so cheap.  <em>$27M in capital cost, and $2M in electricity and take less than 5,000 square feet of space to store and process all US phone calls made in a year.   The NSA seems to be spending $1.7 billion on a 100k square foot datacenter that could easily handle this and much much more.</em></p>
-      </article>
-      <hr/>
 <p class="paginator">
-        <a href="../category/misc3.html">&laquo;</a>
+        <a href="https://alexdong.com/category/misc3.html">&laquo;</a>
     Page 4 / 14
-        <a href="../category/misc5.html">&raquo;</a>
+        <a href="https://alexdong.com/category/misc5.html">&raquo;</a>
 </p>
   </section><!-- /#content -->
 
                 <footer id="contentinfo" class="body">
                 </footer><!-- /#contentinfo -->
 
+    <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-37221534-2', 'auto');
+    ga('send', 'pageview');
+    </script>
         </body>
 </html>

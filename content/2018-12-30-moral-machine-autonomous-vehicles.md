@@ -11,19 +11,19 @@ Numbers are clean and precise.
 Life is fuzzy and poetic. 
 
 We should develop the muscle to appreciate both. After all, we are born
-with a left brain for logic thinking and a right brain for intuition.
+with a left brain for logic and a right brain for intuition.
 Why should we only use one?  
 
-Contrary to the popular belief that numbers are cold and cruel. I think
+Contrary to popular belief that numbers are cold and cruel. I think
 numbers give us a sense of agency. Instead of feeling powerless and at
 the mercy of a giant random number generator in the sky, a good model
 with a few numbers will help us see the world clearer.  As an
 individual, we'll know what to do with our energy and our limited life.
 
 Here are a couple of cool examples. Each takes a thorny question with
-huge social and morale implications and comes up with an experiment to
-put a clear number on them. I find the designs fascinating and the
-numbers revealing some fascinating aspects of human psyche. I hope you
+substantial social and moral implications and comes up with an experiment to
+put a definite number on them. I find the designs fascinating and the
+numbers revealing some fascinating aspects of the human psyche. I hope you
 enjoy them too. 
 
 First. How much is Facebook worth to a user? Answer: $1000 per year.
@@ -41,13 +41,12 @@ Quoting from the [paper](https://journals.plos.org/plosone/article?id=10.1371/jo
 > the economy may be small, our results show that the benefits these
 > services provide for their users are large.
 
-Second. How much do you value a life? Or, whose life worth more? An
-infant or a pregnant women? A dog or a cat? Or a dog or a criminal?
-Tough questions, huh?  Well, there is an answer to that. Infant. Dog.
-And dog again. 
+Second. Whose life worth more? An infant or a pregnant woman? A dog or a
+a criminal?  Tough questions, huh?  Well, there is an
+answer to that. Infant. And dog. 
 
 Even more interesting is that this is also a global preference, which
-means that it's the same across across 233 countries and cultures. (Here
+means that it's the same across 233 countries and cultures. (Here
 is [a direct
 link](https://www.nature.com/articles/s41586-018-0637-6/figures/2) to
 the graph. )
