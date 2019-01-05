@@ -1,5 +1,429 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Raw thoughts from Alex Dong</title><link href="https://alexdong.com/" rel="alternate"></link><link href="https://alexdong.com/feeds/all.atom.xml" rel="self"></link><id>https://alexdong.com/</id><updated>2019-01-01T07:22:00+13:00</updated><entry><title>Hello 2019</title><link href="https://alexdong.com/hello-2019.html" rel="alternate"></link><published>2019-01-01T07:22:00+13:00</published><updated>2019-01-01T07:22:00+13:00</updated><author><name>Alex Dong &lt;me@alexdong.com&gt;</name></author><id>tag:alexdong.com,2019-01-01:/hello-2019.html</id><summary type="html">&lt;p&gt;Waking up this morning, I felt energised. There was a strong sense of
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Raw thoughts from Alex Dong</title><link href="https://alexdong.com/" rel="alternate"></link><link href="https://alexdong.com/feeds/all.atom.xml" rel="self"></link><id>https://alexdong.com/</id><updated>2019-01-06T01:22:00+13:00</updated><entry><title>Steve Jobs and Apple's previous earnings warning</title><link href="https://alexdong.com/steve-jobs-and-apples-previous-earnings-warning.html" rel="alternate"></link><published>2019-01-06T01:22:00+13:00</published><updated>2019-01-06T01:22:00+13:00</updated><author><name>Alex Dong &lt;me@alexdong.com&gt;</name></author><id>tag:alexdong.com,2019-01-06:/steve-jobs-and-apples-previous-earnings-warning.html</id><summary type="html">&lt;p&gt;Just like the previous two days, I'm handcopying a piece of writing today. &lt;/p&gt;
+&lt;p&gt;This one is a letter from Steve Jobs. It's so tightly crafted that it's almost beautiful.  (Source: &lt;a href="https://daringfireball.net/2019/01/steve_jobs_and_apples_last_previous_earnings_warning"&gt;Daring
+fireball&lt;/a&gt;.)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Apple today announced that it expects to generate revenues of about
+$1.4 billion to $1.45 billion …&lt;/p&gt;&lt;/blockquote&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;Just like the previous two days, I'm handcopying a piece of writing today. &lt;/p&gt;
+&lt;p&gt;This one is a letter from Steve Jobs. It's so tightly crafted that it's almost beautiful.  (Source: &lt;a href="https://daringfireball.net/2019/01/steve_jobs_and_apples_last_previous_earnings_warning"&gt;Daring
+fireball&lt;/a&gt;.)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Apple today announced that it expects to generate revenues of about
+$1.4 billion to $1.45 billion in the June quarter, down from previous
+guidance of about $1.6 billion. The lower-than-expected revenues are
+primarily due to soft demand in the consumer and creative markets
+such as advertising and publishing. Geographically, revenue shortfall
+is expected to be offset significantly by higher-than-expected gross
+margins primarily due to lower costs of some components. Accordingly,
+the Company has revised its earnings guidance from $.08 to $.10 per
+diluted share, compared to previous guidance of $.11 or slightly
+higher.&lt;/p&gt;
+&lt;p&gt;"Like others in our industry, we are experiencing a slowdown in sales
+this quarter. As a result, we're going to miss our revenue
+projections by around 10%, resulting in slightly lower profits," said
+Steve Jobs, Apple's CEO. "We've got some amazing new products in
+development, so we're excited about the year ahead. As one of the few
+companies currently making a profit in the PC business, we remain
+very optimistic about Apple's prospects for long-term growth".&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Here is John Gruber's commentary on the writing.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Look at the tight construction of that message from Apple in 2002.
+First paragraph: put out the numbers. Second paragraph: it’s an
+industry-wide problem, but Apple has “amazing new products” coming.
+And then the kicker, the dagger: “As one of the few companies
+currently making a profit in the PC business…”.&lt;/p&gt;
+&lt;p&gt;We’ve got some short term bad news but don’t worry, we have this.”
+And… out. Short and sweet. Rip off the bad news Band-Aid, express
+quiet confidence that Apple is in great shape, and that’s it. Message
+over.&lt;/p&gt;
+&lt;/blockquote&gt;</content></entry><entry><title>How to get rich without getting lucky</title><link href="https://alexdong.com/how-to-get-rich-without-getting-lucky.html" rel="alternate"></link><published>2019-01-05T15:22:00+13:00</published><updated>2019-01-05T15:22:00+13:00</updated><author><name>Alex Dong &lt;me@alexdong.com&gt;</name></author><id>tag:alexdong.com,2019-01-05:/how-to-get-rich-without-getting-lucky.html</id><summary type="html">&lt;p&gt;Another day. Another tweetstorm. This time by
+&lt;a href="https://mobile.twitter.com/naval/status/1002103360646823936"&gt;@naval&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;Just like yesterday, I'm handcopying the full thread here as a way to
+appreciate and understand it better. &lt;/p&gt;
+&lt;p&gt;Key concepts: specific knowledge (proprietary knowledge is what I prefer
+to call it), leverage, accountability, and judgement.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Seek wealth, not money or status. Wealth …&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;Another day. Another tweetstorm. This time by
+&lt;a href="https://mobile.twitter.com/naval/status/1002103360646823936"&gt;@naval&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;Just like yesterday, I'm handcopying the full thread here as a way to
+appreciate and understand it better. &lt;/p&gt;
+&lt;p&gt;Key concepts: specific knowledge (proprietary knowledge is what I prefer
+to call it), leverage, accountability, and judgement.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Seek wealth, not money or status. Wealth is having assets that earn
+   while you sleep. Money is how we transfer time and wealth. Status is
+   your place in the social hierarchy.&lt;/li&gt;
+&lt;li&gt;Understand that ethical wealth creation is possible. If you secretly
+   despise wealth, it will elude you.&lt;/li&gt;
+&lt;li&gt;Ignore people playing status games. They gain status by attacking
+   people playing wealth creation games.&lt;/li&gt;
+&lt;li&gt;You're not going to get rich renting out your time. You must own
+   equity --- a piece of a business --- to gain your financial freedom.&lt;/li&gt;
+&lt;li&gt;You'll get rich by &lt;a href="/platform-wins-by-turning-everyone-into-commodity-sellers.html"&gt;giving society what it wants but does not yet know
+   how to get. At scale.&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;Pick an industry where you can play long term games with long term
+   people.&lt;/li&gt;
+&lt;li&gt;The internet has massively broadened the possible space of careers.
+   Most people haven't figured this out yet.&lt;/li&gt;
+&lt;li&gt;Play iterated games. All the returns in life, whether in wealth,
+   relationships, or knowledge, come from compound interest.&lt;/li&gt;
+&lt;li&gt;Pick business partners with high intelligence, energy, and, above
+   all, integrity.&lt;/li&gt;
+&lt;li&gt;Don't partner with cynics and pessimists. Their beliefs are
+    self-fulfilling.&lt;/li&gt;
+&lt;li&gt;Learn to sell. Learn to build. If you can do both, you will be
+    unstoppable.&lt;/li&gt;
+&lt;li&gt;Arm yourself with specific knowledge, accountability, and
+    &lt;a href="/hello-2019.html"&gt;leverage&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Specific knowledge is knowledge that you cannot be trained for. If
+    society can train you, it can train someone else, and replace you.&lt;/li&gt;
+&lt;li&gt;Specific knowledge is found by pursuing your genuine curiosity and
+    passion rather than whatever is hot right now.&lt;/li&gt;
+&lt;li&gt;Building specific knowledge will feel like play to you but will look
+    like work to others.&lt;/li&gt;
+&lt;li&gt;When specific knowledge is taught, it's through apprenticeships, not
+    schools.&lt;/li&gt;
+&lt;li&gt;Specific knowledge is often highly technical or creative. It cannot
+    be outsourced or automated.&lt;/li&gt;
+&lt;li&gt;Embrace accountability, and take business risks under your own name.
+    Society will reward you with responsibility, equity, and leverage.&lt;/li&gt;
+&lt;li&gt;The most accountable people have singular, public, and risky brands:
+    Oprah, Trump, Kanye, Elon. (AD: Trump? Really?)&lt;/li&gt;
+&lt;li&gt;"Give me a leverl long enough, and a place to stand, and I will move
+    the earth." - Archimedes.&lt;/li&gt;
+&lt;li&gt;Fortune require leverage. Business leverage comes from capital,
+    people, and products with no marginal cost of replication (code and
+    media).&lt;/li&gt;
+&lt;li&gt;Capital means money. To raise money, apply your specific knowledge,
+    with accountability, and show resulting good judgement.&lt;/li&gt;
+&lt;li&gt;Labour means people working for you. It's the oldest and most
+    fought-over form of leverage. Labour leverage will impress your
+    parents, but don't waste your life chasing it.&lt;/li&gt;
+&lt;li&gt;Capital and labour are permissioned leverage. Everyone is chasing
+    capital, but someone has to give it to you. Everyone is trying to
+    lead, but someone has to follow you.&lt;/li&gt;
+&lt;li&gt;Code and media are permissionless leverage. They're the leverage
+    behind the newly rich. You can create software and media that works
+    for you while you sleep.&lt;/li&gt;
+&lt;li&gt;An army of robots is freely available --- it's just packed in data
+    centres for heat and space efficiency. Use it.&lt;/li&gt;
+&lt;li&gt;If you can't code, write books and blogs, record videos and
+    podcasts. &lt;/li&gt;
+&lt;li&gt;Leverage is a force multiplier for your judgement.&lt;/li&gt;
+&lt;li&gt;Judgement requires experience, but can be built faster by learning
+    foundational skills.&lt;/li&gt;
+&lt;li&gt;There is no skill called "business". Avoid business magazines and
+    business classes.&lt;/li&gt;
+&lt;li&gt;Study microeconomics, game theory, psychology, persuasion, ethics,
+    mathematics, and computers.&lt;/li&gt;
+&lt;li&gt;Reading is faster than listening. Doing is faster than watching.
+    (AD: what the hell does this mean? Spend less time socialising and
+    more time reading? Just do it mentality?)&lt;/li&gt;
+&lt;li&gt;You should be too busy to "do coffee", while still keeping an
+    uncluttered calendar. &lt;/li&gt;
+&lt;li&gt;Set and enforce an aspirational personal hourly rate. If fixing a
+    problem will save less than your hourly rate, ignore it. If
+    outsourcing a task will cost less than your hourly rate, outsource
+    it.&lt;/li&gt;
+&lt;li&gt;Work as hard as you can. Even though who you work with and what you
+    work on are more important than how hard you work. &lt;/li&gt;
+&lt;li&gt;Become the best in the world at what you do. Keep refining what you
+    do until this is true.&lt;/li&gt;
+&lt;li&gt;There are no get rich quick schemes. That's just someone else
+    getting rich off you. &lt;/li&gt;
+&lt;li&gt;Apply specific knowledge, with leverage and good judgement, and
+    eventually you will get what you deserve. &lt;/li&gt;
+&lt;li&gt;When you're finally wealthy, you'll realise that it wasn't what you
+    were seeking in the first place. But that's for another day. (AD:
+    This is pretty fruastrating way to end a thoughtful thread. )&lt;/li&gt;
+&lt;/ol&gt;</content></entry><entry><title>"Apple just need to lower their price"</title><link href="https://alexdong.com/apple-just-need-to-lower-their-price.html" rel="alternate"></link><published>2019-01-04T14:22:00+13:00</published><updated>2019-01-04T14:22:00+13:00</updated><author><name>Alex Dong &lt;me@alexdong.com&gt;</name></author><id>tag:alexdong.com,2019-01-04:/apple-just-need-to-lower-their-price.html</id><summary type="html">&lt;p&gt;This full thread is from
+&lt;a href="https://mobile.twitter.com/stevesi/status/1081174886901473280"&gt;@stevesi&lt;/a&gt;. 
+Steven Sinofsky is one of the best strategic thinkers and this thread
+talks about the topics I blogged &lt;a href="/platform-wins-by-turning-everyone-into-commodity-sellers.html"&gt;yesterday&lt;/a&gt;.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;What's the typical way for a luxury brand to broaden its appearl. &lt;/li&gt;
+&lt;li&gt;How does a platform make money?&lt;/li&gt;
+&lt;li&gt;How does players on a platform make …&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;This full thread is from
+&lt;a href="https://mobile.twitter.com/stevesi/status/1081174886901473280"&gt;@stevesi&lt;/a&gt;. 
+Steven Sinofsky is one of the best strategic thinkers and this thread
+talks about the topics I blogged &lt;a href="/platform-wins-by-turning-everyone-into-commodity-sellers.html"&gt;yesterday&lt;/a&gt;.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;What's the typical way for a luxury brand to broaden its appearl. &lt;/li&gt;
+&lt;li&gt;How does a platform make money?&lt;/li&gt;
+&lt;li&gt;How does players on a platform make their money? &lt;/li&gt;
+&lt;li&gt;How has Apple avoided been bogged down by the partners?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;(I'm re-typing everything again so I get to appreciate his points
+better.  Steven, or twitter, owns his tweets. Not me. )&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Apple has long known it is missing the boat on providing low priced
+   phones --- strategic mistake to cede "low end" to Android. Or raised
+   prices too much/soon. Then it must be an easy answer to just lower
+   prices or make low priced phones. Ack! Harder than it looks.&lt;/li&gt;
+&lt;li&gt;Pricing is much more sophisticated than this. Pricing not only says
+   who can afford your product but also establishes a brand, determines
+   channel &amp;amp; more.  Many say Apple is a luxury brand; certainly they
+   focused on that.&lt;/li&gt;
+&lt;li&gt;PC v Mac really showed the weakness in appealing to luxury brand in a
+   volume driven market. High prices were the undoing of the Mac  from
+   the very early days. 
+   Going back to 1990, height of Apple, PCs sold at 10X the Mac run
+   rate. But Macs had much higher margins per device.&lt;/li&gt;
+&lt;li&gt;While available software was a big part of that 10X, reality was that
+   a Mac computer also cost substantially more than a PC, and depending
+   on configuration was often 2X the price.
+   Everyone knew. Apple/Jobs refused to license Mac System enabling
+   cheaper Macs (one approach).&lt;/li&gt;
+&lt;li&gt;PC strategy was low everyday prices for PCs. BUT there was a catch or
+   three --- really important to think about relative to iPhones
+   pricing.
+   PCs were made up of hardware, OS, chips. To have low prices Intel and
+   Microsoft benefited from an ecosystem that "raced to the bottom".&lt;/li&gt;
+&lt;li&gt;Intel and Microsoft held on to most of the profits in selling PCs
+   (and MS w/Office). The retailers and PC makers had very slim (to
+   zero) margins for two decades. Often PC hardware seemed like a
+   suckers bet.&lt;/li&gt;
+&lt;li&gt;The first key to having low priced offerings is that you have to have
+   a set of partners who are willing to compete on thin margins in order
+   to bring the product to market. 
+   Very tough for one player to be the high margin and low margin
+   players. Race yourself to the bottom?&lt;/li&gt;
+&lt;li&gt;The second key thing PCs benefitted from was a channel that allowed
+   distribution by price maintaining price walls - business PCs could be
+   expensive/sold direct (ThinkPad); consumer PCs sold as a bundles with
+   high margin components useless as business PCs. (Dell's Inspiron and
+   Optiplex etc.)&lt;/li&gt;
+&lt;li&gt;Buying a PC was a complex navigation through model line selected by
+   segment (Big Business direct, SMB, individual, Education,
+   Government). Then each form factor was "good, better, best".
+   Byzantine. That's how you offer low prices and avoid everyone paying
+   and have some margin.&lt;/li&gt;
+&lt;li&gt;Plus that is where crapware comes from --- those partners need some
+    way to make margin. Adding software, selling screen real-estate, and
+    so on are the only tools remain that allow for partners to make
+    something when hardware and OS are fixed. &lt;/li&gt;
+&lt;li&gt;This is how business always does premium+low priced offers, eg
+    clothing where brands stand for luxury but aspire to mass market.
+    Brands like Calvin Klein, Ralph Laruen, Armani w/ topi tier labels
+    (like Purple) at select channels or direct. BUT also have mass
+    market/discount.&lt;/li&gt;
+&lt;li&gt;Each of those distribution points is a different label, different
+    quality, and so on. No retailer that carries Purple will carry Sport
+    or RL. They might want to but they won't be allowed to ---
+    distribution constraint that is carefully managed.&lt;/li&gt;
+&lt;li&gt;So when people say Apple needs a cheaper phone there are many
+    questions to answer beyond the "get over yourself" luxury brand
+    issue.
+    What is distribution constraint? What partner absorbs some cost to
+    leave margin? What is the branding? &lt;/li&gt;
+&lt;li&gt;Easy question --- would a cheap phone be sold and supported in Apple
+    stores side by side? How would the rest of the customers feel about
+    more crowds and tougher appointments competing with people who paid
+    half as much? Sell one phone against another --- how? &lt;/li&gt;
+&lt;li&gt;This doesn't even have to be a product question which most people
+    jump to --- sure remove fancy camera, memory, storage,e tc.
+    But these are all hardware items that competitive products will
+    simply add and market against --- "buy our android phone with
+    portrait mode".&lt;/li&gt;
+&lt;li&gt;Apple is constrained by software because apps need to work on all
+    devices --- something that Apple has stretched further than Windows
+    ever did (watch to phone to tablet, and soon Mac). ISVs/devs will
+    never embrae API differences at different price points. &lt;/li&gt;
+&lt;li&gt;Consumers bemoan Windows 10 Home, Pro, Enterprise. Insane energy
+    goes into trying to have features that don't fragment developers and
+    OEMs (drivers, etc) and can be deployed efficiently while alos
+    maintaining price differentiation. That's literally the entire
+    Windows business. &lt;/li&gt;
+&lt;li&gt;The levers available to do cheaper products are not all available to
+    Apple. Those that simply say they have a pricing problem need to
+    solve for the product, the distribution, the branding, and more.&lt;/li&gt;
+&lt;li&gt;Big companies become &lt;em&gt;enormously&lt;/em&gt; consternated over brand value
+    props, channel conflicts, and so on. Where Apple avoided all of
+    these was owning them all. The downside of owning them all is this
+    limits responding to the challenges.&lt;/li&gt;
+&lt;li&gt;At Microsoft we always reminded ourselves that you don't sell 300M
+    of something at one every day low price. Most all energy was to
+    maintain price floor. 
+    &lt;em&gt;AMAZINGLY&lt;/em&gt; Apple managed to sell over 200M of something per year at
+    pretty much one every day high price, then increased price.&lt;/li&gt;
+&lt;li&gt;Anyone that thinks Apple is unaware of the challenge and has not
+    sketched out ideas, tested them, and thought about them immensely is
+    crazy. Literally this consumes a company or at least has been the
+    past year. &lt;/li&gt;
+&lt;li&gt;Example --- I can't count how many times Windows/Office toyed with
+    "lite" versions. Fewer features cost less. DUH! Imaging such product
+    and &lt;em&gt;everyone&lt;/em&gt; wants it. How do you market it? What brand is it? How
+    much revenue do you forgo? Is it freemium? trialware? annoying?&lt;/li&gt;
+&lt;li&gt;Literally the constant drumbeat from the press, partners, channel
+    was that PCs were too expensive, Windows or Office too expensive. No
+    matter what the price was. Also Intel hearing the same. Magic for
+    Intel/MS was getting others to cave --- who caves for Apple?&lt;/li&gt;
+&lt;li&gt;I once  ran the numbers on selling just one SKU of Office rather
+    than the seemingly infinite number. It was literally billions of
+    dollars of lost revenue immediately and more over time --- leaving
+    revenue on table PLUS alienating customers at both high end and low
+    end. &lt;/li&gt;
+&lt;li&gt;What does all these mean? Apple may or may not have a "pricing" or
+    "price point" or "structural"/secular challenge. For sure just
+    releasing a cheap phone doesn't make all better. 
+    All takes place in context of lots of cheap/bad competitive phones. 
+    Lots to consider.&lt;/li&gt;
+&lt;/ol&gt;</content></entry><entry><title>Platform wins by turning everyone into commodity sellers</title><link href="https://alexdong.com/platform-wins-by-turning-everyone-into-commodity-sellers.html" rel="alternate"></link><published>2019-01-03T15:22:00+13:00</published><updated>2019-01-03T15:22:00+13:00</updated><author><name>Alex Dong &lt;me@alexdong.com&gt;</name></author><id>tag:alexdong.com,2019-01-03:/platform-wins-by-turning-everyone-into-commodity-sellers.html</id><summary type="html">&lt;p&gt;The Verge recently ran a featured story on the risks of &lt;a href="https://www.theverge.com/2018/12/19/18140799/amazon-marketplace-scams-seller-court-appeal-reinstatement"&gt;operating in
+Amazon's
+Marketplace&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;Amazon's Marketplace is an e-commerce platform where 6 million sellers
+compete against each other to fulfil your orders. Near two third of the
+items sold on Amazon are sold by these third-party sellers. &lt;/p&gt;
+&lt;p&gt;It turns …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Verge recently ran a featured story on the risks of &lt;a href="https://www.theverge.com/2018/12/19/18140799/amazon-marketplace-scams-seller-court-appeal-reinstatement"&gt;operating in
+Amazon's
+Marketplace&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;Amazon's Marketplace is an e-commerce platform where 6 million sellers
+compete against each other to fulfil your orders. Near two third of the
+items sold on Amazon are sold by these third-party sellers. &lt;/p&gt;
+&lt;p&gt;It turns out that some sellers use Amazon's own rules against each
+other, devising intricate schemes to get their rivals suspended.  Once
+suspended from the platform, sellers find themselves in a bewildering
+appeals system. &lt;/p&gt;
+&lt;p&gt;To quote the story: &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“You have manipulated product reviews on our site,” an email from
+Amazon read. “This is against our policies. As a result, you may no
+longer sell on Amazon.com, and your listings have been removed from
+our site.”&lt;/p&gt;
+&lt;p&gt;A rival had framed Plansky for buying five-star reviews, a high crime
+in the world of Amazon. The funds in his account were immediately
+frozen, and his listings were shut down. Getting his store back would
+take him on a surreal weeks-long journey through Amazon’s bureaucracy,
+one that began with the click of a button at the bottom of his
+suspension message that read “appeal decision.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;A sad situation to find yourself in as a small business
+owner. Plansky certainly had my sympathy. But sadly this is to be expected.&lt;/p&gt;
+&lt;p&gt;I understand that selling through other people's platform saves tons of
+money from marketing, giving a young business a headstart at the
+beginning. But building one's entire distribution channel on top of
+Amazon is willfully ignoring the basic rule at play here.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The platform wins by making everyone else a replaceable commodity.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Generally speaking, there are two kinds of businesses: value creation
+and arbitrage. &lt;/p&gt;
+&lt;p&gt;Value creation sets out to make a difference, and the primary
+way to win is to create something new that people didn't know they want
+it. &lt;/p&gt;
+&lt;p&gt;Arbitrage is to focus on the things people know they want and identify
+the suboptimal market opportunities and buy-low-sell-high. &lt;/p&gt;
+&lt;p&gt;Value creation makes something new and demands a premium. It wins
+through exclusivity. Arbitrage removes any inefficiency in the market
+and drives the cost down and makes the products available to a broader
+audience.&lt;/p&gt;
+&lt;p&gt;The platforms win by making all sellers play the arbitrage game. It's a
+volume based market. It's a race to the bottom" game. Not a value
+creation one. As a business owner, it's our responsibility to know which
+game we are playing and deal with our hands well.&lt;/p&gt;</content></entry><entry><title>Two kinds of doubt, guesstimate, prediction, Fira and flat design is bad</title><link href="https://alexdong.com/two-kinds-of-doubt-guesstimate-prediction-fira-and-flat-design-is-bad.html" rel="alternate"></link><published>2019-01-02T15:22:00+13:00</published><updated>2019-01-02T15:22:00+13:00</updated><author><name>Alex Dong &lt;me@alexdong.com&gt;</name></author><id>tag:alexdong.com,2019-01-02:/two-kinds-of-doubt-guesstimate-prediction-fira-and-flat-design-is-bad.html</id><summary type="html">&lt;p&gt;A few great links/tools I found in the last a few days. &lt;/p&gt;
+&lt;p&gt;&lt;a href="https://continuations.com/post/181045939520/uncertainty-wednesday-leadership-under"&gt;What's the difference between second guessing and
+re-evaluating?&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The former is questioning a decision without material new information.
+The latter is revisiting a decision after material new information has
+been obtained. It is second guessing which is …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;A few great links/tools I found in the last a few days. &lt;/p&gt;
+&lt;p&gt;&lt;a href="https://continuations.com/post/181045939520/uncertainty-wednesday-leadership-under"&gt;What's the difference between second guessing and
+re-evaluating?&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The former is questioning a decision without material new information.
+The latter is revisiting a decision after material new information has
+been obtained. It is second guessing which is destructive for morale,
+because it calls into question not just the decision but also undermines
+the legitimacy of the decision making process itself.&lt;/p&gt;
+&lt;p&gt;Re-evaluating on the other hand is healthy but requires a good decision
+making process. In particular, there has to be a relatively clear way of
+assessing whether something is in fact material new information.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="https://github.com/getguesstimate/guesstimate-app"&gt;Guesstimate&lt;/a&gt;:
+Exceptionally designed and fresh tool for making estimations. If nothing
+else, do check out the screencast on the web page. It's mind blowing
+stuff.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Guesstimate is a tool for performing estimates using monte carlo
+experiments. It can be used similarly to excel, but provides the option
+of providing ranges and distributions as values instead of individual
+points. Other metrics can do mathematical operations on these
+cells/metrics. After each new input is added or changed, a set of 5000
+samples is randomly generated from each input and goes through the
+specified operations to produce confidence intervals in the output.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="https://avc.com/2018/12/what-happened-in-2018/?utm_source=feedburner&amp;amp;utm_medium=feed&amp;amp;utm_campaign=Feed%3A+AVc+%28A+VC%29"&gt;What happened in 2018&lt;/a&gt; and &lt;a href="https://avc.com/2019/01/what-is-going-to-happen-in-2019/?utm_source=feedburner&amp;amp;utm_medium=feed&amp;amp;utm_campaign=Feed%3A+AVc+%28A+VC%29"&gt;What's going to happen in 2019&lt;/a&gt;:
+Eroded trust in institutions and technology, dicey US, messy Brexit and
+sluggish China predicates a difficult macro business and political
+environment. Technology, riding the transition wave from industry age to
+information age, will continue to grow.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In 2018, we saw social media usage in the US flatten out and possibly
+even start to decline a bit.And the usage of screen time management
+apps, like Screentime on iOS, is surging. We know we are addicted to
+tech, we don’t want to be, and we are working on getting sober.&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;All of this lost trust is challenging for big tech, and the tech sector
+in general, but is also a huge opportunity for new companies and new
+technologies that can offer different products and business models that
+we can trust more, or don’t need to trust.&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;This loss of trust in 2018 was not limited to the tech sector. In the
+US, and also in many places around the world, we are losing trust in our
+institutions and our elected officials.&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;I expect the combination of higher rates, uncertainty in Washington, and storm clouds globally (which we will get to soon) will cause business leaders in the US to become more cautious on hiring and investment. Consumers will make essentially the same calculations. And that will lead to a weaker economy in the US in 2019.&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;The startup/tech economy is somewhat immune to macro trends. Many startups and big tech companies were able to grow and expand their businesses during the last financial downturn in 2008 and 2009. Some very important tech companies were even started in those years.&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;The tech/startup economy is driven first and foremost by technical and creative (ie business model) innovation. And that is not impacted by the macro environment.&lt;/p&gt;
+&lt;p&gt;So I expect that we will continue to see big tech invest and grow their
+businesses and do well in 2019.&lt;/p&gt;
+&lt;p&gt;However, I do think a difficult macro business and political environment in the US will lead investors to take a more cautious stance in 2019.&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;But all of that is going to happen at the margin. I expect 2019 to be another solid year for the tech/startup sector as we are in a possibly century-long conversion from an industrial economy to an information economy and the tailwinds for tech/startup vs the rest of the economy remain in place and strong.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="https://github.com/tonsky/FiraCode"&gt;FiraCode&lt;/a&gt;: Fonts designed by
+programmers for programmers. I have just switched all my dev environment
+to this new font. &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Programmers use a lot of symbols, often encoded with several
+characters. For the human brain, sequences like -&amp;gt;, &amp;lt;= or := are
+single logical tokens, even if they take two or three characters on
+the screen. Your eye spends a non-zero amount of energy to scan, parse
+and join multiple characters into a single logical one. Ideally, all
+programming languages should be designed with full-fledged Unicode
+symbols for operators, but that’s not the case yet.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="https://www.researchgate.net/publication/281628009_Flat_Design_vs_Traditional_Design_Comparative_Experimental_Study"&gt;Flat Design vs. Traditional
+Design&lt;/a&gt;:
+I've never been a big fan of Material design from Google or the Metro
+style from Microsoft. Apparently it takes &lt;strong&gt;twice&lt;/strong&gt; amount of cognitive
+load for people to use these flat design interfaces! Twice!  &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In the past few years flat user interface design has become the
+predominating visual style of operating systems, websites and mobile
+apps. Although flat design has been widely criticized by HCI and
+usability experts, empirical research on flat design is still scarce.
+We present the results of an experimental comparative study of visual
+search effectiveness on traditional and flat designs. The following
+types of visual search tasks were examined: (1) search for a target
+word in text; (2) search for a target icon in a matrix of icons; (3)
+search for clickable objects on webpages. Time and accuracy parameters
+of the visual search, as well as oculomotor activity, were measured.
+The results show that a search in flat text mode (compared with the
+traditional mode) is associated with higher cognitive load. A search
+for flat icons takes twice as long as for realistic icons and is also
+characterized by higher cognitive load. Identifying clickable objects
+on flat web pages requires more time and is characterised by a
+significantly greater number of errors. Our results suggest replacing
+the flat style user interfaces with interfaces based on the design
+principles developed over decades of research and practice of HCI and
+usability engineering. &lt;/p&gt;
+&lt;/blockquote&gt;</content></entry><entry><title>Hello 2019</title><link href="https://alexdong.com/hello-2019.html" rel="alternate"></link><published>2019-01-01T07:22:00+13:00</published><updated>2019-01-01T07:22:00+13:00</updated><author><name>Alex Dong &lt;me@alexdong.com&gt;</name></author><id>tag:alexdong.com,2019-01-01:/hello-2019.html</id><summary type="html">&lt;p&gt;Waking up this morning, I felt energised. There was a strong sense of
 excitement&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; in the air. The kind I felt when I was about to embark on
 a new and unknown journey. It was the same excitement when I boarded a
 two-day train ride to go to a …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Waking up this morning, I felt energised. There was a strong sense of

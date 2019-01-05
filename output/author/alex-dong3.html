@@ -14,6 +14,148 @@
                 </header><!-- /#banner -->
   <section id="content" class="body">
       <article>
+        <h2 class="entry-title"><a href="https://alexdong.com/cannot-measure-productivity-openpgp-for-gmail-selling-out-and-judge-music-performance-by-the-look.html">"Cannot measure productivity, OpenPGP for Gmail, Selling out and judge music performance by the look"</a></h2>
+        <abbr class="published" title="2013-09-05T22:05:00+12:00">
+          Published: Thu 05 September 2013
+        </abbr>
+        <h2>- links</h2>
+<p><a href="http://martinfowler.com/bliki/CannotMeasureProductivity.html">Cannot measure productivity</a></p>
+<blockquote>
+<p>Some people say "if you can't measure it, you can't manage it". That's a cop out. Businesses manage things they can't really measure the value of all the time. How do you measure the      productivity of a company's lawyers, it's marketing department, an educational institution?    You can't - but you still need to manage them (see Robert Austin for more).
+I can see why measuring productivity is so seductive. If we could do it we could assess      software much more easily and objectively than we can now. But false measures only make things worse. This is somewhere I think we have to admit to our ignorance.</p>
+</blockquote>
+<p><a href="https://github.com/seancolyer/gmail-crypt">OpenPGP support for gmail</a></p>
+<blockquote>
+<p>gmail-crypt: An OpenPGP browser (currently Chrome) extension that integrates tightly with    Gmail and does encryption/decryption via Javascript.</p>
+</blockquote>
+<p><a href="http://caterina.net/2013/08/29/are-you-taking-any-steps-to-keep-shit-real-dave-eggers-on-selling-out/">Are you taking any steps to keep shit real? Dave Eggers on “Selling Out”</a>: A long     quote from <a href="http://en.wikipedia.org/wiki/Dave_Eggers">Dave Eggers</a>' <a href="http://en.wikipedia.org/wiki/A_Heartbreaking_Work_of_Staggering_Genius">A Heartbreaking Work of  Staggering Genius</a>.</p>
+<blockquote>
+<p>The only thing worse than this sort of activity is when people, students and teachers alike, run around college campuses calling each other racists and anti-Semites. It’s born of boredom, lassitude. Too cowardly to address problems of substance where such problems actually are, we  claw at those close to us. We point to our neighbor, in the khakis and sweater, and cry foul.  It’s ridiculous. We find enemies among our peers because we know them better, and their        proximity and familiarity means we don’t have to get off the couch to dismantle them.
+Did I wonder if people would think we were selling out, that we were not fulfilling the      mission they had assumed we had committed ourselves to?
+No. I did not. Nor will I ever. We just don’t care. We care about doing what we want to do   creatively. We want to be interested in it. We want it to challenge us. We want it to be       difficult. We want to reinvent the stupid thing every time. Would I ever think, before I did   something, of how those with sellout monitors would respond to this or that move? I would not.</p>
+</blockquote>
+<p><a href="http://www.digitalmusicnews.com/uploads/28/50/2850bf87fa857587137db28ac2c81667/PNAS-2013-Tsay-1221454110.pdf">Sight over sound in the judgement of music performance</a></p>
+<blockquote>
+<p>participants were asked to predict the outcomes using either audio-only recordings, videos   with audio, or videos without sound.  Astoundingly, the prediction rate for those watching     without sound was dramatically greater than those evaluating with the sound.   In fact, those  listening to the music predicted the proper outcome about one-third of the time, the same as   chance.</p>
+</blockquote>
+      </article>
+      <hr/>
+      <article>
+        <h2 class="entry-title"><a href="https://alexdong.com/fanout-architecture-design-apache-spark-algorithms-beats-moores-law-and-linuxs-so_reuseport.html">"Fanout architecture design, Apache spark, algorithms beats Moore's law and Linux's SO_REUSEPORT"</a></h2>
+        <abbr class="published" title="2013-08-29T23:07:00+12:00">
+          Published: Thu 29 August 2013
+        </abbr>
+        <h2>- links</h2>
+<p><a href="http://static.googleusercontent.com/external_content/untrusted_dlcp/research.google.com/en/us/people/jeff/Berkeley-Latency-Mar2012.pdf">Fanout architecture design guides from Google (pdf)</a>: If a server has an average 1-ms latency but has a 1% chance of taking longer than 1 second to finish a request, spreading a request across 100 such servers would mean that 63% requests will take more than 1 second.  This paper introduces some good engineering practices for designing a fanout architecture. </p>
+<p><a href="http://spark.incubator.apache.org/">Apache Spark project</a>: When memory is so cheap, why don't run mapreduce in memory? </p>
+<blockquote>
+<p>Spark was initially developed for two applications where placing data in memory helps: iterative algorithms, which are common in machine learning, and interactive data mining. In both cases, Spark can run up to 100x faster than Hadoop MapReduce. However, you can use Spark for general data processing too. </p>
+</blockquote>
+<p><a href="http://agtb.wordpress.com/2010/12/23/progress-in-algorithms-beats-moore%E2%80%99s-law/">Progress in Algorithms Beats Moore’s Law</a>:
+From 1988 to 2003, solving the same model using linear programming sees an improvement by a factor of roughly 43 million.  </p>
+<blockquote>
+<p>Of this, a factor of roughly 1,000 was due to increased processor speed, whereas a factor of roughly 43,000 was due to improvements in algorithms! </p>
+</blockquote>
+<p><a href="http://freeprogrammersblog.vhex.net/post/linux-39-introdued-new-way-of-writing-socket-servers/2">Linux kernel 3.9 introduced SO_REUSEPORT</a>: This patch allows multiple processes to bind to the same IP. This opens up the possibility of uninterrupted server upgrade by gradually replacing old processes with new ones.  This used to be a big selling point for erlang, but now languages like Ruby, Python or node.js would be able to do it too. </p>
+      </article>
+      <hr/>
+      <article>
+        <h2 class="entry-title"><a href="https://alexdong.com/a-problem-statement-for-the-web-bootstraps-way-of-thinking-a-password-manager-follows-unix-philosophy-and-rules-on-writing-cc-shared-libraries.html">"A problem statement for the web, bootstrap's way of thinking, a password manager follows unix philosophy and rules on writing c/c++ shared libraries"</a></h2>
+        <abbr class="published" title="2013-08-26T09:44:00+12:00">
+          Published: Mon 26 August 2013
+        </abbr>
+        <h2>- links</h2>
+<p><a href="http://unitscale.com/mb/bomb-in-the-garden/">The bomb in the garden</a>: <a href="http://practicaltypography.com/end-credits.html#bio">Matthew Butterick</a>'s summarization on the problems of the Internet. It helps me to tie a few thoughts together into a more coherent framework.  The problem statement:"the web is much better at making information free than making it expensive".  As a consequence, "We've ended up with a web dominated by advertising, which is weakening. ". We're seeing "a gradual degradation of design quality" and the real possibility of "the open web becomes a second-class platform".  He did propose a solution, which is similar to what Tim Berners Lee <a href="http://www.weforum.org/videos/insight-idea-tim-berners-lee">said</a> at World Economic Forum in Jan, that we need to make it really easy to pay for online content.  </p>
+<p><a href="http://www.helloerik.com/bootstrap-3-grid-introduction">Bootstrap 3 Grid Introduction</a>: I found bootstrap v3's "mobile first" approach a bit confusing. This article provides a short-but-solid description on what does it mean to be a "mobile first" grid system.  Even if you were not using bootstrap v3, reading this would still bring a new perspective to stylesheet design in mobile age. </p>
+<p><a href="http://zx2c4.com/projects/password-store/">Pass: the standard Unix password manager</a>: A great password manager that follows the Unix philosophy. It uses GPG to encrypt password files and uses git to track password changes. </p>
+<p><a href="http://lucumr.pocoo.org/2013/8/18/beautiful-native-libraries/">Beautiful Native Libraries</a>: Armin's suggestions on writing proper c/c++ shared libraries that "do not annoy your users". Loads of solid advises, but I hope I would never need to use them. </p>
+      </article>
+      <hr/>
+      <article>
+        <h2 class="entry-title"><a href="https://alexdong.com/choirio-explained.html">"Choir.io explained"</a></h2>
+        <abbr class="published" title="2013-08-16T10:15:00+12:00">
+          Published: Fri 16 August 2013
+        </abbr>
+        <h2>- bestof</h2>
+<p>People ask me "why do you build <a href="http://choir.io">choir.io</a>". Yes,
+the <a href="http://choir.io/player/f9c750f2bedb0c0f">Github Realtime Activity</a> 
+demo is cool, but are you really going to bet your next startup on this?" </p>
+<p>My answer is yes and this post explains why. </p>
+<p>Five years from now, most of us will handle
+casual computing tasks with wearable computers.  We don't know what 
+the devices might look like but it's almost certain that we will be 
+communicating with them using voice commands.  Google Moto X's 
+<a href="http://www.theverge.com/2013/7/14/4522054/moto-x-always-listening-voice-commands-new-notifications">"always listening"</a>
+feature enables us to talk to the phone without having to launch an 
+app. Google's voice search is finally fast enough to keep up with 
+my natural speaking speed. </p>
+<p>However, the options for computers to communicate back to us 
+are still very limited. Your email client might play a ding sound
+when a new email arrives. But the sound stays the same regardless of whom 
+the mail is sent from and how important it is to you.  </p>
+<p>Our ears are born multi-tasking masters. As I am
+typing this, I could hear the heat pump's humming, 
+the wind blowing the leaves and the light tapping of snow flakes on the 
+window.  All at the same time. </p>
+<p>We can also, almost effortlessly, notice changes of a sound among 
+different background "noises".  Without looking out of the window, I can tell 
+that the snow has just turned into a sleety rain, because the soft snow
+falling sound has become much louder as the ice hitting the ground. </p>
+<p>Sound is the perfect medium for wearable computers to talk back to us. 
+Sound has a dozen of properties that we can tune to convey different 
+level of emotions and intrusiveness.  Different sound packs would fit 
+into various contexts. </p>
+<p>This is where Choir comes in. Choir provides a programmable
+interface to translate events into a rich set of context-aware sounds.
+Our users mark events with emotions and intrusivenss and we take care of the
+rest. </p>
+<p>Is Choir too early for the market? Certainly not. Choir has three 
+killer applications. </p>
+<p>First, ambient sound monitoring. By associating user or server 
+activities with different sounds, you can stay aware of the current statuses
+without having to look at the graphs. If something unusual happens, you would
+hear the changes almost subconsciously.  Failed login requests, rejected 
+credit card transactions, 500 errors are a few good examples here. </p>
+<p>Second, notify without interruptions. Today your notifications are 
+mostly delivered via email or chat room messages. You have to bear the cost
+of context switches to checkout these messages.  Choir can provide you 
+with a more fine-grained control over different type of notifications. 
+For example, you might choose to play a pleasant, low-intrusive sound
+when a user gives a kudos to a support ticket, but you would probably want to
+select a negative and intrusive sound, maybe a sea monster roar, if a 
+user just unsubscribed from your service. If you hear too many of the 
+scary sea monster noises, you will know something is wrong. </p>
+<p>Third, celebrate with others.  Some companies would hit a giant
+gone when they close a new deal. It is a great morale booster to bring 
+the whole team together and share the excitement of successes. 
+Now you could configure Choir to play a cheerful sound when a new paid
+user sign up for your service. </p>
+<p>If you are interested to give Choir a go, please request an invite at 
+<a href="http://choir.io">http://choir.io</a>. You can also visit our <a href="http://choir.uservoice.com">support
+forum</a> and tell us what you think. 
+We'd love to hear from you. </p>
+      </article>
+      <hr/>
+      <article>
+        <h2 class="entry-title"><a href="https://alexdong.com/facebooks-huxley-looking-inside-dropbox-short-writing-style-guide-and-easy-to-be-a-jerk-online.html">"Facebook's Huxley, looking inside Dropbox, short writing style guide and easy to be a jerk online"</a></h2>
+        <abbr class="published" title="2013-08-15T22:25:00+12:00">
+          Published: Thu 15 August 2013
+        </abbr>
+        <h2>- links</h2>
+<p><a href="https://github.com/facebook/huxley">Facebook's Huxley</a>: Huxley is a new approach to test UIs.  Presentation layer tests are tedious to write and fragile to maintain. Huxley takes screenshots of each test run and compare them with previous results to find out what has changed.  </p>
+<p><a href="https://www.usenix.org/system/files/conference/woot13/woot13-kholia.pdfplus">Looking inside the (Drop) box</a>: This paper presents a method to decrypt Dropbox's native app, bypass the two factor authentication and hijack Dropbox accounts. The key here is to inject Python code by overriding standard C functions like <code>strlen</code>. </p>
+<p><a href="http://www.sdc.uwo.ca/writing/gradhandouts/General%20Writing%20-%20Writing%20Style%20-%20Presentation.pdf">Effective writing style PPT from WSU</a></p>
+<blockquote>
+<p>While you might feel that this takes away some of the forcefulness of your writing, you should always feel that being correct is more important than being persuasive.
+(via <a href="https://twitter.com/Bohr_research">@Bohr_research</a>)</p>
+</blockquote>
+<p><a href="http://www.somebits.com/weblog/culture/games/toxic-behavior-in-league-of-legends.html">Most everyone can be a jerk online</a></p>
+<blockquote>
+<p>1% of players are toxic, frequently acting badly; 78% of players are generally good. The graph on the right shows toxic behavior. And only 5% of toxic behavior comes from toxic people; 77% of it comes from people who are usually good.  </p>
+</blockquote>
+      </article>
+      <hr/>
+      <article>
         <h2 class="entry-title"><a href="https://alexdong.com/androids-notification-center-the-awful-undefined-in-javascript-peak-e-book-sales-and-laura-poitras.html">"Android's notification center, the awful 'undefined' in javascript, peak e-book sales and Laura Poitras "</a></h2>
         <abbr class="published" title="2013-08-14T22:15:00+12:00">
           Published: Wed 14 August 2013
@@ -131,150 +273,9 @@ Here are the main ideas from "art school's true exercises": </p>
 learning your tool, understand the context, form your own opinion and open up to new ideas. </p>
       </article>
       <hr/>
-      <article>
-        <h2 class="entry-title"><a href="https://alexdong.com/snowden-getaway-options-academic-interaction-feynman-diagrams-javascripts-wake-and-false-confidence-in-https.html">"Snowden getaway options, academic interaction feynman diagrams, javascript's wake and false confidence in https"</a></h2>
-        <abbr class="published" title="2013-07-30T09:57:00+12:00">
-          Published: Tue 30 July 2013
-        </abbr>
-        <h2>- links</h2>
-<p><a href="http://edition.cnn.com/2013/07/12/us/snowden-getaway-options">What are the odds of a Snowden getaway?</a>: Even reading this makes me feel cold. </p>
-<blockquote>
-<p>Speaking of movies, near the end of the hit film "Catch Me If You Can," there's a scene that Snowden might do well to watch while he's killing time in the airport lounge (or wherever he is) pondering his fate. The young forger, Frank Abagnale, who has been staying a step ahead of the feds, finally grows irritated and fatigued. Not because they are particularly skilled in their hunting, nor because they are getting closer, but simply because they won't give up. In a fit of pique, he blurts into the phone, "Stop chasing me!" On the other end, the dogged, bureaucratic Treasury agent, Carl Hanratty, answers, "I can't stop. It's my job."
-Ultimately, this is why many people who have been involved in such matters believe Snowden will be caught.  ...
-They'll have to make Edward Snowden their living, because those who are chasing him already have. Government agents will be paid every minute of every day for as long as it takes. Seasons may change and years may pass, but the odds say that one morning, he'll look out of a window, go for a walk or stop for a cup of coffee, and the trap will spring shut. It will be almost like a movie.</p>
-</blockquote>
-<p><a href="http://www.phdcomics.com/comics.php?f=1461">Academic Interaction Feynman Diagrams</a>: hilarious social interaction patterns described using Feynman diagrams.</p>
-<p><a href="http://blog.alexmaccaw.com/javascript-wake-event">JavaScript ‘wake’ event</a></p>
-<blockquote>
-<p>It turns out there is no JavaScript wake event. There is an online event, but it doesn’t seem to trigger whenever the computer is sent to sleep and re-awoken.
-The only sure fire way I could work out to achieve this, was to run a interval and check that the it was invoked at the expected times. Any delay in an interval invocation indicates that the computer has just slept.</p>
-</blockquote>
-<p><a href="http://www.tedunangst.com/flak/post/tiny-downside-to-encrypting-all-web-traffic">tiny downside to encrypting all web traffic</a></p>
-<blockquote>
-<p>When "https is secure, make sure your bank uses https" permeates into the general conscience, does it become "if everything is https, everything is secure"? Does the prevalence of https inspire false confidence in the web or will people learn that https was never a good signal for determining the legitimacy of a (possibly forged) web site?</p>
-</blockquote>
-      </article>
-      <hr/>
-      <article>
-        <h2 class="entry-title"><a href="https://alexdong.com/two-scripts-for-android-app-reverse-engineering.html">"Two scripts for Android app reverse engineering"</a></h2>
-        <abbr class="published" title="2013-07-24T10:10:00+12:00">
-          Published: Wed 24 July 2013
-        </abbr>
-        <h2>- code</h2>
-<p>For the last two weeks, I've been working on an audit project for an Android app. 
-I worked on Microsoft's <a href="https://en.wikipedia.org/wiki/Windows_CE">WinCE</a> about 14 years ago. 
-I am quietly impressed by how developer friendly the Android platform is. Here are a couple of
-shell scripts I have written to make the reverse engineering process easier. </p>
-<p>During our work, it is quite common to make some modification to the smali files 
-generated by <a href="https://code.google.com/p/android-apktool/">apktool</a>, turn it back 
-into a proper apk and install on the device to see whether our guesses were correct. 
-This is quite a repetitive process that involves sign the apk, align the zip file, 
-uninstall the original app and install the new one from local computer to the device. </p>
-<p><code>Pack.sh</code> is a shell script that automates this process for you. It takes two parameters, 
-the first is the folder where the smali files are; the second is the package name 
-for the application, which is needed for us to automatically uninstalled the app from 
-the device. </p>
-<p>{% gist 6073781 %}</p>
-<p><a href="http://en.wikipedia.org/wiki/Strace">strace</a> is a brilliant tool that allows you to 
-attach to a running process and see all the unix system calls it's making. 
-Once you get it up and running, it is almost trivial to get a comprehensive view 
-of the app's interaction with Android system, for example, 
-which files it touches, which urls it requests. </p>
-<p>In our case, the app would be launched and crashed immediately, leaving us no time
-to manually attach a strace to the process to see what has gone wrong. <code>ambush.sh</code>
-is a shell script that waits for a process to show up and automatically attach strace
-to that process. This makes it possible for us to see what the app has been doing 
-before it crashes itself. It takes two parameters too. The first is the pattern 
-that <code>ps | grep</code> could use to find the process id; the latter is where the strace
-is located. </p>
-<p>{% gist 6034934 %}</p>
-<p><a href="http://benno.id.au/blog/2007/11/18/android-runtime-strace">Benno</a>
-has compiled a version of <a href="http://benno.id.au/android/strace">strace for Android</a>.
-If you have <a href="www.busybox.net">busybox</a> installed, you can run the following command 
-to install it from the net. </p>
-<p _="%" endcodeblock>{% codeblock lang:bash %}
-    $ cd /data/local
-    $ wget http://benno.id.au/android/strace
-    $ chmod 555 ./strace</p>
-<p>Please note that you'll have to put the strace in <code>/data/local</code> in order to 
-use <code>chmod</code> to make it an executable. </p>
-      </article>
-      <hr/>
-      <article>
-        <h2 class="entry-title"><a href="https://alexdong.com/browser-fingerprint-randomness-of-hashing-algorithm-rate-limiting-as-meta-tool-and-kpi-for-local-government.html">"Browser fingerprint, randomness of hashing algorithm, rate limiting as meta-tool and KPI for local government"</a></h2>
-        <abbr class="published" title="2013-07-22T22:58:00+12:00">
-          Published: Mon 22 July 2013
-        </abbr>
-        <h2>- links</h2>
-<p><a href="https://github.com/Valve/fingerprintjs">fast browser fingerprint using javascript</a></p>
-<blockquote>
-<p>Fingerprinting is a technique, outlined in the research by Electronic Frontier Foundation, of anonymously identifying a web browser with accuracy of up to 94%.<br>
-Browser is queried its agent string, screen color depth, language, installed plugins with supported mime types, timezone offset and other capabilities, such as local storage and session storage. Then these values are passed through a hashing function to produce a fingerprint that gives weak guarantees of uniqueness.<br>
-No cookies are stored to identify a browser.</p>
-</blockquote>
-<p><a href="http://programmers.stackexchange.com/questions/49550/which-hashing-algorithm-is-best-for-uniqueness-and-speed">Awesome data visualization of the randomness of different hashing algorithm</a>: Murmur seems to be pretty good.  The images is one of the best of its kind. </p>
-<p><a href="http://www.codinghorror.com/blog/2009/02/rate-limiting-and-velocity-checking.html">Rate Limiting and Velocity Checking</a>: Rate limiting is one of the hadful meta tools that are easy to deploy yet much more effective to prevent possible attacks.   </p>
-<blockquote>
-<p>I was shocked how little comprehensive information was out there on rate limiting and velocity checking for software developers, because they are your first and most important line of defense against a broad spectrum of possible attacks. It's amazing how many attacks you can mitigate or even defeat by instituting basic rate limiting.</p>
-</blockquote>
-<p><a href="http://knightlab.northwestern.edu/2013/07/15/clay-johnson-on-creative-technologists-designing-with-empathy-and-news-as-a-community-service/">KPI dashboard for your community and local government</a></p>
-<blockquote>
-<p>When I talk about my book, the one question I ask consistently is “Who here knows the child poverty rate of the area they live in?” And nobody knows. Nor does anybody know the direction it’s moving! But I think fairly soon, we’re going to see healthy community key indicators coming up and getting reported on, and it’s going to change the way the newsroom works a bit.</p>
-</blockquote>
-      </article>
-      <hr/>
-      <article>
-        <h2 class="entry-title"><a href="https://alexdong.com/the-pixar-theory-authentic-design-problem-with-apples-ad-and-malware-hidden-in-jpg-headers.html">"The pixar theory, Authentic Design, Problem with Apple's Ad and Malware hidden in JPG Headers"</a></h2>
-        <abbr class="published" title="2013-07-17T09:56:00+12:00">
-          Published: Wed 17 July 2013
-        </abbr>
-        <h2>- links</h2>
-<p><a href="http://jonnegroni.com/2013/07/11/the-pixar-theory/">The Pixar Theory</a>: When Steve Jobs said he lives at the intersection of technology and humanity, I guess in his mind he didn't see a particularly bright future. </p>
-<blockquote>
-<p>Every Pixar movie is connected. I explain how, and possibly why. Several months ago, I watched a fun-filled video on Cracked.com that introduced the idea (at least to me) that all of the Pixar movies actually exist within the same universe. Since then, I’ve obsessed over this concept, working to complete what I call “The Pixar Theory,” a working narrative that ties all of the Pixar movies into one cohesive timeline with a main theme. </p>
-</blockquote>
-<p><a href="http://www.fastcodesign.com/1673020/in-20-years-we-re-all-going-to-realize-this-apple-ad-is-nuts">In 20 Years, We’re All Going To Realize This Apple Ad Is Nuts</a>: I like this article but let's keep in mind that the reality is rarely as dramatic or black-and-white as reporters love to write in. </p>
-<blockquote>
-<p>the fundamental interactions behind our gadgets are designed to constantly lure us back into the four-inch world, nudging us with vibration, push notifications, and impromptu xylophone solos to almost touch all of the people in our lives doing the same thing on another four-inch screen somewhere else.</p>
-</blockquote>
-<p><a href="http://www.smashingmagazine.com/2013/07/16/authentic-design/">Authentic Design</a>: A good landscape overview to separate the concept of "flat design", "minimalist design" from "authenticity in design".  The author has done a good job guiding one through the history of design movements in the last two centuries.  I like his definition of authentic design. </p>
-<blockquote>
-<p>In its desire for authenticity, the Modern design movement curbed the ornamental excess of the 19th century, making design fit the age of mass production. </p>
-<p>(In late 19 century) The idea was to highlight beauty of form in objects that were purely functional. For the modern design movement, decoration was not necessary. Beauty and elegance were to emerge from the design of the content itself, not from a superficial coat of decoration.</p>
-<p>Authentic design is about using materials without masking them in fake textures, showcasing their strengths instead of trying to hide their weaknesses. Authentic design is about doing away with features that are included only to make a product appear familiar or desirable but that otherwise serve no purpose.</p>
-<p>"Its artless shape gave it a certain naive innocence that suggested authenticity, just as the early versions of the Land Rover had the kind of credibility that comes with a design based on a technically ingenious idea rather than the desire to create a seductive consumer product." --  Deyan Sudjic commented on the design of the iconic Anglepoise lamp</p>
-<p>Design whose beauty lies in function is not the same thing as minimalist style. With the former, the designer seeks to remove the superfluous, to make the product easier to understand, to make it perform better and to make the most of its medium. The latter seeks to create a minimalist aesthetic, to give the object an aura of simplicity and cleanliness. One is a fundamental principle of design, the other a stylistic choice.</p>
-<p>It would be a mistake to rigidly apply a minimalist design aesthetic to an interface as a style in the hope of making the interface simpler and more digitally “authentic.” For example, ruthlessly eliminating visuals such as shadows, colors and varied background styles would not necessarily make an interface easier to use. In some cases, it would achieve the opposite by undermining hierarchy and focus, which were established by those very shadows and background colors.</p>
-</blockquote>
-<p><a href="http://blog.sucuri.net/2013/07/malware-hidden-inside-jpg-exif-headers.html">Malware Hidden Inside JPG EXIF Headers</a>: I like PHP for its flexibility. You just modify a file and you're done. But with that flexibility comes with huge security risks. In fact the security holes in PHP has scared me away from wordpress into Jekyll.  This backdoor is possible because this strange decision to make a string replace be able to execute a file. </p>
-<blockquote>
-<p>preg_replace has a hidden and tricky option where if you pass the “/e” modifier it will execute the content (eval), instead of just searching/replacing.</p>
-</blockquote>
-      </article>
-      <hr/>
-      <article>
-        <h2 class="entry-title"><a href="https://alexdong.com/fish-shell-tls-crash-course-peak-smart-phone-and-googles-suggestion-on-mobile-site-design.html">"Fish shell, TLS crash course, Peak smart phone and Google's suggestion on mobile site design'"</a></h2>
-        <abbr class="published" title="2013-07-16T21:02:00+12:00">
-          Published: Tue 16 July 2013
-        </abbr>
-        <h2>- links</h2>
-<p><a href="http://fishshell.com">Finally, a command line shell for the 90s</a>: Fish is the shell I recently switched to from zsh. I am still running zsh side-by-side since I've got too many customisations there but fish's work-out-of-box is so refreshing and rather enjoyable compared to maintaining one's own oh-my-zsh forks. </p>
-<p><a href="http://blog.cloudflare.com/staying-on-top-of-tls-attacks">Staying on top of TLS attacks</a>: An awesome technical explaination on how https and TLS works. If you find <code>ECDHE-RSA-RC4128-SHA</code> a bit foreign or even intimadating, this post is for you. </p>
-<p><a href="http://tomtunguz.com/peak-smart-phone">Peak Smart Phone: What Happens to the App Economy When Smartphone Penetration Reaches 100%?</a>: I am darn sure that we will never reach 100% but it is an interesting thought experiment. Here are the conclusions from the author: </p>
-<blockquote>
-<p>When we do hit peak smart phone penetration, how might the app store dynamics change? It’s hard to know before it happens but here are a few thoughts.</p>
-<ol>
-<li>Limited demand for applications should increase the average cost per install. This will drive developers to pursue apps with increasing monetization to support higher costs of acquisition.</li>
-<li>We will have maturity in utility categories like email clients, phone clients, web browsers; some turnover in social networks; most turnover in games. Utilities tend to be downloaded by new users and infrequently replaced. But gamers swap out the next platformer as soon as they are bored.</li>
-<li>Decreasing attractiveness of the marginal smart phone user in terms of ARPUU. New smart phone users will increasingly live outside of the most developed markets.</li>
-</ol>
-</blockquote>
-<p><a href="https://developers.google.com/webmasters/smartphone-sites/details">Building Smartphone-Optimized Websites</a>: Google's recommendation on how to optimize the website for mobile usage. In short, responsive design, using Vary HTTP header, annotate html header and sitemap as well as make sure the page <a href="http://calendar.perfplanet.com/2012/make-your-mobile-pages-render-in-under-one-second/">load under one second</a>.''</p>
-      </article>
-      <hr/>
 <p class="paginator">
         <a href="https://alexdong.com/author/alex-dong2.html">&laquo;</a>
-    Page 3 / 5
+    Page 3 / 6
         <a href="https://alexdong.com/author/alex-dong4.html">&raquo;</a>
 </p>
   </section><!-- /#content -->

@@ -44,7 +44,8 @@ article h2 + abbr {
   color: #444;
 }
 
-article p {
+article p, 
+article li {
   margin: 1em 0;
   line-height: 1.6;
 }

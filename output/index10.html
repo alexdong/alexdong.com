@@ -14,6 +14,80 @@
                 </header><!-- /#banner -->
   <section id="content" class="body">
       <article>
+        <h2 class="entry-title"><a href="https://alexdong.com/3-fundamental-startup-questions.html">3 fundamental startup questions</a></h2>
+        <abbr class="published" title="2012-10-28T21:32:01+13:00">
+          Published: Sun 28 October 2012
+        </abbr>
+        <h2>- startup</h2>
+<p>Fred Wilson just posted an interesting paper on startup business models for Bitcoin Bank.  I bolded 3 fundamental questions that each startup should try to answer:</p>
+<blockquote>
+<p>So when you are finalising your Business Model Canvas for your final project for this course, think about <strong>what your key value proposition is and who is your primary customer</strong> and focus on that. And think about what you can do in your <strong>revenue model to make it</strong> so that it will be h<strong>ard for others to come in and undercut you</strong>. And think about your <strong>cost model and how to keep it as low as possible while allowing your company to be best in class</strong> at what it does.</p>
+</blockquote>
+<p>via <a href="http://www.avc.com/a_vc/2012/10/how-to-be-in-business-forever-week-four.html?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed:AVc(AVC)">A VC: How To Be In Business Forever: Week Four</a>.</p>
+      </article>
+      <hr/>
+      <article>
+        <h2 class="entry-title"><a href="https://alexdong.com/navigating-the-holey-plane.html">Navigating the Holey Plane</a></h2>
+        <abbr class="published" title="2012-10-28T19:01:32+13:00">
+          Published: Sun 28 October 2012
+        </abbr>
+        <h2>- culture</h2>
+<blockquote>
+<p>In advancing through modernity toward a digital, networked world, <strong>we have gained connectivity at the expense of continuity.</strong> Analog technology embodied continuity, and the very fabric of society was more continuous and whole before a variety of innovations enabled us to slice, separate, and otherwise reorganize our reality.</p>
+</blockquote>
+<p>...</p>
+<p>People who grow up in the Holey Plane tend to relate to their environments differently than their traditional urban predecessors. ... With a car, an iPhone, and a credit card, one can be right at home throughout much of a metropolis like Houston. ... The explosion of social media and smartphone apps epitomizes this shift, transforming countless aspects of city life, such as restaurant recommendations and dating, into more rationalized, algorithm-driven processes. After all, many of us <strong>have lived hyperconnected lives that are broken up by jump cuts</strong> across space and time, and we welcome any tool that can smooth our experience of a discontinuous world. Despite what he says, <strong>Mark Zuckerberg isn’t connecting that world—he’s just covering up the holes.</strong></p>
+<p>via <a href="http://www.ribbonfarm.com/2012/10/23/navigating-the-holey-plane/">Navigating the Holey Plane</a>.</p>
+      </article>
+      <hr/>
+      <article>
+        <h2 class="entry-title"><a href="https://alexdong.com/async-in-ruby-done-right-by-learning-from-erlang.html">Async in Ruby done right by learning from Erlang</a></h2>
+        <abbr class="published" title="2012-10-25T14:26:42+13:00">
+          Published: Thu 25 October 2012
+        </abbr>
+        <h2>- code</h2>
+<p>I wrote about <a href="http://alexdong.com/learn-a-language-you-wont-use-in-work/">learning a language you won't use in work</a>, mainly because by doing so, you'll gain understanding of the "right way" to do things.  <a href="http://alexdong.com/alan-kay-normal-considered-harmful/">Perspective</a> sometimes worth a lot more than people expected. Celluloid is a Ruby project that seems to get async model right by taking ideas from Erlang and implement them.</p>
+<blockquote>
+<p>By combining concurrency with object oriented programming, Celluloid frees you up from worry about where to use threads and locks. Celluloid combines them together into a single concurrent object oriented programming model, encapsulating state in concurrent objects and thus avoiding many of the problems associated with multithreaded programming. Celluloid provides many features which make concurrent programming simple, easy, and fun:</p>
+</blockquote>
+<p>Automatic "deadlock-free" synchronization: Celluloid uses a concurrent object model which combines method dispatch and thread synchronization. Each actor is a concurrent object running in its own thread, and <strong>every method invocation is wrapped in a fiber that can be suspended whenever it calls out to other actors, and resumed when the response is available</strong>. This means methods which are waiting for responses from other actors, external messages, or other system events (including I/O with Celluloid::IO) can be suspended and will never block other methods that are ready to run. This won't prevent bugs in Celluloid, bugs in other thread-safe libraries you use, and even certain "dangerous" features of Celluloid from causing your program to deadlock, but in general, programs built with Celluloid will be naturally immune to deadlocks.</p>
+<p>Fault-tolerance: Celluloid has taken to <strong>heart many of Erlang's ideas about fault-tolerance in order to enable self-healing applications</strong>. The central idea: have you tried turning it off and on again? Celluloid takes care of rebooting subcomponents of your application when they crash, whether it's a single actor, or large (potentially multi-tiered) groups of actors that are all interdependent. This means rather that worrying about rescuing every last exception, you can just sit back, relax, and let parts of your program crash, knowing Celluloid will automatically reboot them in a clean state. Celluloid provides its own implementation of the <strong>core fault-tolerance concepts in Erlang including linking, supervisors, and supervision groups.</strong></p>
+<p>via <a href="https://github.com/celluloid/celluloid">celluloid/celluloid</a>.</p>
+      </article>
+      <hr/>
+      <article>
+        <h2 class="entry-title"><a href="https://alexdong.com/use-sidekiq-to-make-resque-clusters-run-happier.html">Use sidekiq to make resque clusters run happier</a></h2>
+        <abbr class="published" title="2012-10-25T14:19:05+13:00">
+          Published: Thu 25 October 2012
+        </abbr>
+        <h2>- code</h2>
+<p>Resque is a single-thread, single-process, fork-based process. Running lots of them incurs serious swapping. There have been proposals of running <a href="http://blog.carbonfive.com/2011/09/16/improving-resques-memory-efficiency/">jruby</a> to solve this problem but looks like Sidekq and the upcoming Ruby 3.0 offer a cleaner solution.</p>
+<blockquote>
+<p>Sidekiq uses multithreading so it is much more memory efficient than Resque (which forks a new process for every job). You'll find that you might need 50 200MB resque processes to peg your CPU whereas one 300MB Sidekiq process will peg the same CPU and perform the same amount of work. Please see my blog post on Resque's memory efficiency and how I was able to shrink a Carbon Five client's resque processing farm from 9 machines to 1 machine.</p>
+</blockquote>
+<p>via <a href="https://github.com/mperham/sidekiq">mperham/sidekiq</a>.</p>
+      </article>
+      <hr/>
+      <article>
+        <h2 class="entry-title"><a href="https://alexdong.com/the-tesla-approach-to-distributing-and-servicing-cars.html">The Tesla Approach to Distributing and Servicing Cars</a></h2>
+        <abbr class="published" title="2012-10-24T08:37:02+13:00">
+          Published: Wed 24 October 2012
+        </abbr>
+        <ul>
+<li>startup</li>
+<li>strategy</li>
+</ul>
+<hr>
+<p>The following post from Telsa, the new car making company, reminds me the challenges people used to have when Apple opened its own physical store.  And why the late comers like Samsung are also piloting their own physical store as well.  <strong>People still triumphs machine, branding and technology at the end of day, especially for ground-breaking new stuff</strong>.</p>
+<blockquote>
+<p>By the time most people decide to head to their local dealer, they have already pretty much decided what car they want to buy, which is usually the same make as their old car. At that point it is largely just a matter of negotiating with the dealer on price. Tesla, as a new carmaker, would therefore rarely have the opportunity to educate potential customers about Model S if we were positioned in typical auto dealer locations.</p>
+</blockquote>
+<p>That is why we are deliberately positioning our store and gallery locations in high foot traffic, high visibility retail venues, like malls and shopping streets that people regularly visit in a relatively open-minded buying mood. This allows us to interact with potential customers and have them learn about our cars from Tesla Product Specialists before they have decided which new car to buy. The Product Specialists are also trained to answer questions about electric vehicles in general, not just ours. They are not on commission and they will never pressure you to buy a car. Their goal and the sole metric of their success is to have you enjoy the experience of visiting so much that you look forward to returning again.</p>
+<p>As it is, our Product Specialists could not sell you a car today under any circumstances, as Model S is already sold out several months in advance and there is no inventory on site. All they can do is get you to consider placing a reservation. Our stores are designed to be informative and interactive in a delightful way and are simply unlike the traditional dealership with several hundred cars in inventory that a commissioned salesperson is tasked with selling. Our technology is different, our car is different, and, as a result, our stores are intentionally different.</p>
+<p>via <a href="http://www.teslamotors.com/blog/tesla-approach-distributing-and-servicing-cars">The Tesla Approach to Distributing and Servicing Cars | Blog | Tesla Motors</a>.</p>
+      </article>
+      <hr/>
+      <article>
         <h2 class="entry-title"><a href="https://alexdong.com/the-rise-of-the-successful-unsustainable-company.html">The rise of the “successful” unsustainable company</a></h2>
         <abbr class="published" title="2012-10-24T08:29:21+13:00">
           Published: Wed 24 October 2012
@@ -123,78 +197,6 @@
         </abbr>
         <h2>- startup</h2>
 <p>4-minute video. Worth every second.</p>
-      </article>
-      <hr/>
-      <article>
-        <h2 class="entry-title"><a href="https://alexdong.com/four-nice-links-about-traction-and-quant-based-marketing.html">Four nice links about traction and quant based marketing</a></h2>
-        <abbr class="published" title="2012-10-09T21:20:51+13:00">
-          Published: Tue 09 October 2012
-        </abbr>
-        <h2>- startup</h2>
-<p>Ran into a few posts about startup traction and the concept of quant based market. Thought it might benefit some readers of this blog. (If you haven't read my previous post of <a href="http://alexdong.com/if-you-build-it-will-they-come/">distribution channels,</a> you should.)</p>
-<ul>
-<li>
-<p>Gabriel from DuckDuckGo has two nice articles on this topic.  "<a href="http://www.gabrielweinberg.com/blog/2012/07/traction-mistakes.html">How to move the needle</a>" talks about traction for different growth period and "<a href="http://www.gabrielweinberg.com/blog/2012/07/traction-mistakes.html">Traction mistakes</a>" lists 4 common mistakes people make. I have all four of them squarely.  This 50% time on product and 50% for traction parallel thinking is certainly the approach I'd take if I have a chance to do it again.   BTW, he is writing a <a href="http://tractionbook.com/">book</a> on this topic too. His co-author has a <a href="http://justinmares.com/thoughts-on-paul-grahams-growth/">recent review </a>on PG's "Startup = Growth" essay which echos what Gabriel has said.</p>
-</li>
-<li>
-<p>Noah Kagan who did the original marketing work for mint.com has an interesting post on <a href="http://okdork.com/2010/07/15/quant-based-marketing-for-pre-launch-start-ups/">Quant Based Marketing</a>.  The basic idea is pretty simple. List all potential channels of incoming attention and conversion rate from day-0. Then follow through the list.  Here is the <a href="https://docs.google.com/spreadsheet/ccc?key=0AuTYwDzB4XSudGpFcE9lSWI4YzUwcnhKZnNoMktEdkE&amp;hl=en_GB#gid=0">spreadsheet </a>for it. Worth a close look.</p>
-</li>
-</ul>
-      </article>
-      <hr/>
-      <article>
-        <h2 class="entry-title"><a href="https://alexdong.com/git-a-new-form-of-argument.html">'Git: a new form of argument'</a></h2>
-        <abbr class="published" title="2012-10-09T08:21:56+13:00">
-          Published: Tue 09 October 2012
-        </abbr>
-        <h2>- strategy</h2>
-<p>My favorite author Clay Shirkey has recently given a TED talk on how open source technology can eventually change the concept of governance.  He compares git, the distributed version control system, to printing press, voting, jury and peer review as a new form of argument tools.</p>
-      </article>
-      <hr/>
-      <article>
-        <h2 class="entry-title"><a href="https://alexdong.com/foundry-groups-investment-themes.html">Foundry Group's investment themes</a></h2>
-        <abbr class="published" title="2012-10-08T21:17:39+13:00">
-          Published: Mon 08 October 2012
-        </abbr>
-        <h2>- startup</h2>
-<p>A couple of days ago, I blogged about the<a href="http://alexdong.com/union-square-ventures-investment-thesis-explained/"> investment philosophy of USV</a> from NYC.   Here is a similar piece from the Colorado based Foundry Group.</p>
-<p><a href="http://www.foundrygroup.com/wp/2008/03/what-is-thematic-investing/">This article explains</a> 2 things: "what types of companies do you guys like to invest in? and what sectors do you find interesting?”Here is a quick excerpt:</p>
-<blockquote>
-<p>Our themes tend to be horizontal in nature and are often based on an underlying protocol, standard or market trend that we believe is on the cusp of widespread adoption that has the potential to drive a cycle of innovation and company creation for at least a five to ten year period. We try to focus on themes and their underlying technologies that are ready to be rolled out to consumers or the enterprise and are well beyond the science-experiment phase.</p>
-</blockquote>
-<p>To make this concrete, some examples of themes we are excited about presently and historically include email, RSS, the implicit web and human-computer interaction (HCI). Because themes are inherently horizontal, they have often have applications in the consumer and enterprise markets and can be delivered in myriad ways, whether it is via a web site, SaaS, a gadget, an appliance or good old-fashioned downloadable client or server software.</p>
-<p>Here is a <a href="http://www.foundrygroup.com/wp/themes/">detailed list of portfolio companies across 6 themes</a>.</p>
-      </article>
-      <hr/>
-      <article>
-        <h2 class="entry-title"><a href="https://alexdong.com/union-square-ventures-investment-thesis-explained.html">Union Square Ventures Investment Thesis explained</a></h2>
-        <abbr class="published" title="2012-10-06T07:13:38+13:00">
-          Published: Sat 06 October 2012
-        </abbr>
-        <ul>
-<li>startup</li>
-<li>strategy</li>
-</ul>
-<hr>
-<p>There are two stereotyped perspective of investing. One assumes that every year, there are about 10 investment opportunities for the whole industry.  So the investor's main job is to locate those deals and be part of it.  The other insists that there are certain rules on how startup works. So they try to find/curate startups following those lines. These two views map quite nicely into Peter Thiel's <a href="http://blakemasters.tumblr.com/post/23787022006/peter-thiels-cs183-startup-class-14-notes-essay">2x2 matrix of determinate/indeterminate and optimistic/pessimistic of future</a>.</p>
-<p>As an entrepreneur, I'm firmly in the determinate/optimistic area but well aware that unknown and luck is still a major part of the game.  Without any control over the luck factor, the best startups can do is to figure out the "right model" and structure your company accordingly.</p>
-<p>I have been looking for a concise, yet comprehensive, explanation of the key components for a successful start-up.  Yesterday, I finally stumble upon one.  Print this one out. Use it as a compass for your business.</p>
-<blockquote>
-<p>Large networks of engaged users, differentiated through user experience, and defensible through network effects.</p>
-</blockquote>
-<p>via <a href="http://www.usv.com/2012/05/investment-thesis-usv.php">Investment Thesis @USV - Union Square Ventures: A New York Venture Capital Fund Focused on Early Stage &amp; Startup Investing</a>.</p>
-      </article>
-      <hr/>
-      <article>
-        <h2 class="entry-title"><a href="https://alexdong.com/the-clothesline-paradox.html">The Clothesline Paradox</a></h2>
-        <abbr class="published" title="2012-10-05T10:34:13+13:00">
-          Published: Fri 05 October 2012
-        </abbr>
-        <p>The clothesline paradox tells a lot about the value flow.  I believe the current way of measuring economic using GDP somewhat encourages the endless and blind churn to keep the growth. Not saying the growth is bad, it is not. But more along the line where we want to think carefully about whether we are really creating value or we are just keep running like a blinded mule.</p>
-<blockquote>
-<p>I've been thinking a lot lately about a piece I read in Stuart Brand's, CoEvolution Quarterly back in 1975. It's called the "Clothesline Paradox." The author, Steve Baer, was talking about alternative energy. The thesis is simple: <strong>You put your clothes in the dryer, and the energy you use gets measured and counted. You hang your clothes on the clothesline, and it "disappears" from the economy.</strong> It struck me that there are a lot of things that we're dealing with on the Internet that are subject to the Clothesline Paradox. Value is created, but it's not measured and counted. It's captured somewhere else in the economy.</p>
-</blockquote>
-<p>via <a href="http://www.edge.org/conversation/-39the-clothesline-paradox-39-">"the Clothesline Paradox" | Conversation | Edge</a>.</p>
       </article>
       <hr/>
 <p class="paginator">
