@@ -14,6 +14,189 @@
                 </header><!-- /#banner -->
   <section id="content" class="body">
       <article>
+        <h2 class="entry-title"><a href="https://alexdong.com/convert-mp3-files-to-ogg.html">"Convert mp3 files to ogg"</a></h2>
+        <abbr class="published" title="2013-07-05T14:10:00+12:00">
+          Published: Fri 05 July 2013
+        </abbr>
+        <ul>
+<li>code</li>
+<li>open source</li>
+<li>bestof</li>
+</ul>
+<hr>
+<p>I have never expected this to be hard. Sure it won't be difficult to do this in 2013. But after sinking almost 1 hour into this, I decided to write it down hoping that it might save other people a bit time. </p>
+<p>So I started with <a href="sox.sourceforge.net/">sox</a>. I tried <code>sox zit.mp3 zit.ogg</code> and received an error message</p>
+<blockquote>
+<p>sox FAIL formats: no handler for file extension `ogg'. </p>
+</blockquote>
+<p>Then I tried <code>dir2ogg -q7 zit.mp3</code> which was recommended by a post on Ubuntu's discussion forum. But unfortunately, it still didn't work out. Here is the error message I got: </p>
+<blockquote>
+<p>dir2ogg 0.11.8 (2009-08-04), converts audio files into ogg vorbis.</p>
+<p>WARNING: Mutagen failed on zit.mp3, no tags available
+Traceback (most recent call last):
+ID3NoHeaderError: 'zit.mp3' doesn't start with an ID3 tag</p>
+<p>INFO: Converting "zit.mp3" (using mpg123 as decoder)...
+[wav.c:143] error: cannot even write a single byte: Illegal seek
+[audio.c:630] error: failed to open audio device
+[mpg123.c:902] error: Failed to initialize output, goodbye.
+ERROR: Cannot open output file "zit.ogg": Permission denied
+WARNING: No tags found...
+}}}</p>
+</blockquote>
+<p>After much fiddling around, this is the final solution that was working for me. To chain <code>mpg123</code> and <code>oggenc</code> together. <code>mpg123</code> will generate a <code>.wav</code>  file to the standard output, which <code>oggenc</code> takes in and emit a corresponding <code>ogg</code> file. </p>
+<p><code>for i in *.mp3; do mpg321 $i -w - | oggenc -q7 -o ${i/mp3/ogg} -; done</code></p>
+<p>A few caveats: </p>
+<ul>
+<li><code>$i</code> is the filename and <code>${i/mp3/ogg}</code> changes the output filename. </li>
+<li><code>-q7</code> select a level-7 sound quality. Since both mp3 and ogg are lossy sound format, converting one to another with the same sample rate would only decrease the sound quality. By specifying a higher bit rate, the <code>ogg</code> output would sound similar to the <code>mp3</code> file. </li>
+<li>The <code>-</code> are quite important. </li>
+<li>On Ubuntu/Debian, you might need to install the packages using <code>sudo apt-get install mpg321 vorbis-tools</code></li>
+</ul>
+      </article>
+      <hr/>
+      <article>
+        <h2 class="entry-title"><a href="https://alexdong.com/gmo-crops-mean-more-herbicide-apple-and-app-developers-detecting-outliers-and-information-theory-and-financial-market.html">"GMO crops mean more herbicide, Apple and app developers, Detecting outliers and Information theory and Financial market"</a></h2>
+        <abbr class="published" title="2013-07-04T18:04:00+12:00">
+          Published: Thu 04 July 2013
+        </abbr>
+        <h2>- links</h2>
+<p><a href="http://www.forbes.com/sites/bethhoffman/2013/07/02/gmo-crops-mean-more-herbicide-not-less/">GMO Crops Mean More Herbicide, Not Less</a>:
+The nature never ceases to amuse us. But human beings are the true master of drama.  Monsanto seems to be doing really well by having an increase in its pesticide product and GMO seeds. </p>
+<blockquote>
+<p>One of the main arguments behind creating these engineered crops is that farmers then need to use less herbicide and pesticide.  This makes farms more eco-friendly, say proponents of genetically modified (GM) crops, and GM seeds also allow farmers to spend less on “inputs” (chemicals), thereby making a greater profit.</p>
+<p>But a new study released by Food &amp; Water Watch yesterday finds the goal of reduced chemical use has not panned out as planned.  In fact, according to the USDA and EPA data used in the report, the quick adoption of genetically engineered crops by farmers has increased herbicide use over the past 9 years in the U.S.</p>
+<p>Both reports focus on “superweeds.” It turns out that spraying a pesticide repeatedly selects for weeds which also resist the chemical.  Ever more resistant weeds are then  bred, able to withstand increasing amounts – and often different forms – of herbicide.</p>
+<p>At the center of debate is the pesticide glyphosate, the active ingredient in Monsanto Round Up.</p>
+</blockquote>
+<p><a href="http://stratechery.com/2013/why-doesnt-apple-enable-sustainable-businesses-on-the-app-store/">Apple has been burned by productivity apps before</a>: An interesting theory but I am not sure I agree. I think Apple is strong enough to have walked out of its youth insecurity. But still a fascinating to read: </p>
+<blockquote>
+<p>As I just noted, the great thing about productivity apps is that they add value, and the more you use them, the more valuable they become – the potential value of a productivity app is limited only by the amount of data you are willing to put into it.</p>
+<p>The trouble for Apple – or any platform provider – is apps that cross that line from nice-to-have to completely irreplaceable. It’s at that point a user’s loyalty shifts from platform to app, and there are no greater examples than the aforementioned Photoshop and Microsoft Office.</p>
+</blockquote>
+<p><a href="http://dtrace.org/blogs/brendan/2013/07/01/detecting-outliers/">Detecting Outlers</a>: I love the sanddune metaphor and how much clearer a light layer of color adds to the graph. Nice data visualization. </p>
+<p><a href="http://www.arnoldkling.com/blog/information-and-order/">Information and Order</a>: A fresh perspective of treating Gold as a low entropy device in the finance market. </p>
+<blockquote>
+<p>Predictability and order are notspontaneous and cannot be left to the invisible hand. It takes a low-entropy carrier (no surprises) to bear high-entropy information (full of surprisal). In capitalism, the predictable carriers are the rule of law, the maintenance of order, the defense of property rights, the reliability and restraint of regulation, the transparency of accounts, the stability of money, the discipline and futurity of family life, and a level of taxation commensurate with a modest and predictable role of government.</p>
+</blockquote>
+<p>Also from the <a href="http://www.forbes.com/sites/ralphbenko/2013/06/10/george-gilder-thankfully-returns-bearing-knowledge-and-power/">Forbes review</a> of the same book. </p>
+<p>On Dodd-Frank</p>
+<blockquote>
+<p>“The goal of financial reform should be to end this divorce between knowledge and power and ensure that most capital flows to the people who can wield it best, the entrepreneurs.  By contrast, the reform that was enacted, the Dodd-Frank Wall Street Reform and Consumer Protection Act, with 2,323 pages of bromides and legalese enhancing the power of regulators, moves in the opposite direction.  It increases the distance between the people in authority and the people with entrepreneurial knowledge.  It concentrates yet more power in the leviathans and their Treasury sponsors and Federal Reserve supervisors, and it imposes hundreds of new regulations on entrepreneurial finance.  Dodd-Frank sacrifices information on the altar of ignorant power.” </p>
+</blockquote>
+<p>On monetary policy</p>
+<blockquote>
+<p>“Could it be that the fundamental cause of the [2008 financial] crisis was that the monetary system, alone among the structures of capitalism, lacks a low-entropy physical layer?</p>
+<p>“Over the centuries of monetary history, the remedy for unstable money has always been gold.  Critics who say the gold standard has been eclipsed by an information standard based on the Internet do not grasp the essence of information theory, which measures the information content by its ‘news’ (expressed in digital form as unexpected bits or entropy).  It takes a low-entropy carrier to bear a high-entropy newsworthy message.</p>
+<p>“The 130,000 metric tons of gold that has been mined in all of human history constitutes the supreme low-entropy carrier for the upside surprises of capitalism.  Without guidance from gold, currency markets are subject to political high entropy.  They resemble a communications system without a predictable carrier that enables the information to be distinguished from the noise in the line.</p>
+<p>“…Without a baseline of gold, entrepreneurship in the world economy degenerates into the manipulation of currencies for the interests of profiteers and government insiders.  This is a pathology of capitalism ….” (p. 122)</p>
+</blockquote>
+<p>Have you told you that I <strong>love</strong> the concept of <a href="http://alexdong.com/will-bitcoin-follow-the-path-of-bittorrent/">Bitcoin</a> yet? </p>
+      </article>
+      <hr/>
+      <article>
+        <h2 class="entry-title"><a href="https://alexdong.com/will-bitcoin-follow-the-path-of-bittorrent.html">"Will Bitcoin follow the path of BitTorrent? "</a></h2>
+        <abbr class="published" title="2013-07-04T17:16:00+12:00">
+          Published: Thu 04 July 2013
+        </abbr>
+        <ul>
+<li>links</li>
+<li>technology</li>
+<li>strategy</li>
+<li>bestof</li>
+</ul>
+<hr>
+<p>First of all, I love the concept of Bitcoin. I love a currency that's outside of the
+the control of governments, or law enforcement agencies.  I love 
+the built-in feature of fixed number of money supply.  </p>
+<p>Around 2004-06, I had similar feeling towards P2P technologies. 
+I spent non-trivial amount of time reading BitTorrent's source code, following
+the latest development in Distributed Hash Tables. By then, Skype was this shiny little
+startup from Estonia that uses P2P to achieve significant call quality improvement with little cost.  However, almost
+10 years later, P2P still hasn't been accepted by mainstream. Yet. </p>
+<p>I did a quick landscape research on bitcoin recently. My feeling is that
+it's still too early for us to know for sure what might come out of this experiment.  The smeared reputation as a currency for buying illegal goods, the extremely low usage of 
+the currency and the government's cramp down all reminds me what has happened to 
+BitTorrent and P2P technology could happen to Bitcoin as well. </p>
+<p>My conclusion is Bitcoin is overvalued but it will stay high as long as US keeps printing its dollar and China keeps loaning money to the US. This does not mean Bitcoin has a bright future though unless the mainstream starts to accept it as a currency for transactions.  Here are four good links I have found on this topic. Go reading them and form your own opinion. </p>
+<p><a href="http://www.cbinsights.com/blog/trends/bitcoin-industrystartups">Bitcoin Industry Sees More Investors than Startups</a>: The increase
+of Bitcoin value seems to be a result of traditional money diversifying their "portfolio"
+instead of driven up by real usage. (via <a href="http://twitter.com/joshuabrustein">@joshuabrustein</a>)</p>
+<blockquote>
+<p>With deal activity shooting up in Q2’13 as the graph below illustrates, there are currently more venture capital and angel investors interested in the Bitcoin space than there are actual investor-backed startups.</p>
+</blockquote>
+<p><a href="http://blog.p2pfoundation.net/how-the-bitcoin-1-manipulate-the-currency-deceive-its-user-community-and-make-its-future-uncertain/2013/06/30">How the Bitcoin 1% manipulate the currency, deceive its user community, and make its future uncertain</a></p>
+<blockquote>
+<p>“We discovered that almost all these large transactions were the descendants of a single large transaction involving 90,000 Bitcoins which took place on November 8th 2010, and that the subgraph of these transactions contains many strange looking chains and fork-merge structures, in which a large balance is either transferred within a few hours through hundreds of temporary intermediate accounts, or split into many small amounts which are sent to different accounts only in order to be recombined shortly afterwards into essentially the same amount in a new account.” (source: Dorit Ron and Adi Shamir, Quantitative Analysis of the Full Bitcoin Transaction Graph.)”</p>
+</blockquote>
+<p><a href="https://bitcointalk.org/index.php?topic=68438.0">Topic: Current Bitcoins in "circulation"</a>: Due to the nature of Bitcoin and how many people hold it instead of using it, it is not surprising to see that it's hard to come up with an accurate circulation number.  I don't treat this as either good or bad though.  It's this inevitable nature of Bitcoin that might surprise normal people who are used to the concept of Central Banks and controlled number of money in circulation.</p>
+<blockquote>
+<p>I could have a million BTC in an address that hasn't been touched for 2 years, and then add 10 BTC to it today.  That shouldn't add a million and ten to the "in circulation" number; it should just add 10 BTC.</p>
+</blockquote>
+<p><a href="http://www.avc.com/a_vc/2013/06/bitcoin-bits.html">Bitcoin Bits and the market</a>: Don't call me a Bitcoin critics because I am not. I want it to succeed. It is spirit lifting to see a real world market where goods can only be bought using Bitcoin.  Usage is the oxygen to ideas. I don't believe in any other alternative ways for bitcoin to gain momentum except to have more markets like this. </p>
+<blockquote>
+<p>It is truly an "open air market". Folks were buying and selling Bitcoin for cash. You'd hand someone the cash and they would take out their phone and send you the Bitcoin in a mobile wallet to mobile wallet transaction. I also bought a Bitcoin t-shirt using Bitcoin sent from my mobile wallet.
+There is something real and tangible about an open air market where the only currency allowed is Bitcoin. </p>
+</blockquote>
+<hr>
+<p>After reviewing this article, <a href="http://corte.si">Aldo Cortesi</a> gave a valuable comment on how Bitcoin is compared to P2P technology on usability and mainstream's inertia: </p>
+<blockquote>
+<p>I think P2P never caught on because a) it was never very convenient for the user, and b) it was stigmatized due to transfer of illegal/pirated content.
+Structurally, Bitcoin has a better chance of actually solving some long-standing, existing user convenience issues. But its stigma problem is even greater than p2p, though.</p>
+</blockquote>
+      </article>
+      <hr/>
+      <article>
+        <h2 class="entry-title"><a href="https://alexdong.com/responding-to-peer-review-lisp-as-a-meta-language-future-of-blogging-is-linking-and-technology-has-lost-its-golden-child-image.html">"Responding to peer review, lisp as a meta language, future of blogging is linking and technology has lost its golden child image. "</a></h2>
+        <abbr class="published" title="2013-07-04T16:47:00+12:00">
+          Published: Thu 04 July 2013
+        </abbr>
+        <h2>- links</h2>
+<p><a href="http://matt.might.net/articles/peer-review-rebuttals/">Responding to peer review</a>: Some concrete examples of how to write rebuttals to peer reviews. Sometime I do wish that on internet, we can construct our discourse following these guidelines. </p>
+<blockquote>
+<p>However you decide to reply to a reviewer, several principles always apply:</p>
+<ol>
+<li>Be polite. Lashing out at a negative reviewer is not going to change their opinion.</li>
+<li>Be conciliatory. If a reviewer is wrong, don't say they're wrong. Say "there seems to be a misunderstanding." If the misunderstanding arose from poor presentation, admit it and offer to fix it.</li>
+<li>Be thorough. Don't dodge any points or refuse to answer any questions. If the reviewers found a flaw, admit the flaw and offer a fix (if you can find one).</li>
+</ol>
+</blockquote>
+<p><a href="http://lisp-univ-etc.blogspot.co.nz/2013/06/lisp-hackers-marc-battyani.html?m=1">Interview with Marc Battyani</a>: There are high performance programming languages like C, there are highly expressive languages like Python. And there are Lisp, which is expressive enough to be used as a DSL to generate code for high performance systems. </p>
+<blockquote>
+<p>Domain Specific Language Compilers and various other tools written in Common Lisp. [...] on 10Gb/s Ethernet market data packets coming from exchanges like the NASDAQ we process the IP/UDP/multicast network stack, extract the messages from the packets, parse/decode/filter/normalize those messages, maintain the indexed order book data structures, aggregate the price levels per stock, generate output messages and finally send them to a server through PCI-express or 10Gb/s Ethernet network stacks. The nice thing is that we do all that fully pipelined at a rate of one message every 12 nanoseconds! To have an idea of how fast it is, in 12 ns the light will only travel 3.6 meters (11.8 ft). Another way to view this performance is that the system can process 83 Millions of financial messages per second without any queuing.</p>
+</blockquote>
+<p><a href="https://news.ycombinator.com/item?id=5968822">The future of blogging platform is ... a linking service</a>:  Well said. </p>
+<blockquote>
+<p>The underlying value proposition by any sort of blogging engine (Posthaven, Medium, Svbtle, et al) is limited to a network, ease of use, and a good design. For most tech people, ease of use is a non-factor (you can extol 'distractions-free design', but you can put vim or Byword in full-screen mode) -- and I think the way people are reading is shifting away from individual sites and towards external services to the extent that design isn't a huge factor (everything looks the same in NewsBlur or Instapaper.)
+[...]
+I can't help thinking that the winner of this nouveau publishing spectrum isn't going to be a hosting service, but a linking service. You might never get Patrick McKenzie to blog on your platform (because why would he?) but you can always link to his material.</p>
+</blockquote>
+<p><a href="http://michaelochurch.wordpress.com/2013/06/24/technology-we-can-change-our-leadership-or-we-can-quit/">Technology: we can change our leadership, or we can quit.</a></p>
+<blockquote>
+<p>Technology has lost its “golden child” image, with piñatas of Google buses being beaten to shit in San Francisco, invasions of privacy making national headlines, and an overall sense in the country that our leadership’s exceptionalist reputation as the “good” nouveau riche is not deserved and must end. To put it bluntly, the rest of the country doesn’t like us– any of us– anymore. We’ve lost that good faith, in technology, that allowed us to be rich (well, a few of us) and not hated, even in the midst of a transformational, generation-eating recession. 2013 will be remembered as the year when popular opinion of “Silicon Valley” imploded.</p>
+</blockquote>
+      </article>
+      <hr/>
+      <article>
+        <h2 class="entry-title"><a href="https://alexdong.com/vcs-game-30-day-count-down-on-startup-invite-the-unknown-and-swedens-switch-to-left-hand-driving.html">"VC's game, 30-day count down on startup, invite the unknown and Sweden's switch to left hand driving."</a></h2>
+        <abbr class="published" title="2013-07-04T16:44:00+12:00">
+          Published: Thu 04 July 2013
+        </abbr>
+        <h2>- links</h2>
+<p><a href="http://www.avc.com/a_vc/2013/06/valuation-vs-ownership.html">http://www.avc.com/a_vc/2013/06/valuation-vs-ownership.html</a>: VC are motivated differently. Picking one means you have picked their game as yours.</p>
+<blockquote>
+<p>We recommend that entrepreneurs keep the funding amounts small in the early rounds when the valuations are lower and then scale up the amounts in the later rounds when it is a lot more clear how money can create value and when the valuations will be higher. This model has worked out pretty well. David Karp raised $600k, then $4mm, then 5mm, then $25mm, then $80mm (or something like that). And at the time of the sale to Yahoo!, he owned a very nice stake in the business even though he had raised well north of $100mm. He did that by keeping his rounds small in the early days and only scaling them when he had to and the valuations offered were much higher.</p>
+</blockquote>
+<p><a href="https://news.ycombinator.com/item?id=5940554">Comment on My Startup has 30 Days to Live</a>: Unsurprisingly, closing down a business as a failure isn't that different from getting it acquired.  You need to take care of employees, customers and yourself. It provides a clean slate for you to get started again. </p>
+<p><a href="http://www.brainpickings.org/index.php/2013/06/18/anais-nin-the-unknown/">Invite the unknown</a>: </p>
+<blockquote>
+<p>It is a sign of great inner insecurity to be hostile to the unfamiliar.
+Understanding is not a piercing of the mystery, but an acceptance of it, a living blissfully with it, in it, through and by it.</p>
+</blockquote>
+<p><a href="http://en.wikipedia.org/wiki/Dagen_H">Dagen H</a>: Dagen H(D day) was the day when traffic in Swden switched from driving on the left-hand side to the right.  The government and the public have done a thorough job that there was actually less accidents when the switch happened.  It's amazing that nowadays the governments seem to have less apetite for this kind of massive project anymore. 
+Bonus: checkout the Headlamp sold in Sweden not long before Dagen H.</p>
+      </article>
+      <hr/>
+      <article>
         <h2 class="entry-title"><a href="https://alexdong.com/python-console-debugger-kamikaze-pilots-with-a-puppy-water-powered-space-coach-and-hash-sharing-system-to-fight-spam.html">"Python console debugger, Kamikaze pilots with a puppy, water powered space coach and hash sharing system to fight spam."</a></h2>
         <abbr class="published" title="2013-07-04T16:38:00+12:00">
           Published: Thu 04 July 2013
@@ -115,86 +298,6 @@ Ad supported: </p>
 <p><a href="http://sciblogs.co.nz/tuataragenome/">Why sequence the tuatara genome?</a>: New Zealand scientists are starting to sequencing tuarara genome. Here is why it's so important: <em>Modern birds descend from one branch in the diverse group we call dinosaurs, but each of those ten thousand species are dinosaurs. The tuatara, on the other hand, are the only living members of a lineage that separated from other reptiles more than 200 million years ago.</em>  (If you can't see the graph, it's <a href="http://sciblogs.co.nz/tuataragenome/files/2013/06/tree_graph.png">here</a>)</p>
 <p><a href="http://alistapart.com/blog/post/paul-irish-on-chrome-moving-to-blink">Paul Irish on Chrome Moving to Blink</a>: The part I really like: <em>Let me take a moment to provide my own perspective on Dart. :) Now, as you know, I’m a JavaScript guy, so early on, I took a side and and considered Dart an enemy. JavaScript should win; Dart is bad! But then I came to realize the Dart guys aren’t just setting out to improve the authoring and scalability of web application development. They also really want the web to win. Now I’ve recently spoke about how The Mobile Web Is In Trouble, and clarified that my priorities are seeing it provide a fantastic user experience to everyone. For me, seeing the mobile web be successful trumps language wars and certainly quibbling over syntax. So I’m happy to see developers embrace the authoring advantages of Coffeescript, the smart subset of JavaScript strict mode, the legendary Emscripten &amp; asm.js combo, the compiler feedback of TypeScript and the performance ambitions of Dart. It’s worth trying out technologies that can leapfrog the current expectations of the user experience that we can deliver. Our web is worth it.</em></p>
 <p><a href="http://plc.vc/google-glass">To justify having a computer on your face for everyone to see would have to deliver spectacular results.</a>: <em>if Google Glass would let you see 10x better than 20:20 vision then it might be a compelling proposition.  The problem Google Glass has is that it simply isn’t much better than a smart phone, and it comes as a huge price – having something on your face.</em></p>
-      </article>
-      <hr/>
-      <article>
-        <h2 class="entry-title"><a href="https://alexdong.com/the-feudal-cloud-einsteins-secret-of-learning-anything-random-forest-in-python-and-dirt-cheap-to-save-all-us-phone-calls.html">"The Feudal cloud, Einstein's secret of learning anything, Random forest in Python and dirt cheap to save all US phone calls"</a></h2>
-        <abbr class="published" title="2013-06-17T21:01:00+12:00">
-          Published: Mon 17 June 2013
-        </abbr>
-        <h2>- links</h2>
-<p><a href="http://www.schneier.com/blog/archives/2013/06/more_on_feudal.html">Schneier on Security</a>: The relationship between us and the "cloud service providers" * is inherently a feudal relationship. We cede control of our data and computing platforms to these companies and trust that they will treat us well and protect us from harm.  ... In the longer term, we all need to work to reduce the power imbalance. Medieval feudalism evolved into a more balanced relationship in which lords had responsibilities as well as rights. Today's Internet feudalism is both ad hoc and one-sided. We have no choice but to trust the lords, but we receive very few assurances in return.*</p>
-<p><a href="http://www.brainpickings.org/index.php/2013/06/14/einstein-letter-to-son/">The Secret to Learning Anything: Albert Einstein’s Advice to His Son</a>: <em>I am very pleased that you find joy with the piano. This and carpentry are in my opinion for your age the best pursuits, better even than school. Because those are things which fit a young person such as you very well. Mainly play the things on the piano which please you, even if the teacher does not assign those. That is the way to learn the most, that when you are doing something with such enjoyment that you don’t notice that the time passes. I am sometimes so wrapped up in my work that I forget about the noon meal. . . .</em></p>
-<p><a href="http://blog.yhathq.com/posts/random-forests-in-python.html">Random Forests in Python</a>: <em>random forest is an aggregation of other models. The algorithm to induce a random forest will create a bunch of random decision trees automatically. Since the trees are generated at random, most won't be all that meaningful to learning your classification/regression problem (maybe 99.9% of trees). Simply, the 99.9% of trees that are irrelevant make predictions that are all over the map and cancel each another out. The predictions of the minority of trees that are good top that noise and yield a good prediction.</em></p>
-<p><a href="http://boingboing.net/2013/06/16/what-would-it-cost-to-store-al.html">What would it cost to store all of America's phone calls?</a>: Intuitively we all know that storage is cheap but this one still surprised me. Considering Facebook's 57B market cap, no wonder why privacy is so cheap.  <em>$27M in capital cost, and $2M in electricity and take less than 5,000 square feet of space to store and process all US phone calls made in a year.   The NSA seems to be spending $1.7 billion on a 100k square foot datacenter that could easily handle this and much much more.</em></p>
-      </article>
-      <hr/>
-      <article>
-        <h2 class="entry-title"><a href="https://alexdong.com/is-ios-7-the-victim-of-narrow-design-mentality-design-for-designs-sake.html">"Is iOS 7 the victim of narrow design mentality? Design for design's sake? "</a></h2>
-        <abbr class="published" title="2013-06-16T10:24:00+12:00">
-          Published: Sun 16 June 2013
-        </abbr>
-        <ul>
-<li>design</li>
-<li>startup</li>
-</ul>
-<hr>
-<p>Like <a href="http://alexdong.com/ios-7-im-feeling-1-dot-0/">I said</a>, I feel let down by the iOS 7 design.  It is not that Apple won't be able to get the contrasts right or they can't nail the design details. It is not that this does not open up a whole new trend of design that focuses on content, which I agree is a good thing. It is about what is Apple. </p>
-<p><a href="http://www.apple.com/designed-by-apple/">Designed by Apple</a> is fine. I love Apple's product because they are beautiful and such a joy to use. But down in my heart, <strong>I see Apple as a technology company, not a design company</strong>.  Macintosh made it possible for normal people to run VisiCalc at home.  iPhone offered GPS and high-def camera which enabled a whole range of innovations/industries. These are the things I am looking for on a technology platform provider. </p>
-<p>The following comment from HackerNews summarized my thoughts perfectly. </p>
-<blockquote>
-<p>Yay change for change's sake.</p>
-<p>This is exactly the wrong attitude in my opinion. How does it help users to all of a sudden have most apps feel ancient? Is it really something to be proud of? That for the next year we'll be working on replacing existing utilities so that they feel "right" and "fresh" instead of doing what we should be doing: thinking of actual new software that is worthwhile to write.</p>
-<p>I've been saying this for a while but I think what is happening, and what many developers haven't noticed yet, is that we have exhausted the utility of software for software's sake. The interesting stuff happening in mobile now has nothing to do with "design" in the traditional sense any more. Its not enough to just have a coder and a designer on the team. The really cool stuff is all about what your phone actually allows you to do in the real world. Look at apps like uber, postmates, spotify, and twitch.tv. Most of these have terrible UI's, but that's not the point. The point is that they allow you to do things. I can have a car on my doorstep! I can listen to almost any song I want. They're not just another calculator app or news reader, so who cares if its not the prettiest or easiest thing to use in the world. They are an interface to actually useful services. Software was interesting on its own a decade ago, but the industry has grown up, its time to do things now. That doesn't mean that "UI and UX" don't matter, it just means their definition changes and grows beyond just how you tap things on glass and what pixels you choose to animate.</p>
-<p>The reason that iOS 7 seems comforting in the way its described in this article is because it gives developers who haven't realized this something to do again. Marco is absolutely right, for a long time it has felt like all the major categories have been covered on the app store. That's a good thing! It means we've solved lots of problems. We shouldn't daydream of a day when those problems get artificially unsolved so we can have another shot at them. We should move on.</p>
-</blockquote>
-      </article>
-      <hr/>
-      <article>
-        <h2 class="entry-title"><a href="https://alexdong.com/ray-ozzie-on-nsa-prism-and-the-critical-junction-for-the-next-decade.html">"Ray Ozzie on NSA, PRISM and the critical junction for the next decade"</a></h2>
-        <abbr class="published" title="2013-06-16T10:17:00+12:00">
-          Published: Sun 16 June 2013
-        </abbr>
-        <h2>- strategy</h2>
-<p>Ray Ozzie on why NSA's PRISM program makes now the critical moment for the internet industry for next 10 years.  (Via: <a href="https://news.ycombinator.com/item?id=5847189">HackerNews</a>)</p>
-<blockquote>
-<p>Back to the present - it pains me to see such a lack of transparency in how our elected officials are running our government. Of course, the common man knows it's common sense that there's an inherent need for secrecy in conducting small scale covert operations. We do get it.
-However, it's also common sense that it's inevitable that any complex large-scale long-term operation will ultimately come to light. And so it's just common sense that any such broad-based operations that might be perceived as impacting our constitutional rights should be the subject of broad public debate. No, not when they're being prototyped or tested or used in small scale settings - but definitely somewhere on the path from "tactical use" to "broad strategic dependence".</p>
-<p>These are not small issues, nor need they be at all partisan. Wyden, Paul, and others are trying. Theses issues are fundamental to defining the relationship between us citizens and our government in the decades ahead.
-In particular, in this world where "SaaS" and "software eats everything" and "cloud computing" and "big data" are inevitable and already pervasive, it pains me to see how 3rd Party Doctrine may now already be being leveraged to effectively gut the intent of U.S. citizens' Fourth Amendment rights. Don't we need a common-sense refresh to the wording of our laws and potentially our constitution as it pertains to how we now rely upon 3rd parties? It makes zero sense in a "services age" where granting third parties limited rights to our private information is so basic and fundamental to how we think, work, conduct and enjoy life.
-For example, did you really intend to yield your 4th amendment rights when you granted a 3rd party access to your files as a part of Mac Software Update, Windows Update, Virus Scanners, etc., or when you started using a service-tethered smartphone?</p>
-<p>Anyway, unlike 'web tracking' issues which seem to be broadly ignored because of our love for ad-supported services, I hope we all (especially the young readers of reddit, hackernews, etc) wake up to the fact that these privacy and transparency issues are REAL, and that they truly will impact you and the country you live in, and that even if you don't consider yourself an activist you really should get informed and form an opinion. Again, this is a non-partisan issue, and let's all work to ensure that it stays this way.</p>
-<p>Two great organizations where you can learn are EPIC and EFF. (Disclosure: I am on the board of EPIC.) Take it in, and think. Your contributions are needed and would of course be quite welcome.</p>
-</blockquote>
-      </article>
-      <hr/>
-      <article>
-        <h2 class="entry-title"><a href="https://alexdong.com/weekend-reads-and-videos-on-deep-learning.html">"Weekend reads and videos on Deep Learning"</a></h2>
-        <abbr class="published" title="2013-06-14T21:27:00+12:00">
-          Published: Fri 14 June 2013
-        </abbr>
-        <ul>
-<li>links</li>
-<li>ai</li>
-<li>bestof</li>
-</ul>
-<hr>
-<p>Yesterday I posted the link on Google's new photo search and how "deep learning" makes that possible.  Here are some weekend reads on this topic.  The two videos focusing on different aspect of this concept. The first one explains the concept and the implication. The second talk covers how to use a large distributed computing model to train the multiple layers. </p>
-<p><a href="http://en.wikipedia.org/wiki/Deep_learning">What is Deep learning</a>: <em>Deep learning is set of algorithms in machine learning that attempt to learn layered models of inputs, commonly neural networks. The layers in such models correspond to distinct levels of concepts, where higher-level concepts are defined from lower-level ones, and the same lower-level concepts can help to define many higher-level concepts.</em></p>
-<p><a href="http://oreillynet.com/pub/e/2538">Deep learning - The Biggest Data Science Breakthrough of the Decade</a> (60m video): This one talks more about the historical context and the Kaggle machine learning platform. Not particularly technically challenging but interesting enough since it provides lots of the applications of this technology. <em>Machine learning and AI have appeared on the front page of the New York Times three times in recent memory: 1) When a computer beat the world's #1 chess player 2) When Watson beat the world's best Jeopardy players 3) When deep learning algorithms won a chemo-informatics Kaggle competition. We all know about the first two... but what's that deep learning thing about?</em></p>
-<p><a href="http://vimeo.com/52332329">Tera-scale deep learning - Quoc V. Le</a> (60m video): <em>Deep learning and unsupervised feature learning offer the potential to transform many domains such as vision, speech, and NLP. However, these methods have been fundamentally limited by our computational abilities, and typically applied to small-sized problems. In this talk, I describe the key ideas that enabled scaling deep learning algorithms to train a very large model on a cluster of 16,000 CPU cores (2000 machines). This network has 1.15 billion parameters, which is more than 100x larger than the next largest network reported in the literature.</em> (via: <a href="http://datascience101.wordpress.com">data science 101</a>)</p>
-      </article>
-      <hr/>
-      <article>
-        <h2 class="entry-title"><a href="https://alexdong.com/google-photo-search-break-through-linkins-monitorrank-apples-picasso-style-design-and-on-demand-music-touring.html">"Google photo search break-through, Linkin's MonitorRank, Apple's Picasso-style design and On-demand music touring"</a></h2>
-        <abbr class="published" title="2013-06-13T17:11:00+12:00">
-          Published: Thu 13 June 2013
-        </abbr>
-        <h2>- links</h2>
-<p><a href="http://googleresearch.blogspot.co.nz/2013/06/improving-photo-search-step-across.html">Improving Photo Search: A Step Across the Semantic Gap</a>: To be able to search for a photo without up-front labeling has been a dream until recently Google reported a doubled average precision. Two things make this break-through possible. First, the <a href="http://research.google.com/archive/large_deep_networks_nips2012.html">ability</a> (pdf) to <em>training a deep network with billions of parameters using tens of thousands of CPU cores</em>. Second, the training now uses <a href="http://wiki.freebase.com/wiki/Entity">Freebase entities</a> to form the basis of <a href="http://www.google.com/insidesearch/features/search/knowledge.html">knowledge graph</a>. </p>
-<p><a href="http://www.sigmetrics.org/sigmetrics2013/pdfs/p93.pdf">Root Cause Detection in a Service-Oriented Architecture</a> [pdf] Like <a href="http://codeascraft.com/2013/06/11/introducing-kale/">Etsy's Loupe/Kale</a>.  <em>An anomalous change in a metric of one service can propagate to other services during this communication, resulting in overall degradation of the request. ... A modern website is usually composed of hundreds of services running on thousands of machines in multiple data centers. This paper introduces MonitorRank, an algorithm that can reduce the time, domain knowledge, and human effort required to find the root causes of anomalies in such service-oriented architectures. In the event of an anomaly, MonitorRank provides a ranked order list of possible root causes for monitoring teams to investigate. MonitorRank uses the historical and current time-series metrics of each sensor as its input, along with the call graph generated between sensors to build an unsupervised model for ranking.</em></p>
-<p><a href="http://vintagemacmuseum.com/the-enduring-appeal-of-macintosh-picasso-artwork/">The Enduring Appeal of Macintosh Picasso Artwork</a>: I am happily surprised to see that even as early as 1984, Steve Jobs has already got a strong, long lasting and consistent brand image nailed. This is used all the way into mid 1990s. <em>The famous Macintosh Picasso logo was developed for the introduction of the original 128k Mac back in 1984. A minimalist line drawing in the style of Pablo Picasso, this whimsical graphic implied the whole of a computer in a few simple strokes. It was an icon of what was inside the box, and became as famous as the computer it represented. It’s been beloved ever since, and the graphic style has endured across decades.</em>  </p>
-<p><a href="http://www.economist.com/blogs/prospero/2013/06/music-industry">On-demand touring</a>: <em>Fans still crave going to shows, yet increased digital access has led to slumps in live concert attendance. many complain that the process of acquiring tickets is increasingly frustrating.  Services like Detour ... Services like Detour have determined that fans are more than willing to leave the house for a live-music experience, if someone will simply organise that experience well.</em></p>
       </article>
       <hr/>
 <p class="paginator">

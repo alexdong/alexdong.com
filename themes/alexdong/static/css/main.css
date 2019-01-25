@@ -46,9 +46,17 @@ article h2 + abbr {
 
 article p, 
 article li {
-  margin: 1em 0;
   line-height: 1.6;
 }
+
+article p {
+  margin: 1em 0;
+}
+
+article li {
+  margin: 0.35em 0;
+}
+
 
 article + hr {
   color: #ccc;

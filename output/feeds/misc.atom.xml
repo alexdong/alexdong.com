@@ -1,5 +1,399 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Raw thoughts from Alex Dong - misc</title><link href="https://alexdong.com/" rel="alternate"></link><link href="https://alexdong.com/feeds/misc.atom.xml" rel="self"></link><id>https://alexdong.com/</id><updated>2019-01-06T01:22:00+13:00</updated><entry><title>Steve Jobs and Apple's previous earnings warning</title><link href="https://alexdong.com/steve-jobs-and-apples-previous-earnings-warning.html" rel="alternate"></link><published>2019-01-06T01:22:00+13:00</published><updated>2019-01-06T01:22:00+13:00</updated><author><name>Alex Dong &lt;me@alexdong.com&gt;</name></author><id>tag:alexdong.com,2019-01-06:/steve-jobs-and-apples-previous-earnings-warning.html</id><summary type="html">&lt;p&gt;Just like the previous two days, I'm handcopying a piece of writing today. &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Raw thoughts from Alex Dong - misc</title><link href="https://alexdong.com/" rel="alternate"></link><link href="https://alexdong.com/feeds/misc.atom.xml" rel="self"></link><id>https://alexdong.com/</id><updated>2019-01-20T07:55:00+13:00</updated><entry><title>Book summary: Measure what matters</title><link href="https://alexdong.com/book-summary-measure-what-matters.html" rel="alternate"></link><published>2019-01-20T07:55:00+13:00</published><updated>2019-01-20T07:55:00+13:00</updated><author><name>Alex Dong &lt;me@alexdong.com&gt;</name></author><id>tag:alexdong.com,2019-01-20:/book-summary-measure-what-matters.html</id><summary type="html">&lt;p&gt;John Doerr's recent book &lt;a href="https://www.amazon.com/Measure-What-Matters-Google-Foundation/dp/0525536221"&gt;Measure what
+matters&lt;/a&gt;
+described a simple framework for goal setting, tracking and continuous
+learning. You can watch his &lt;a href="https://www.ted.com/talks/john_doerr_why_the_secret_to_success_is_setting_the_right_goals?language=en"&gt;12 minute TED
+talk&lt;/a&gt;
+for a quick overview. This post summarises the key ideas without the
+examples.&lt;/p&gt;
+&lt;h3&gt;What is OKRs?&lt;/h3&gt;
+&lt;p&gt;OKRs, Short for Objectives for Key Results. It's …&lt;/p&gt;</summary><content type="html">&lt;p&gt;John Doerr's recent book &lt;a href="https://www.amazon.com/Measure-What-Matters-Google-Foundation/dp/0525536221"&gt;Measure what
+matters&lt;/a&gt;
+described a simple framework for goal setting, tracking and continuous
+learning. You can watch his &lt;a href="https://www.ted.com/talks/john_doerr_why_the_secret_to_success_is_setting_the_right_goals?language=en"&gt;12 minute TED
+talk&lt;/a&gt;
+for a quick overview. This post summarises the key ideas without the
+examples.&lt;/p&gt;
+&lt;h3&gt;What is OKRs?&lt;/h3&gt;
+&lt;p&gt;OKRs, Short for Objectives for Key Results. It's a collaborative
+goal-setting protocol for companies, teams and individuals. OKRs
+are not silver bullet. They cannot substitute for sound judgement,
+strong leadership, or a creative workspace culture. But if those
+fundamentals are in place, OKRs can guide you to the mountaintop.&lt;/p&gt;
+&lt;p&gt;OKRs is a management methodology that helps to ensure that the company
+focuses efforts on the same important issues throughout the
+organisation. &lt;/p&gt;
+&lt;p&gt;An OBJECTIVE is simply WHAT is to be achieved, no more and no less.
+By definition, objectives are significant, concrete, action oriented,
+and (ideally) inspirational. When properly designed and deployed,
+they're a vaccine against fuzzy thinking --- and fuzzy execution.&lt;/p&gt;
+&lt;p&gt;KEY RESULTS benchmark and monitor HOW we get to the objective.
+Effective KRs are specific and time-bound, agreesive yet realistic.
+Most of all, they are measurable and verifiable. &lt;/p&gt;
+&lt;h3&gt;What are the benefits?&lt;/h3&gt;
+&lt;p&gt;OKRs surface your primary goals. They channel efforts and coordination.
+They link diverse operations, lending purpose and unity to the entire
+organisation.&lt;/p&gt;
+&lt;p&gt;Many companies have a "rule of seven," limiting managers to a maximum of
+seven direct reports. In some cases, Google has flipped the rule to a
+&lt;em&gt;minimum&lt;/em&gt; of seven. The higher the ratio of reports, the flatter the
+org chart --- which means less top-down oversight, greater frontline
+autonomy, and more fertile soil for the next break-through. OKRs help
+make all of these good things possible.&lt;/p&gt;
+&lt;p&gt;Psychology professional Edwin Locke:  "Hard goals" drive performance
+more effectively than easy goals.  "Specific hard goals" produce a
+higher level of output" than vaguely worded ones.&lt;/p&gt;
+&lt;p&gt;A two-year Deloitte study found that no single factor has more impact
+than "clearly defined goals" that are written down and shared freely ...
+Goals create alignment, clarity, and job satisfaction.&lt;/p&gt;
+&lt;p&gt;Acute focus, open sharing, exacting measurement, a license to shoot for
+the moon --- these are the hallmarks of modern goal science.&lt;/p&gt;
+&lt;h3&gt;The Father of OKRs - Andy Grove from Intel&lt;/h3&gt;
+&lt;p&gt;"Expertise was very much valued (at Fairchild)," Andy explained. "That is
+why people got hired. That's why people got promoted. Their
+effectiveness at translating that knowledge into actual results was kind
+of shrugged off." At Intel, he went on, "we tend to be exactly the
+opposite. It almost doesn't matter what you know. It's what you can do
+with whatever you know or can acquire and actually accomplish [that]
+tends to be valued here." Hence the company's slogan: "Intel delivers."&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The two key phrases ... are objectives and key result. And they match
+the two purposes. The objective is the direction: "We want to dominate
+the mid-range microcomputer component business." That's an objective.
+That's where we're going to go. Key results for this quarter: "Win ten
+new designs for the 8085" is one key result. It's a milestone. The two
+are not the same ..."&lt;/p&gt;
+&lt;p&gt;The key result has to be measurable. But at the end you can look, and
+without any arguments: Did I do that or did I not do it? Yes? No?
+Simple. No judgements in it.&lt;/p&gt;
+&lt;p&gt;Now, did we dominate the mid-range microcomputer business? That's for
+us to argue in the years to come, but over the next quarter we'll know
+whether we've won ten new designs or not.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The Objective and the Key Results strike a balance of long- and
+short-range planning, informed by data and encriched by regular
+conversations among colleagues. &lt;/p&gt;
+&lt;p&gt;Andy sought to "create an envrionment that values and emphasizes output"
+and to avoid what Peter Drucker termed the "activity trap": "Stressing
+output is the key to increasing productivity, while looking into
+increase activity can result in just the opposite."&lt;/p&gt;
+&lt;h3&gt;OKRs superpowers - Focus&lt;/h3&gt;
+&lt;p&gt;Measuring what matters begins with the question: &lt;em&gt;what is most
+important for the next three (or six, or twelve) months?&lt;/em&gt; Successful
+organisations focus on the handful of initiatives that can make a real
+difference, deferring less urgent ones. Their leaders commit to those
+choices in word and deed. By standing firmly behind a few top-line
+OKRs, they give their teams a compass and a baseline for assessment.&lt;/p&gt;
+&lt;p&gt;Wrong decisions can be corrected once results begin to roll in.
+Nondecisions --- or hastily abandoned ones --- teach us nothing. &lt;em&gt;What
+are our main priorities for the coming period? Where should people
+concentrate their efforts?&lt;/em&gt; An effective goal-setting system starts with
+disciplined thinking at the top, with leaders who invest the time and
+energy to choose what counts.&lt;/p&gt;
+&lt;p&gt;While paring back a list of goals is invariably a challege, it is well
+worth the effort. As any seasoned leader will tell you, no one
+individual --- or company --- can "do it all." With a select set of
+OKRs, we can highlight a few things --- the vital things --- that must
+get done, as planned and on time.&lt;/p&gt;
+&lt;p&gt;Leaders must get across the &lt;em&gt;why&lt;/em&gt; as well as the &lt;em&gt;what&lt;/em&gt;. Their people
+need more than milestones for motivation. They are thirsting for
+meaning, to understand how their goals relate to the mission. And the
+process can't stop with unveiling top-line OKRs at a quarterly all-hands
+meeting. "When you are tired of saying it, people are starting to hear
+it."&lt;/p&gt;
+&lt;p&gt;To safeguard quality while pushing for quantitative deliverables, one
+solution is to pair key results --- to measure "both effect and
+counter-effect". From Andy Grove:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The paired counterparts should stress the quality of the work. Thus,
+in accounts payable, the number of vouchers processed should be
+paired with the number of errors found either by auditing or by our
+suppliers. For another example, the number of square feet cleaned by a
+custodial group should be paired with a ... rating of the quality of
+work as assessed by a senior manager with an office in that building.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;OKRs superpowers - Alignment&lt;/h3&gt;
+&lt;p&gt;If you tell everybody to go to the center of Europe, and
+some start marching off to France, and some to Germany, and some to
+Italy, that's no good. Not if you want them all going to Switzerland. If
+the vectors point in different directions, they add up to zero. But if
+you get everybody pointing in the same direction, you maximise the
+result.&lt;/p&gt;
+&lt;p&gt;Research shows that public goals are more likely to be attained than
+goals held in private. Simply flipping the switch to "open" lifts
+achievement across the board. In a recent survey of one thousand working
+U.S adults, 92 percent said they'd be more motivated to reach their
+goals if colleagues could see their progress.&lt;/p&gt;
+&lt;p&gt;In an OKR system, the most junior staff can look at everyone's goals, on
+up to the CEO. Critiques and corrections are out in public view.
+Contributors have carte blanche to weight in, even on flaws in the
+goal-settings process itself. Meritocracy flourishes in sunlight.&lt;/p&gt;
+&lt;p&gt;Once top-line objectives are set, the real work begins. As they shift
+from planning to execution, managers and contributors alike tie their
+day-to-day activities to the organisation's vision. The term for this
+linkage is alignment. According to Harvard Busienss Review, companies
+with highly aligned employees are more than twice as likely to be top
+performers.&lt;/p&gt;
+&lt;p&gt;To avoid compulsive, soul-killing overalignment, healthy organisations
+encourage some goals to emerge from the bottom up. Salespeople
+understand shifting customer demands before management does; financial
+analysts are the earliest to know when the fundamentals of a business
+change.&lt;/p&gt;
+&lt;p&gt;Micromanagement is mismanagement. A healthy OKR environment strikes a
+balance between alignment and autonomy, common purpose and creative
+latitude. &lt;/p&gt;
+&lt;p&gt;An optimal OKR system frees contributors to set at least some
+of their own objectives and most or all of their key results. People are
+led to stretch above and beyond, to set more ambitious targets and
+achieve more of those they set. When our &lt;em&gt;how&lt;/em&gt; is defined by others, the
+goal won't engage us to the same degree. By loosening the reins and
+backing people to find &lt;em&gt;their&lt;/em&gt; right answers, we help everybody win.&lt;/p&gt;
+&lt;p&gt;As business becomes more intricate and initiatives more complex,
+interdependent divisions need a tool to help them reach the finish line
+together. A transparent OKR system promotes this sort of freewheeling
+collaboration once people across the whole organisation can see what's
+going on.&lt;/p&gt;
+&lt;h3&gt;OKRs superpowers - Track for accountability&lt;/h3&gt;
+&lt;p&gt;One underrated virtue of OKRs is that they can be tracked --- and then
+revised or adapted as circumstances dictate. OKRs are living, breathing
+organisms. Their life cycle unfolds in three phases.&lt;/p&gt;
+&lt;p&gt;The setup phase gives OKRs a home, where they are connected on a daily basis
+with people. Without frequent status updates, goals slide into
+irrelevance; the gap between plan and reality widens by the day.
+Contributors are most engaged when they can actually see how their work
+contributes to the company's success. &lt;/p&gt;
+&lt;p&gt;The midlife tracking phase tracks and shows how everyone is progressing.
+Research suggests that making measured headway can be more incentivising
+than public recognition, monetary inducements, or even achieving the
+goal itself. Regular check-ins --- preferaby weekly --- are essential to
+prevent slippage. As Peter Drucker observed, "Without an action plan,
+the executive becomes a prinsoner of events. And without check-ins to
+reexamine the plan as events unfold, the executive has no way of knowing
+which events really matter and which are only noise."&lt;/p&gt;
+&lt;p&gt;The wrap-up phase consist of three parts: objective scoring, subjective
+self-assessment, and reflection. &lt;/p&gt;
+&lt;p&gt;The simplest, cleanest way to score an objective is by averaging the
+percentage completion rates of its associated key results. &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;0.7 to 1.0 = green. (We delivered.)&lt;/li&gt;
+&lt;li&gt;0.4 to 0.6 = yellow. (We made progress, but fell short of completion.)&lt;/li&gt;
+&lt;li&gt;0.0 to 0.3 = red. (We failed to make real progress.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In evaluating the performance, objective data is enhanced by the goal
+setter's thoughtful, subjective judgement. Say the team's objective is
+to recruit new customers, and your individual key result is fifty phone
+calls. You wind up calling thirty-five prospects, for a raw goal score
+of 70 percent. Did you succeed or fail? By itself, the data doesn't
+afford us much insight. But if a dozen of your calls lasted several
+hours apiece and resulted in eight new customers, you might give youself
+a perfect 1.0. Conersely: If you procrastinated, rushed through all
+fifty calls, and signed only one new customer, you might assess your
+performance at 0.25 --- because you could have pushed harder. (And on
+reflection: Should the key result have prioritised new customers, rather
+than calls?) In the end, the numbers are probably less important than
+contextual feedback and a broader discussion within the team.&lt;/p&gt;
+&lt;p&gt;Reflection is the intentional attempts to synthesise, abstract and
+articulate the key lessons taught by experience. Asks the questions&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Did I accomplish all of my objectives? If so, what contributed to my
+  success?&lt;/li&gt;
+&lt;li&gt;If not, what obstacles did I encounter?&lt;/li&gt;
+&lt;li&gt;If I were to rewrite a goal achived in full, what would I change?&lt;/li&gt;
+&lt;li&gt;What have I learned that might alter my approach to the next cycle's
+  OKRs?&lt;/li&gt;
+&lt;li&gt;What did I learn that I didn't foresee at the beginning of the quarter? How will
+I apply this lesson in the future?&lt;/li&gt;
+&lt;/ul&gt;</content></entry><entry><title>"This is to have succeeded."</title><link href="https://alexdong.com/this-is-to-have-succeeded.html" rel="alternate"></link><published>2019-01-10T21:32:00+13:00</published><updated>2019-01-10T21:32:00+13:00</updated><author><name>Alex Dong &lt;me@alexdong.com&gt;</name></author><id>tag:alexdong.com,2019-01-10:/this-is-to-have-succeeded.html</id><summary type="html">&lt;p&gt;Just saw the news of Jeff Bezos' divorce on TV. This made me feel quite
+sad. As a complete outsider, I wouldn't really know what's going on
+behind the scenes but I always thought the marriage between an avid book
+reader and an novelist would last forever.&lt;/p&gt;
+&lt;p&gt;I thougth of …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Just saw the news of Jeff Bezos' divorce on TV. This made me feel quite
+sad. As a complete outsider, I wouldn't really know what's going on
+behind the scenes but I always thought the marriage between an avid book
+reader and an novelist would last forever.&lt;/p&gt;
+&lt;p&gt;I thougth of a &lt;a href="https://twitter.com/jeffbezos/status/992765968182001665?lang=en"&gt;tweet Bezos
+sent&lt;/a&gt;
+last May.  It's a quote from Emerson which Bezos printed out and put
+onto his fridge so he can look at it everyday. &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;To laugh often and much; to win the respect of intelligent people and
+the affection of children; to earn the appreciation of honest critics
+and endure the betrayal of false friends; to appreciate beauty; to
+find the best in others; to leave the world a bit better, whether by a
+healthy child, a garden patch, or a redeemed social condition; to know
+even one life has breathed easier because you have lived. This is to
+have succeeded."&lt;/p&gt;
+&lt;/blockquote&gt;</content></entry><entry><title>Detention figures, state-building and decline in smartphone shipments</title><link href="https://alexdong.com/detention-figures-state-building-and-decline-in-smartphone-shipments.html" rel="alternate"></link><published>2019-01-09T22:46:00+13:00</published><updated>2019-01-09T22:46:00+13:00</updated><author><name>Alex Dong &lt;me@alexdong.com&gt;</name></author><id>tag:alexdong.com,2019-01-09:/detention-figures-state-building-and-decline-in-smartphone-shipments.html</id><summary type="html">&lt;p&gt;&lt;a href="http://www.chinafile.com/reporting-opinion/features/where-did-one-million-figure-detentions-xinjiangs-camps-come"&gt;Where Did the One Million Figure for Detentions in Xinjiang’s Camps
+Come
+From?&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The first estimate, from Adrian Zenz, a social scientist at the
+European School of Culture &amp;amp; Theology, is based on an accounting of
+the detention camp populations totalling some 892,000 individuals in
+68 Xinjiang counties as …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;&lt;a href="http://www.chinafile.com/reporting-opinion/features/where-did-one-million-figure-detentions-xinjiangs-camps-come"&gt;Where Did the One Million Figure for Detentions in Xinjiang’s Camps
+Come
+From?&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The first estimate, from Adrian Zenz, a social scientist at the
+European School of Culture &amp;amp; Theology, is based on an accounting of
+the detention camp populations totalling some 892,000 individuals in
+68 Xinjiang counties as of the Spring of 2018. &lt;/p&gt;
+&lt;p&gt;...  &lt;/p&gt;
+&lt;p&gt;The second estimate comes from the Washington, D.C.-based nonprofit
+Chinese Human Rights Defenders (CHRD). Between mid-2017 and mid-2018,
+CHRD interviewed eight ethnic Uighurs located in eight different
+villages in southern Xinjiang. Each person gave their own estimate of
+the number of people detained in their village, which CHRD used to
+surmise a detention rate for each village. These village detention
+rates ranged from 8 to 20 percent, averaging out to 12.8 percent
+across all eight villages. Just as Zenz did, CHRD “conservatively”
+rounded down to reach a 10 percent estimated detention rate.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3292226"&gt;When State-Building Hinders Growth: The Legacy of China's Confucian
+Bureaucracy&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Do countries with a long history of state-building fare better in the
+long run? Recent work has shown that earlier state-building may lead
+to higher levels of present-day growth. By contrast, I use a natural
+experiment to show that the regions of China with over a thousand
+years of sustained exposure to state-building are significantly poorer
+today. The mechanism of persistence, I argue, was the introduction of
+a civil service exam based on knowledge of Confucian classics, which
+strengthened the social prestige of the civil service and weakened the
+prestige of commerce. A thousand years later, the regions of China
+where the Confucian bureaucracy was first introduced have a more
+educated population and more Confucian temples, but lower levels of
+wealth. The paper contributes to an important debate on the Great
+Divergence, highlighting how political institutions interact with
+culture to cause long-run patterns of growth.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is a neat article with some interesting data points. I love to
+believe in the conclusion but I think the author has the cause and
+effect sequence wrong. &lt;/p&gt;
+&lt;p&gt;I think the poorer parts of China tend to be flatter, share common
+langauge, thus easier to rule through a central state. But because of
+their location, they are too far away from the coast to benefit from
+international trades. The wealthier parts tend to have poor
+transportation system, more cut-off from the central state and, without
+a better choice, had to rely more on trade, thus enjoying the fruits
+from doing so.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.reuters.com/article/us-china-smartphone-research/china-smartphone-shipments-seen-down-12-15-5-percent-last-year-market-data-idUSKCN1P20X2"&gt;China smartphone shipments seen down 12-15.5 percent last year: market
+data&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;shipments dropped 15.5 percent to roughly 390 million units for the
+year, with a 17 percent slump in December.&lt;/p&gt;
+&lt;p&gt;The Chinese smartphone market, the world’s largest, could shrink
+another 3 percent this year, Canalys said, in what would be a third
+straight year of declines. Smartphone shipments in the country had
+fallen 4 percent in 2017.&lt;/p&gt;
+&lt;/blockquote&gt;</content></entry><entry><title>How the economic machine works by Ray Dalio</title><link href="https://alexdong.com/how-the-economic-machine-works-by-ray-dalio.html" rel="alternate"></link><published>2019-01-08T22:59:00+13:00</published><updated>2019-01-08T22:59:00+13:00</updated><author><name>Alex Dong &lt;me@alexdong.com&gt;</name></author><id>tag:alexdong.com,2019-01-08:/how-the-economic-machine-works-by-ray-dalio.html</id><summary type="html">&lt;p&gt;I finally found time to sit down and watch Ray Dalio's famous 30 minutes &lt;a href="https://www.youtube.com/watch?v=PHe0bXAIuk0"&gt;How The
+Economic Machine Works&lt;/a&gt;
+video. It's totally different from the classic Econ 101 but it feels more
+practical and seems to explain the world economy better and in a simpler
+way. &lt;/p&gt;
+&lt;p&gt;Things I learned:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Credit …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;I finally found time to sit down and watch Ray Dalio's famous 30 minutes &lt;a href="https://www.youtube.com/watch?v=PHe0bXAIuk0"&gt;How The
+Economic Machine Works&lt;/a&gt;
+video. It's totally different from the classic Econ 101 but it feels more
+practical and seems to explain the world economy better and in a simpler
+way. &lt;/p&gt;
+&lt;p&gt;Things I learned:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Credit/debt boosts growth first and depress it later. Credit
+  encourages spending which boosts economy; however the need to pay back
+  the debts reduced spending which depresses the economy. &lt;/li&gt;
+&lt;li&gt;Higher interest rate lowers the assets present value. Given the same
+  future cash flow projection, higher interests rate means higher
+  discounts, which means lower present value.&lt;/li&gt;
+&lt;li&gt;Stock market goes down when economy and profit growth is strong. This
+  is counter-intuitive but it's part of the natural cycle.&lt;/li&gt;
+&lt;li&gt;Short-term cycle is 7-10 years and long-term cycle takes about 70-100
+  years.&lt;/li&gt;
+&lt;li&gt;Productivity matters in the long run. Credit matters in the short run.&lt;/li&gt;
+&lt;li&gt;When the economy becomes deflationary because of the contraction from
+  debt payment, printing money converts credits to money. So printing
+  money is inflationary. It works because as long inflation is higher
+  than deflation, the debt burden is taken care of. The key is to
+  balance the inflation and deflation.&lt;/li&gt;
+&lt;li&gt;The term "Lost decade" comes because of a long term readjustment takes
+  10 years for the market to go back to where it was. Even when the
+  deleveraging is handled perfectly, it will still take 3 years for
+  going down and another 7 to go back to where it was. &lt;/li&gt;
+&lt;li&gt;Three advices: don’t let debt increase faster than income, otherwise
+  the debt will crush you; don’t let income rises faster than
+  productivity growth, otherwise you will become less competitive;
+  always improve the productivity because it is what matters in the long
+  run.&lt;/li&gt;
+&lt;/ul&gt;</content></entry><entry><title>Four factors that might end outsourcing</title><link href="https://alexdong.com/four-factors-that-might-end-outsourcing.html" rel="alternate"></link><published>2019-01-07T22:56:00+13:00</published><updated>2019-01-07T22:56:00+13:00</updated><author><name>Alex Dong &lt;me@alexdong.com&gt;</name></author><id>tag:alexdong.com,2019-01-07:/four-factors-that-might-end-outsourcing.html</id><summary type="html">&lt;p&gt;Many of my friends were shocked when they heard that our &lt;a href="https://happymoose.nz/"&gt;photo printing
+business&lt;/a&gt; made everything in New Zealand instead
+of China. People couldn't believe that, with all of our automation,
+we can provide the same service in New Zealand 25% cheaper than getting
+them done in Shanghai --- this doesn't …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Many of my friends were shocked when they heard that our &lt;a href="https://happymoose.nz/"&gt;photo printing
+business&lt;/a&gt; made everything in New Zealand instead
+of China. People couldn't believe that, with all of our automation,
+we can provide the same service in New Zealand 25% cheaper than getting
+them done in Shanghai --- this doesn't even include the international
+shipping cost yet. &lt;/p&gt;
+&lt;p&gt;The common belief is that outsourcing is an inevitable trend. Small
+countries like New Zealand can't do anything about it, except
+just following along and hoping for the best.&lt;/p&gt;
+&lt;p&gt;I disagree. I have the evidence to believe that there are certain types
+of businesses that'd be better off manufacturing in New Zealand, to stay
+close to their market.&lt;/p&gt;
+&lt;p&gt;Bloomberg recently published a long opinion piece on this topic called
+&lt;a href="https://www.bloomberg.com/opinion/articles/2018-10-19/clothing-manufacturing-may-be-moving-back-to-west-from-asia"&gt;Your Clothes Could Be Made in the USA
+Again&lt;/a&gt;.
+The article has done an excellent job describing the key factors that
+are causing apparel production jobs to move back to local markets or
+neighbouring countries (Like Mexico for the US). &lt;/p&gt;
+&lt;p&gt;Here are the four key reasons for brands to make the move. &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Stress their heritage and increase control over supply chains.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Burberry and other British fashion labels have moved some of their
+production as “Made in England” became attractive to luxury buyers
+after an import boom in the 1990s and early 2000s. Hugo Bosss, the
+German fashion label, has started selling a “Made in Germany”
+collection, produced completely (except for some fabrics) in
+Metzingen, the company’s corporate seat.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Speed beats marginal cost advantage and basic compliance is upgraded to an integrated sustainability strategy.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Failure to respond to demand for an item consumers have seen on
+Instagram may mean huge volumes of unsold clothing. Unable to tell
+consumers what they should wear, producers must treat short lead times
+as the No. 1 priority.  Fast fashion is giving way to ultra-fast
+fashion, as practiced by online retailers such as Boohoo, Asos and
+Lesara. This doesn’t work well with shipping from Asia: Delivery to
+big Western markets takes about 30 days by sea.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Shortened lead time increases gross profit margin.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;But as lead times gain importance, shortening them compensates for
+some of the labor cost disadvantage by increasing the share of clothes
+sold at the full price. Raising it by 6.1 percent for a garment that
+takes 60 minutes to produce would justify the transfer of production
+from China to the U.S., McKinsey calculated.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Automation and robotics drive down production cost.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Automation can drive down the cost in Western countries. Now, sewing a
+pair of jeans takes an average of 19 minutes, more than half of the
+total production time. McKinsey and RWTH Aachen figure robotics can
+cut that time by 40 percent to 90 percent. At another important step,
+distressing the jeans, technology exists to cut the time necessary
+from about 20 minutes to 90 seconds: Levi’s does it with lasers. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</content></entry><entry><title>Steve Jobs and Apple's previous earnings warning</title><link href="https://alexdong.com/steve-jobs-and-apples-previous-earnings-warning.html" rel="alternate"></link><published>2019-01-06T01:22:00+13:00</published><updated>2019-01-06T01:22:00+13:00</updated><author><name>Alex Dong &lt;me@alexdong.com&gt;</name></author><id>tag:alexdong.com,2019-01-06:/steve-jobs-and-apples-previous-earnings-warning.html</id><summary type="html">&lt;p&gt;Just like the previous two days, I'm handcopying a piece of writing today. &lt;/p&gt;
 &lt;p&gt;This one is a letter from Steve Jobs. It's so tightly crafted that it's almost beautiful.  (Source: &lt;a href="https://daringfireball.net/2019/01/steve_jobs_and_apples_last_previous_earnings_warning"&gt;Daring
 fireball&lt;/a&gt;.)&lt;/p&gt;
 &lt;blockquote&gt;
